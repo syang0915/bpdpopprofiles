@@ -29,22 +29,6 @@ supabase_client = create_client(supabase_url, supabase_key)
 def health_check():
     return "alive"
 
-@app.route('/api/time')
-def get_current_time():
-    return {'time': time.time()}
-
-
-@app.route('/api/dbquery')
-def db_query():
-    return {'message': "HELLO WORLD",
-        'data': [1,2,3,4,5]
-        }
-
-@app.route('/test')
-def tester():
-    resp = supabase_client.table("officers_real").select("*").limit(1).execute()
-    return { "status": getattr(resp, "status_code", None), "error": getattr(resp, "error", None), "data": resp.data }
-
 
 @app.route('/api/prompt', methods = ['POST'])
 async def prompt():
