@@ -1,8 +1,104 @@
-import { useEffect, useState, type CSSProperties } from "react";
+import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import { OfficerProfileCard } from "@/components/officer/officer-profile-card";
 import { Button } from "@/components/ui/button";
 import { buildOfficerProfile } from "@/lib/officer-profile";
+
+type PayrollYearPoint = {
+  year: number;
+  overtimeHours: number;
+  baseSalary: number;
+  totalSalary: number;
+  complaints: number;
+};
+
+type OfficerAnalytics = {
+  payroll: PayrollYearPoint[];
+  outcomes: {
+    consequence: number;
+    dismissed: number;
+  };
+};
+
+function hashString(value: string) {
+  let hash = 0;
+  for (let index = 0; index < value.length; index += 1) {
+    hash = (hash * 31 + value.charCodeAt(index)) >>> 0;
+  }
+  return hash;
+}
+
+function toCurrency(value: number) {
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  }).format(value);
+}
+
+function makeLinePoints(
+  values: number[],
+  width: number,
+  height: number,
+  leftPadding: number,
+  topPadding: number,
+  rightPadding: number,
+  bottomPadding: number,
+) {
+  if (!values.length) {
+    return "";
+  }
+  const plotWidth = width - leftPadding - rightPadding;
+  const plotHeight = height - topPadding - bottomPadding;
+  const maxValue = Math.max(...values);
+  const minValue = Math.min(...values);
+  const range = Math.max(1, maxValue - minValue);
+
+  return values
+    .map((value, index) => {
+      const x = leftPadding + (index / Math.max(1, values.length - 1)) * plotWidth;
+      const normalizedY = (value - minValue) / range;
+      const y = topPadding + (1 - normalizedY) * plotHeight;
+      return `${x.toFixed(2)},${y.toFixed(2)}`;
+    })
+    .join(" ");
+}
+
+function buildOfficerAnalytics(officerId: string | undefined): OfficerAnalytics {
+  const seed = hashString(officerId ?? "officer");
+  const years = [2019, 2020, 2021, 2022, 2023, 2024, 2025];
+  const baseSalaryStart = 76000 + (seed % 14000);
+  const salaryStep = 1700 + ((seed >>> 3) % 750);
+  const overtimeRate = 56 + ((seed >>> 4) % 12);
+
+  const payroll = years.map((year, index) => {
+    const wave = Math.sin((index + (seed % 5)) / 1.7);
+    const overtimeHours = Math.max(120, Math.round(220 + wave * 55 + index * 14));
+    const baseSalary = Math.round(baseSalaryStart + index * salaryStep);
+    const totalSalary = Math.round(baseSalary + overtimeHours * overtimeRate);
+    const complaints = Math.max(0, Math.round(2 + ((seed >>> (index + 2)) % 6) - index * 0.2));
+
+    return {
+      year,
+      overtimeHours,
+      baseSalary,
+      totalSalary,
+      complaints,
+    };
+  });
+
+  const totalComplaints = payroll.reduce((sum, point) => sum + point.complaints, 0);
+  const consequence = Math.max(1, Math.round(totalComplaints * (0.22 + ((seed % 9) / 100))));
+  const dismissed = Math.max(1, totalComplaints - consequence);
+
+  return {
+    payroll,
+    outcomes: {
+      consequence,
+      dismissed,
+    },
+  };
+}
 
 export default function OfficerDashboardPage() {
   const { officerId } = useParams();
@@ -11,6 +107,56 @@ export default function OfficerDashboardPage() {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const district = searchParams.get("district") ?? "Unknown District";
   const profile = buildOfficerProfile(officerId);
+  const analytics = useMemo(() => buildOfficerAnalytics(officerId), [officerId]);
+  const payrollYears = analytics.payroll.map((point) => point.year);
+  const baseSalarySeries = analytics.payroll.map((point) => point.baseSalary);
+  const totalSalarySeries = analytics.payroll.map((point) => point.totalSalary);
+  const overtimeSeries = analytics.payroll.map((point) => point.overtimeHours * 1000);
+  const complaintsSeries = analytics.payroll.map((point) => point.complaints);
+  const salaryChartWidth = 640;
+  const salaryChartHeight = 220;
+  const lineChartPadding = { left: 36, top: 14, right: 16, bottom: 24 };
+  const salaryBasePoints = makeLinePoints(
+    baseSalarySeries,
+    salaryChartWidth,
+    salaryChartHeight,
+    lineChartPadding.left,
+    lineChartPadding.top,
+    lineChartPadding.right,
+    lineChartPadding.bottom,
+  );
+  const salaryTotalPoints = makeLinePoints(
+    totalSalarySeries,
+    salaryChartWidth,
+    salaryChartHeight,
+    lineChartPadding.left,
+    lineChartPadding.top,
+    lineChartPadding.right,
+    lineChartPadding.bottom,
+  );
+  const overtimePoints = makeLinePoints(
+    overtimeSeries,
+    salaryChartWidth,
+    salaryChartHeight,
+    lineChartPadding.left,
+    lineChartPadding.top,
+    lineChartPadding.right,
+    lineChartPadding.bottom,
+  );
+  const complaintsChartWidth = 640;
+  const complaintsChartHeight = 210;
+  const complaintsPoints = makeLinePoints(
+    complaintsSeries,
+    complaintsChartWidth,
+    complaintsChartHeight,
+    36,
+    14,
+    16,
+    24,
+  );
+  const complaintsTotal = analytics.outcomes.consequence + analytics.outcomes.dismissed;
+  const consequencePct = (analytics.outcomes.consequence / complaintsTotal) * 100;
+  const dismissedPct = (analytics.outcomes.dismissed / complaintsTotal) * 100;
 
   useEffect(() => {
     document.documentElement.classList.add("dark");
@@ -150,6 +296,114 @@ export default function OfficerDashboardPage() {
                     style={{ width: `${profile.overtimePercentile}%` }}
                   />
                 </div>
+              </div>
+            </section>
+
+            <section className="mt-5 grid gap-4 lg:grid-cols-2">
+              <article className="rounded-lg border border-blue-300/30 bg-[#101b45]/86 p-4 shadow-[0_0_9px_rgba(59,130,246,0.28)]">
+                <p className="text-xs uppercase tracking-[0.14em] text-[#9cb6ea]">
+                  Overtime vs Base and Total Salary
+                </p>
+                <p className="mt-1 text-xs text-[#afc3ea]">Mock trend across 2019-2025</p>
+                <div className="mt-3 rounded-md border border-blue-300/20 bg-[#070f2b]/90 p-2">
+                  <svg viewBox={`0 0 ${salaryChartWidth} ${salaryChartHeight}`} className="h-[220px] w-full">
+                    <polyline
+                      fill="none"
+                      stroke="#38bdf8"
+                      strokeWidth="3"
+                      strokeLinejoin="round"
+                      strokeLinecap="round"
+                      points={salaryBasePoints}
+                    />
+                    <polyline
+                      fill="none"
+                      stroke="#c084fc"
+                      strokeWidth="3"
+                      strokeLinejoin="round"
+                      strokeLinecap="round"
+                      points={salaryTotalPoints}
+                    />
+                    <polyline
+                      fill="none"
+                      stroke="#fbbf24"
+                      strokeWidth="2.4"
+                      strokeDasharray="6 5"
+                      strokeLinejoin="round"
+                      strokeLinecap="round"
+                      points={overtimePoints}
+                    />
+                  </svg>
+                </div>
+                <div className="mt-3 flex flex-wrap gap-4 text-xs">
+                  <span className="text-cyan-200">- Base Salary</span>
+                  <span className="text-fuchsia-200">- Total Salary</span>
+                  <span className="text-amber-200">- Overtime (scaled)</span>
+                </div>
+                <div className="mt-3 grid grid-cols-1 gap-2 text-xs text-[#b8c9eb] sm:grid-cols-3">
+                  <div>Latest base: <span className="text-[#d9ecff]">{toCurrency(baseSalarySeries.at(-1) ?? 0)}</span></div>
+                  <div>Latest total: <span className="text-[#f2e8ff]">{toCurrency(totalSalarySeries.at(-1) ?? 0)}</span></div>
+                  <div>OT hours: <span className="text-[#ffe6b7]">{analytics.payroll.at(-1)?.overtimeHours ?? 0}</span></div>
+                </div>
+              </article>
+
+              <article className="rounded-lg border border-cyan-300/28 bg-[#101b45]/86 p-4 shadow-[0_0_9px_rgba(56,189,248,0.3)]">
+                <p className="text-xs uppercase tracking-[0.14em] text-[#9cb6ea]">
+                  Complaint Outcomes
+                </p>
+                <p className="mt-1 text-xs text-[#afc3ea]">Consequence vs dismissed</p>
+
+                <div className="mt-4 space-y-3">
+                  <div>
+                    <div className="mb-1 flex items-center justify-between text-xs text-[#cce2ff]">
+                      <span>Consequence</span>
+                      <span>{analytics.outcomes.consequence} ({consequencePct.toFixed(1)}%)</span>
+                    </div>
+                    <div className="h-3 w-full rounded-full bg-[#0a1433]/90">
+                      <div
+                        className="h-3 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 shadow-[0_0_10px_rgba(56,189,248,0.5)]"
+                        style={{ width: `${consequencePct}%` }}
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="mb-1 flex items-center justify-between text-xs text-[#e9dcff]">
+                      <span>Dismissed</span>
+                      <span>{analytics.outcomes.dismissed} ({dismissedPct.toFixed(1)}%)</span>
+                    </div>
+                    <div className="h-3 w-full rounded-full bg-[#0a1433]/90">
+                      <div
+                        className="h-3 rounded-full bg-gradient-to-r from-fuchsia-400 to-indigo-400 shadow-[0_0_10px_rgba(168,85,247,0.5)]"
+                        style={{ width: `${dismissedPct}%` }}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </section>
+
+            <section className="mt-4 rounded-lg border border-purple-300/28 bg-[#101b45]/86 p-4 shadow-[0_0_9px_rgba(147,51,234,0.3)]">
+              <p className="text-xs uppercase tracking-[0.14em] text-[#b4acef]">
+                Complaints Received Over Time
+              </p>
+              <p className="mt-1 text-xs text-[#cbc2f2]">Count of complaints per year</p>
+              <div className="mt-3 rounded-md border border-purple-300/20 bg-[#070f2b]/90 p-2">
+                <svg viewBox={`0 0 ${complaintsChartWidth} ${complaintsChartHeight}`} className="h-[210px] w-full">
+                  <polyline
+                    fill="none"
+                    stroke="#a78bfa"
+                    strokeWidth="3"
+                    strokeLinejoin="round"
+                    strokeLinecap="round"
+                    points={complaintsPoints}
+                  />
+                </svg>
+              </div>
+              <div className="mt-2 flex flex-wrap justify-between gap-2 text-[11px] text-[#c8bcf1]">
+                {payrollYears.map((year, index) => (
+                  <span key={year}>
+                    {year}: <span className="text-[#ece6ff]">{complaintsSeries[index]}</span>
+                  </span>
+                ))}
               </div>
             </section>
 
