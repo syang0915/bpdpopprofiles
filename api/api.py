@@ -2,9 +2,11 @@ import time
 from flask import Flask, request
 from flask_cors import CORS
 import os
+import pandas as pd
 from supabase import create_client
 from flask_hot_reload import HotReload
 
+COORDS = pd.read_csv("../data/district_latlong.csv")
 
 # CLIENNNTTT 
 url = os.environ.get("SUPABASE_URL")
@@ -36,11 +38,52 @@ def get_officer_data():
     SELECT * from officers where first_name='John' and last_name='Smith'
     """
     employee_id = request.args.get('employee_id')
-     
-
-    response = db.table("officers").select("*").eq("Employee ID", employee_id).execute()
+    response = db.table("officers_real").select("*").eq("employee_id", employee_id).execute()
     
     return {"message": response.data}
+
+@app.route('/departments/incidents')
+def get_all_departments_and_officers():
+    """
+    read func name lol :((( )))
+    """
+    unique_districts = db.table("districts").select("patrol_district").execute().data
+    unique_districts = list(set([d["patrol_district"] for d in unique_districts]))
+    districts = []
+
+    for district in unique_districts: 
+        officers = db.table("districts").select("*, officers_real(*)").eq("patrol_district", district).execute().data
+        officers = [{"first_name": o["officers_real"]["first_name"], "last_name": o["officers_real"]["last_name"], "employee_id": o["officers_real"]["employee_id"]} for o in officers]
+        dist_dict = {
+            "district": district,
+            "officers": officers,
+            "position": [COORDS[COORDS["district"] == district]["latitude"].values[0], COORDS[COORDS["district"] == district]["longitude"].values[0]],
+            "mapping_score": 0.85 # todo get score 
+        }
+        
+        districts.append(dist_dict)
+       
+    # AHHHHHHHHHHHHHHHHHHHHH
+#     result = [{
+#     "id": "a-1",
+#     "district": "Boston Police District A-1",
+#     "address": "40 New Sudbury St, Boston, MA 02114",
+#     "position": [42.3613, -71.0598],
+#     "officers": [
+#       { "id": "det-rivera", "name": "Det. Rivera" },
+#       { "id": "sgt-oneil", "name": "Sgt. O'Neil" },
+#       { "id": "officer-patel", "name": "Officer Patel" },
+#       { "id": "officer-kim", "name": "Officer Kim" },
+#       { "id": "officer-thomas", "name": "Officer Thomas" },
+#       { "id": "officer-murphy", "name": "Officer Murphy" },
+#       { "id": "officer-lee", "name": "Officer Lee" },
+#       { "id": "officer-hughes", "name": "Officer Hughes" },
+#     ],
+#     "mapping_score": 0.85
+#   }]
+    
+    return {"message": districts}
+    
 
 
 @app.route("/departments/incidents/<department_id>")
@@ -48,5 +91,6 @@ def get_incidents_by_department(department_id):
     """
     SELECT * FROM incidents WHERE department_id = <department_id>
     """
+    # join with departments table to get department name join on employee_id
     response = db.table("incidents").select("*").eq("department_id", department_id).execute()
     return {"message": response.data}
