@@ -1,6 +1,8 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { buildOfficerProfile } from "@/lib/officer-profile";
+import { fetchOfficerProfile, parseEmployeeId } from "@/lib/api";
 import { RankBadgeIcon } from "@/components/officer/rank-badge-icon";
 
 type OfficerProfileCardProps = {
@@ -17,17 +19,51 @@ export function OfficerProfileCard({
   className = "",
 }: OfficerProfileCardProps) {
   const profile = buildOfficerProfile(officerId);
+  const [liveOfficerName, setLiveOfficerName] = useState<string | null>(null);
+  const [liveOfficerRank, setLiveOfficerRank] = useState<string | null>(null);
+  const employeeId = parseEmployeeId(officerId);
+
+  useEffect(() => {
+    let isCancelled = false;
+    async function loadOfficer() {
+      try {
+        const data = await fetchOfficerProfile(officerId);
+        if (isCancelled || !data) {
+          return;
+        }
+        const firstName = data.officer.first_name?.trim() ?? "";
+        const lastName = data.officer.last_name?.trim() ?? "";
+        const fullName = `${firstName} ${lastName}`.trim();
+        if (fullName) {
+          setLiveOfficerName(fullName);
+        }
+        if (data.officer.rank) {
+          setLiveOfficerRank(data.officer.rank);
+        }
+      } catch {
+        // Keep mock profile visuals if live API is unavailable.
+      }
+    }
+    void loadOfficer();
+    return () => {
+      isCancelled = true;
+    };
+  }, [officerId]);
+
+  const displayName = liveOfficerName ?? profile.name;
+  const displayRank = liveOfficerRank ?? profile.rank;
+  const displayBadgeId = employeeId ? `EMP-${employeeId}` : profile.badgeId;
 
   return (
     <article
       className={`rounded-lg border border-blue-300/30 bg-[#101b45]/86 p-4 shadow-[0_0_9px_rgba(59,130,246,0.28)] ${className}`}
     >
       <div className="flex items-start gap-3">
-        <RankBadgeIcon rank={profile.rank} />
+        <RankBadgeIcon rank={displayRank} />
         <div className="min-w-0 flex-1">
-          <p className="truncate text-base font-semibold text-[#e0ecff]">{profile.name}</p>
-          <p className="text-xs text-[#b8c9eb]">Badge ID: {profile.badgeId}</p>
-          <p className="text-xs text-[#b8c9eb]">{`${profile.rank} • ${profile.sex}, ${profile.race}`}</p>
+          <p className="truncate text-base font-semibold text-[#e0ecff]">{displayName}</p>
+          <p className="text-xs text-[#b8c9eb]">Badge ID: {displayBadgeId}</p>
+          <p className="text-xs text-[#b8c9eb]">{`${displayRank} • ${profile.sex}, ${profile.race}`}</p>
           {district ? <p className="mt-1 text-xs text-[#9fb6e8]">{district}</p> : null}
         </div>
       </div>

@@ -3,6 +3,7 @@ import { Link, useParams, useSearchParams } from "react-router-dom";
 import { OfficerProfileCard } from "@/components/officer/officer-profile-card";
 import { Button } from "@/components/ui/button";
 import { buildOfficerProfile } from "@/lib/officer-profile";
+import { fetchOfficerProfile, parseEmployeeId } from "@/lib/api";
 
 type PayrollYearPoint = {
   year: number;
@@ -105,7 +106,9 @@ export default function OfficerDashboardPage() {
   const [searchParams] = useSearchParams();
   const [brandLight, setBrandLight] = useState({ x: 0, y: 0, active: false });
   const [isChatOpen, setIsChatOpen] = useState(false);
-  const district = searchParams.get("district") ?? "Unknown District";
+  const [liveOfficerName, setLiveOfficerName] = useState<string | null>(null);
+  const [liveDistrict, setLiveDistrict] = useState<string | null>(null);
+  const district = liveDistrict ?? searchParams.get("district") ?? "Unknown District";
   const profile = buildOfficerProfile(officerId);
   const analytics = useMemo(() => buildOfficerAnalytics(officerId), [officerId]);
   const payrollYears = analytics.payroll.map((point) => point.year);
@@ -163,6 +166,36 @@ export default function OfficerDashboardPage() {
     return () => document.documentElement.classList.remove("dark");
   }, []);
 
+  useEffect(() => {
+    let isCancelled = false;
+    async function loadOfficer() {
+      if (!officerId || !parseEmployeeId(officerId)) {
+        return;
+      }
+      try {
+        const data = await fetchOfficerProfile(officerId);
+        if (isCancelled || !data) {
+          return;
+        }
+        const firstName = data.officer.first_name?.trim() ?? "";
+        const lastName = data.officer.last_name?.trim() ?? "";
+        const fullName = `${firstName} ${lastName}`.trim();
+        if (fullName) {
+          setLiveOfficerName(fullName);
+        }
+        if (data.district?.patrol_district) {
+          setLiveDistrict(data.district.patrol_district);
+        }
+      } catch {
+        // Keep mock dashboard data as placeholder visuals.
+      }
+    }
+    void loadOfficer();
+    return () => {
+      isCancelled = true;
+    };
+  }, [officerId]);
+
   return (
     <div className="relative min-h-screen bg-[#050d24] text-foreground">
       <header className="absolute inset-x-0 top-0 z-[1000] border-b border-blue-400/25 bg-[#0f2f80]/20 backdrop-blur-[2px]">
@@ -215,7 +248,7 @@ export default function OfficerDashboardPage() {
                 <p className="mb-2 text-xs uppercase tracking-[0.16em] text-cyan-200/80">
                   Officer Profile
                 </p>
-                <h1 className="mb-1 text-2xl font-semibold text-[#e4efff]">{profile.name}</h1>
+                <h1 className="mb-1 text-2xl font-semibold text-[#e4efff]">{liveOfficerName ?? profile.name}</h1>
                 <p className="text-sm text-[#afc2ea]">{district}</p>
               </div>
               <div className="flex items-center gap-2 self-start">

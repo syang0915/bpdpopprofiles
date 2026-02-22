@@ -1,9 +1,9 @@
+import os
+import re
 import time
+import pandas as pd
 from flask import Flask, request
 from flask_cors import CORS
-import os
-import pandas as pd
-from supabase import create_client
 from mock_data import MOCK_DEPARTMENTS
 
 try:
@@ -11,17 +11,87 @@ try:
 except ImportError:
     create_client = None
 
-COORDS = pd.read_csv("../data/district_latlong.csv")
+try:
+    from dotenv import load_dotenv
+except ImportError:
+    load_dotenv = None
 
-# CLIENNNTTT 
-url = os.environ.get("SUPABASE_URL")
-key = os.environ.get("SUPABASE_KEY")
+DATA_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
+COORDS_PATH = os.path.join(DATA_DIR, "district_latlong.csv")
+COORDS = pd.read_csv(COORDS_PATH) if os.path.exists(COORDS_PATH) else pd.DataFrame()
+
+if not COORDS.empty:
+    COORDS["district_key"] = COORDS["district"].astype(str).str.lower().str.strip()
+    COORDS_BY_DISTRICT = {
+        row["district_key"]: [float(row["latitude"]), float(row["longitude"])]
+        for row in COORDS.to_dict("records")
+    }
+else:
+    COORDS_BY_DISTRICT = {}
+
+FALLBACK_COORDS = [42.3601, -71.0589]
+ADDRESS_BY_DISTRICT_ID = {item["id"]: item["address"] for item in MOCK_DEPARTMENTS}
+
+if load_dotenv:
+    load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
+    load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
+
+url = (
+    os.environ.get("SUPABASE_URL")
+    or os.environ.get("VITE_SUPABASE_URL")
+)
+key = (
+    os.environ.get("SUPABASE_KEY")
+    or os.environ.get("SUPABASE_ANON_KEY")
+    or os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
+    or os.environ.get("VITE_SUPABASE_ANON_KEY")
+)
 db = create_client(url, key) if create_client and url and key else None
 
 app = Flask(__name__)
 CORS(app)
 
-hot_reload = HotReload(app, includes=['templates', 'static', '.'], excludes=['__pycache__', 'node_modules', '.git'])
+
+def _district_id_from_name(name):
+    if not name:
+        return "unknown"
+    match = re.search(r"([A-Za-z])\s*-\s*(\d{1,2})", str(name))
+    if match:
+        return f"{match.group(1).lower()}-{int(match.group(2))}"
+    normalized = re.sub(r"[^a-z0-9]+", "-", str(name).strip().lower())
+    return normalized.strip("-") or "unknown"
+
+
+def _coords_for_district(name):
+    return COORDS_BY_DISTRICT.get(str(name).lower().strip(), FALLBACK_COORDS)
+
+
+def _build_department_payload(district_name, rows):
+    department_id = _district_id_from_name(district_name)
+    officers = []
+    for row in rows:
+        officer = row.get("officers_real") or {}
+        employee_id = officer.get("employee_id")
+        first_name = officer.get("first_name") or ""
+        last_name = officer.get("last_name") or ""
+        full_name = f"{first_name} {last_name}".strip() or f"Officer {employee_id}"
+        officers.append(
+            {
+                "id": str(employee_id) if employee_id is not None else "unknown",
+                "name": full_name,
+                "employee_id": employee_id,
+                "rank": officer.get("rank"),
+            }
+        )
+
+    return {
+        "id": department_id,
+        "district": district_name,
+        "address": ADDRESS_BY_DISTRICT_ID.get(department_id, "Address unavailable"),
+        "position": _coords_for_district(district_name),
+        "officers": officers,
+        "mapping_score": 0.85,
+    }
 
 @app.route('/api/time')
 def get_current_time():
@@ -32,100 +102,116 @@ def get_current_time():
 def db_query():
     if db is None:
         return {"message": "Supabase not configured", "data": []}
-    response = (
-    db.table("officers")
-    .select("*")
-    .execute()
-)
-    return {"message": response.data}
+    response = db.table("officers_real").select("*").limit(20).execute()
+    return {"data": response.data}
 
 @app.route('/officers')
 def get_officer_data():
-    """ 
-    SELECT * from officers where first_name='John' and last_name='Smith'
-    """
     if db is None:
-        return {"message": []}
+        return {"message": "Supabase not configured", "data": []}
     employee_id = request.args.get('employee_id')
+    if not employee_id:
+        return {"message": "employee_id query param is required", "data": []}, 400
     response = db.table("officers_real").select("*").eq("employee_id", employee_id).execute()
-    
-    return {"message": response.data}
+    return {"message": response.data, "data": response.data}
+
+
+@app.route("/api/officers/<int:employee_id>")
+def get_officer_profile(employee_id):
+    if db is None:
+        return {"message": "Supabase not configured", "data": None}, 503
+
+    officer_response = db.table("officers_real").select("*").eq("employee_id", employee_id).limit(1).execute()
+    officer_data = officer_response.data[0] if officer_response.data else None
+    if not officer_data:
+        return {"message": "Officer not found", "data": None}, 404
+
+    department_response = (
+        db.table("districts")
+        .select("patrol_district,name,total_incidents")
+        .eq("employee_id", employee_id)
+        .limit(1)
+        .execute()
+    )
+    compensation_response = (
+        db.table("compensation")
+        .select("year,total_pay,regular_pay,ot_pay,other_pay")
+        .eq("employee_id", employee_id)
+        .order("year", desc=True)
+        .limit(1)
+        .execute()
+    )
+
+    return {
+        "data": {
+            "officer": officer_data,
+            "district": department_response.data[0] if department_response.data else None,
+            "latest_compensation": compensation_response.data[0] if compensation_response.data else None,
+        }
+    }
 
 @app.route('/departments/incidents')
 def get_all_departments_and_officers():
-    """
-    read func name lol :((( )))
-    """
+    if db is None:
+        return {"message": "Supabase not configured", "data": []}, 503
+
     unique_districts = db.table("districts").select("patrol_district").execute().data
-    unique_districts = list(set([d["patrol_district"] for d in unique_districts]))
+    unique_districts = sorted(list(set([d["patrol_district"] for d in unique_districts if d.get("patrol_district")])))
     districts = []
 
-    for district in unique_districts: 
+    for district in unique_districts:
         officers = db.table("districts").select("*, officers_real(*)").eq("patrol_district", district).execute().data
-        officers = [{"first_name": o["officers_real"]["first_name"], "last_name": o["officers_real"]["last_name"], "employee_id": o["officers_real"]["employee_id"]} for o in officers]
-        dist_dict = {
-            "district": district,
-            "officers": officers,
-            "position": [COORDS[COORDS["district"] == district]["latitude"].values[0], COORDS[COORDS["district"] == district]["longitude"].values[0]],
-            "mapping_score": 0.85 # todo get score 
-        }
-        
-        districts.append(dist_dict)
-       
-    # AHHHHHHHHHHHHHHHHHHHHH
-#     result = [{
-#     "id": "a-1",
-#     "district": "Boston Police District A-1",
-#     "address": "40 New Sudbury St, Boston, MA 02114",
-#     "position": [42.3613, -71.0598],
-#     "officers": [
-#       { "id": "det-rivera", "name": "Det. Rivera" },
-#       { "id": "sgt-oneil", "name": "Sgt. O'Neil" },
-#       { "id": "officer-patel", "name": "Officer Patel" },
-#       { "id": "officer-kim", "name": "Officer Kim" },
-#       { "id": "officer-thomas", "name": "Officer Thomas" },
-#       { "id": "officer-murphy", "name": "Officer Murphy" },
-#       { "id": "officer-lee", "name": "Officer Lee" },
-#       { "id": "officer-hughes", "name": "Officer Hughes" },
-#     ],
-#     "mapping_score": 0.85
-#   }]
-    
-    return {"message": districts}
-    
+        districts.append(_build_department_payload(district, officers))
+
+    return {"message": districts, "data": districts}
 
 
 @app.route("/departments/incidents/<department_id>")
 def get_incidents_by_department(department_id):
-    """
-    SELECT * FROM incidents WHERE department_id = <department_id>
-    """
-    # join with departments table to get department name join on employee_id
-    response = db.table("incidents").select("*").eq("department_id", department_id).execute()
-    return {"message": response.data}
+    if db is None:
+        return {"message": "Supabase not configured", "data": []}, 503
+
+    district_rows = db.table("districts").select("employee_id,patrol_district").execute().data
+    matching_employee_ids = []
+    for row in district_rows:
+        district_name = row.get("patrol_district")
+        if _district_id_from_name(district_name) == department_id:
+            matching_employee_ids.append(row["employee_id"])
+
+    if not matching_employee_ids:
+        return {"data": [], "meta": {"department_id": department_id, "count": 0}}
+
+    response = db.table("incidents").select("*").in_("Employee ID", matching_employee_ids).execute()
+    return {
+        "data": response.data,
+        "meta": {"department_id": department_id, "count": len(response.data)},
+    }
 
 @app.route('/api/departments')
 def get_departments():
-    """
-    Pretends to run a query layer while filtering in-memory mock data.
-    Query params:
-      - district_id: exact district id (e.g. a-1)
-      - q: case-insensitive search over district/address/officer names
-      - limit: max number of departments to return
-      - delay_ms: optional simulated latency
-    """
     district_id = request.args.get('district_id')
     search = (request.args.get('q') or '').strip().lower()
-    delay_ms = max(0, int(request.args.get('delay_ms', 180)))
+    delay_ms = max(0, int(request.args.get('delay_ms', 0)))
     limit_param = request.args.get('limit')
 
     if delay_ms:
         time.sleep(min(delay_ms, 1200) / 1000)
 
+    source = "mock"
     departments = MOCK_DEPARTMENTS
+    if db is not None:
+        source = "supabase"
+        district_rows = db.table("districts").select("patrol_district, employee_id, officers_real(*)").execute().data
+        grouped = {}
+        for row in district_rows:
+            district_name = row.get("patrol_district")
+            if not district_name:
+                continue
+            grouped.setdefault(district_name, []).append(row)
+        departments = [_build_department_payload(name, rows) for name, rows in grouped.items()]
 
     if district_id:
-        departments = [department for department in departments if department["id"] == district_id]
+        departments = [department for department in departments if department["id"].lower() == district_id.lower()]
 
     if search:
         def matches(department):
@@ -149,7 +235,7 @@ def get_departments():
     return {
         "data": departments,
         "meta": {
-            "source": "mock",
+            "source": source,
             "count": len(departments),
             "query": {
                 "district_id": district_id,
@@ -158,4 +244,3 @@ def get_departments():
             },
         },
     }
-
