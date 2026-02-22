@@ -26,6 +26,7 @@ export function OfficerProfileCard({
 }: OfficerProfileCardProps) {
   const profile = buildOfficerProfile(officerId);
   const [liveOfficerName, setLiveOfficerName] = useState<string | null>(null);
+  const [liveOfficerRank, setLiveOfficerRank] = useState<string | null>(null);
   const employeeId = parseEmployeeId(officerId);
 
   useEffect(() => {
@@ -42,6 +43,10 @@ export function OfficerProfileCard({
         if (fullName) {
           setLiveOfficerName(fullName);
         }
+        const rank = data.officer.rank?.trim() ?? "";
+        if (rank) {
+          setLiveOfficerRank(rank);
+        }
       } catch {
         // Keep mock profile visuals if live API is unavailable.
       }
@@ -54,7 +59,7 @@ export function OfficerProfileCard({
 
   const displayName = liveOfficerName ?? officerName ?? "Officer";
   const displayBadgeId = employeeId ? `EMP-${employeeId}` : profile.badgeId;
-  const displayRank = officerRank ?? profile.rank;
+  const displayRank = liveOfficerRank ?? officerRank ?? "Unknown";
 
   return (
     <article
@@ -64,6 +69,7 @@ export function OfficerProfileCard({
         <RankBadgeIcon rank={displayRank} />
         <div className="min-w-0 flex-1">
           <p className="truncate text-base font-semibold text-[#e0ecff]">{displayName}</p>
+          <p className="text-xs text-[#b8c9eb]">Rank: {displayRank}</p>
           <p className="text-xs text-[#b8c9eb]">Badge ID: {displayBadgeId}</p>
         </div>
       </div>

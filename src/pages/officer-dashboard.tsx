@@ -340,13 +340,13 @@ export default function OfficerDashboardPage() {
 
               <div className="rounded-lg border border-cyan-300/28 bg-[#101b45]/86 p-4 shadow-[0_0_9px_rgba(56,189,248,0.3)] transition-transform duration-300 ease-out hover:scale-[1.02]">
                 <p className="text-xs uppercase tracking-[0.14em] text-[#9cb6ea]">
-                  Civilian Complaints Percentile
+                  Civilian Complaints
                 </p>
                 <p className="mt-2 text-3xl font-semibold text-[#dff3ff]">
-                  {displayComplaintsPercentile.toFixed(1)}
+                  {displayComplaintsTotal}
                 </p>
                 <p className="mt-1 text-sm text-[#b8caec]">
-                  {displayComplaintsTotal} total complaints
+                  Complaints percentile: {displayComplaintsPercentile.toFixed(1)}%
                 </p>
                 <div className="mt-3 h-2 w-full rounded-full bg-[#0a1433]/90">
                   <div
@@ -364,7 +364,7 @@ export default function OfficerDashboardPage() {
                   {toCurrency(displayOvertimePay)}
                 </p>
                 <p className="mt-1 text-sm text-[#cbc2f2]">
-                  Overtime percentile: {displayOvertimePercentile.toFixed(1)}
+                  Overtime percentile: {displayOvertimePercentile.toFixed(1)}%
                 </p>
                 <div className="mt-3 h-2 w-full rounded-full bg-[#0a1433]/90">
                   <div
