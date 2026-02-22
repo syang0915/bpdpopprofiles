@@ -6,6 +6,48 @@ type DepartmentsResponse = {
   data: PoliceDepartment[];
 };
 
+type OfficerRecord = {
+  employee_id: number;
+  first_name: string | null;
+  last_name: string | null;
+  rank: string | null;
+  zip_code: string | null;
+};
+
+type OfficerDistrictRecord = {
+  patrol_district: string | null;
+  name: string | null;
+  total_incidents: number | null;
+};
+
+type OfficerCompensationRecord = {
+  year: number | null;
+  total_pay: number | null;
+  regular_pay: string | null;
+  ot_pay: string | null;
+  other_pay: string | null;
+};
+
+export type OfficerProfileResponse = {
+  data: {
+    officer: OfficerRecord;
+    district: OfficerDistrictRecord | null;
+    latest_compensation: OfficerCompensationRecord | null;
+  };
+};
+
+export function parseEmployeeId(value: string | undefined) {
+  if (!value) {
+    return null;
+  }
+  const digitsOnly = value.match(/\d+/)?.[0];
+  if (!digitsOnly) {
+    return null;
+  }
+  const parsed = Number(digitsOnly);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
 export async function fetchPoliceDepartments(query?: {
   districtId?: string;
   search?: string;
@@ -34,4 +76,23 @@ export async function fetchPoliceDepartments(query?: {
 
   const body = (await response.json()) as DepartmentsResponse;
   return body.data ?? [];
+}
+
+export async function fetchOfficerProfile(officerId: string) {
+  const employeeId = parseEmployeeId(officerId);
+  if (!employeeId) {
+    return null;
+  }
+
+  const endpoint = new URL(`/api/officers/${employeeId}`, API_BASE_URL);
+  const response = await fetch(endpoint.toString());
+  if (!response.ok) {
+    if (response.status === 404) {
+      return null;
+    }
+    throw new Error(`Failed to fetch officer profile (${response.status})`);
+  }
+
+  const body = (await response.json()) as OfficerProfileResponse;
+  return body.data ?? null;
 }
