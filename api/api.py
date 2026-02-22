@@ -91,7 +91,7 @@ def _to_float(value):
         return 0.0
 
 
-def _build_department_payload(district_name, rows, metrics_by_employee=None):
+def _build_department_payload(district_name, rows, metrics_by_employee=None, mapping_score=0.0):
     department_id = _district_id_from_name(district_name)
     officers = []
     for row in rows:
@@ -118,7 +118,7 @@ def _build_department_payload(district_name, rows, metrics_by_employee=None):
         "address": ADDRESS_BY_DISTRICT_ID.get(department_id, "Address unavailable"),
         "position": _coords_for_district(district_name),
         "officers": officers,
-        "mapping_score": 0.85,
+        "mapping_score": round(float(mapping_score or 0.0), 2),
     }
 
 
@@ -132,6 +132,10 @@ def _percentile_for_value(values, target):
 
 def _incident_employee_id(row):
     return row.get("Employee ID") or row.get("employee_id")
+
+
+def _incident_severity(row):
+    return _to_float(row.get("severity") or row.get("Severity"))
 
 
 def _compute_percentile_metrics(officer_rows, compensation_rows, incident_rows):
@@ -211,11 +215,21 @@ def _initialize_session_cache():
             latest_comp_by_employee[employee_id] = row
 
     incidents_by_employee = {}
+    severity_by_employee = {}
     for row in incident_rows:
         employee_id = _incident_employee_id(row)
         if employee_id is None:
             continue
         incidents_by_employee.setdefault(employee_id, []).append(row)
+        severity_by_employee[employee_id] = severity_by_employee.get(employee_id, 0.0) + _incident_severity(row)
+
+    mapping_score_by_department_id = {}
+    for department_id, employee_ids in employee_ids_by_department_id.items():
+        unique_employee_ids = set(employee_ids)
+        mapping_score_by_department_id[department_id] = sum(
+            severity_by_employee.get(employee_id, 0.0)
+            for employee_id in unique_employee_ids
+        )
 
     metrics_by_employee = _compute_percentile_metrics(officer_rows, compensation_rows, incident_rows)
 
@@ -226,7 +240,12 @@ def _initialize_session_cache():
             continue
         grouped.setdefault(district_name, []).append(row)
     departments = [
-        _build_department_payload(name, rows, metrics_by_employee)
+        _build_department_payload(
+            name,
+            rows,
+            metrics_by_employee,
+            mapping_score_by_department_id.get(_district_id_from_name(name), 0.0),
+        )
         for name, rows in grouped.items()
     ]
 
@@ -326,6 +345,16 @@ def get_officer_profile(employee_id):
 
 @app.route('/departments/incidents')
 def get_all_departments_and_officers():
+    if db is None:
+        return {"message": "Supabase not configured", "data": []}, 503
+    if not _ensure_session_cache():
+        return {"message": "Failed to warm cache", "error": SESSION_CACHE["error"], "data": []}, 500
+    districts = SESSION_CACHE["departments"]
+    return {"message": districts, "data": districts}
+
+
+@app.route('/departments/severity')
+def get_all_departments_and_severity():
     if db is None:
         return {"message": "Supabase not configured", "data": []}, 503
     if not _ensure_session_cache():

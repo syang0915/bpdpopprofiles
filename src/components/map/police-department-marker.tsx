@@ -16,12 +16,14 @@ export type PoliceDepartment = {
   address: string;
   position: LatLngExpression;
   officers: Officer[];
+  mapping_score?: number;
 };
 
 type PoliceDepartmentMarkerProps = {
   department: PoliceDepartment;
   isActive: boolean;
   onToggle: (departmentId: string) => void;
+  onHoverChange: (departmentId: string | null) => void;
 };
 
 const PULSE_DURATION_SECONDS = 1.6;
@@ -53,6 +55,7 @@ export function PoliceDepartmentMarker({
   department,
   isActive,
   onToggle,
+  onHoverChange,
 }: PoliceDepartmentMarkerProps) {
   const icon = useMemo(
     () => {
@@ -79,6 +82,8 @@ export function PoliceDepartmentMarker({
       icon={icon}
       eventHandlers={{
         click: () => onToggle(department.id),
+        mouseover: () => onHoverChange(department.id),
+        mouseout: () => onHoverChange(null),
       }}
     />
   );

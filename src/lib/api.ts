@@ -86,6 +86,17 @@ export async function fetchPoliceDepartments(query?: {
   return body.data ?? [];
 }
 
+export async function fetchDepartmentsSeverity() {
+  const endpoint = new URL("/departments/severity", API_BASE_URL);
+  const response = await fetch(endpoint.toString());
+  if (!response.ok) {
+    throw new Error(`Failed to fetch department severity (${response.status})`);
+  }
+
+  const body = (await response.json()) as DepartmentsResponse;
+  return body.data ?? [];
+}
+
 export async function fetchOfficerProfile(officerId: string) {
   const employeeId = parseEmployeeId(officerId);
   if (!employeeId) {

@@ -97,7 +97,9 @@ export function OfficerProfileCard({
 
       {showOpenProfileLink ? (
         <Link
-          to={`/officer/${officerId}${district ? `?district=${encodeURIComponent(district)}` : ""}`}
+          to={`/officer/${officerId}?name=${encodeURIComponent(displayName)}${
+            district ? `&district=${encodeURIComponent(district)}` : ""
+          }`}
           className="mt-3 inline-flex rounded-md border border-cyan-300/40 bg-[#122359]/90 px-3 py-1.5 text-xs uppercase tracking-[0.1em] text-[#d7e7ff] transition-colors hover:bg-[#1a2f75]"
         >
           Open full profile + chat

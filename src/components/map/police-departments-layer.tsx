@@ -7,12 +7,14 @@ type PoliceDepartmentsLayerProps = {
   departments: PoliceDepartment[];
   activeDepartmentId: string | null;
   onDepartmentToggle: (departmentId: string) => void;
+  onDepartmentHoverChange: (departmentId: string | null) => void;
 };
 
 export function PoliceDepartmentsLayer({
   departments,
   activeDepartmentId,
   onDepartmentToggle,
+  onDepartmentHoverChange,
 }: PoliceDepartmentsLayerProps) {
   return (
     <>
@@ -22,6 +24,7 @@ export function PoliceDepartmentsLayer({
           department={department}
           isActive={activeDepartmentId === department.id}
           onToggle={onDepartmentToggle}
+          onHoverChange={onDepartmentHoverChange}
         />
       ))}
     </>
