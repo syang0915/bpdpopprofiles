@@ -1,7 +1,17 @@
-import time
 from flask import Flask, request
 from flask_cors import CORS
+from dotenv import load_dotenv
 import os
+from google import genai
+from supabase import create_client
+
+from api.ai_service import interpret_query
+
+load_dotenv()
+
+genAiKey = api_key=os.getenv("GEMINI_API_KEY")
+supabase_url = os.environ.get("SUPABASE_URL")
+supabase_key = os.environ.get("SUPABASE_KEY")
 import pandas as pd
 from supabase import create_client
 from mock_data import MOCK_DEPARTMENTS
@@ -21,23 +31,25 @@ db = create_client(url, key) if create_client and url and key else None
 app = Flask(__name__)
 CORS(app)
 
-hot_reload = HotReload(app, includes=['templates', 'static', '.'], excludes=['__pycache__', 'node_modules', '.git'])
+client = genai.Client(api_key=genAiKey)
+supabase_client = create_client(supabase_url, supabase_key)
 
-@app.route('/api/time')
-def get_current_time():
-    return {'time': time.time()}
+@app.route('/')
+def health_check():
+    return "alive"
 
 
-@app.route('/test')
-def db_query():
-    if db is None:
-        return {"message": "Supabase not configured", "data": []}
-    response = (
-    db.table("officers")
-    .select("*")
-    .execute()
-)
-    return {"message": response.data}
+@app.route('/api/prompt', methods = ['POST'])
+async def prompt():
+
+    print(request.get_json())
+    data = request.get_json()
+
+    query_output = interpret_query(data['model'], data['prompt'])
+
+    return {
+        "output": query_output
+    }
 
 @app.route('/officers')
 def get_officer_data():
