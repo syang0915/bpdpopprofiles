@@ -1,28 +1,17 @@
-from http.client import HTTPException
-import time
-from flask import Flask, json, request
+from flask import Flask, request
 from flask_cors import CORS
 from dotenv import load_dotenv
-import asyncio
 import os
 from google import genai
-from supabase import create_client, Client
+from supabase import create_client
 
-from ai_service import interpret_query
+from api.ai_service import interpret_query
 
 load_dotenv()
 
 genAiKey = api_key=os.getenv("GEMINI_API_KEY")
 supabase_url = os.environ.get("SUPABASE_URL")
 supabase_key = os.environ.get("SUPABASE_KEY")
-
-ALLOWED_COLUMNS = {"id", "name", "category", "price", "in_stock"}
-ALLOWED_OPERATORS = {"eq", "lt", "gt", "ilike"}
-
-# CLIENNNTTT 
-url = os.environ.get("SUPABASE_URL")
-key = os.environ.get("SUPABASE_KEY")
-db = create_client(url, key)
 
 app = Flask(__name__)
 CORS(app)
@@ -43,50 +32,8 @@ async def prompt():
 
     query_output = interpret_query(data['model'], data['prompt'])
 
-    print("AI RESPONSE:", query_output)
-
-    try:
-        query_json = json.loads(query_output)
-    except:
-        raise HTTPException(status_code=400, detail="Invalid AI JSON output")
-    
-    db_query = supabase_client.table(query_json["table"]).select("*")
-
-    for f in query_json.get("filters", []):
-        col = f["column"]
-        op = f["operator"]
-        val = f["value"]
-
-        if col not in ALLOWED_COLUMNS:
-            raise HTTPException(status_code=400, detail="Invalid column")
-
-        if op not in ALLOWED_OPERATORS:
-            raise HTTPException(status_code=400, detail="Invalid operator")
-
-        if op == "eq":
-            print("adding eq")
-            db_query = db_query.eq(col, val)
-        elif op == "ilike":
-            print("adding ilike")
-            db_query = db_query.ilike(col, f"%{val}%")
-        elif op == "lt":
-            db_query = db_query.lt(col, val)
-        elif op == "gt":
-            db_query = db_query.gt(col, val)
-
-    if "order_by" in query_json and query_json["order_by"]:
-        db_query = db_query.order(
-            query_json["order_by"]["column"],
-            desc=query_json["order_by"]["direction"] == "desc"
-        )
-
-    if "limit" in query_json and query_json["limit"]:
-        db_query = db_query.limit(min(query_json["limit"], 50))
-
-    result = db_query.execute()
-
     return {
-        "output": result.data
+        "output": query_output
     }
 
 @app.route('/officers')
