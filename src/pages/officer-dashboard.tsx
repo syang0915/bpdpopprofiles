@@ -112,8 +112,8 @@ export default function OfficerDashboardPage() {
   const [liveOvertimePayTotal, setLiveOvertimePayTotal] = useState<number | null>(null);
   const [liveComplaintsPercentile, setLiveComplaintsPercentile] = useState<number | null>(null);
   const [liveOvertimePercentile, setLiveOvertimePercentile] = useState<number | null>(null);
-  const [liveOvertimeToBasePct, setLiveOvertimeToBasePct] = useState<number | null>(null);
   const district = liveDistrict ?? searchParams.get("district") ?? "Unknown District";
+  const routeOfficerName = searchParams.get("name");
   const profile = buildOfficerProfile(officerId);
   const analytics = useMemo(() => buildOfficerAnalytics(officerId), [officerId]);
   const payrollYears = analytics.payroll.map((point) => point.year);
@@ -162,18 +162,21 @@ export default function OfficerDashboardPage() {
     16,
     24,
   );
-  const complaintsTotal = analytics.outcomes.consequence + analytics.outcomes.dismissed;
-  const consequencePct = (analytics.outcomes.consequence / complaintsTotal) * 100;
-  const dismissedPct = (analytics.outcomes.dismissed / complaintsTotal) * 100;
+  const mockComplaintsTotal = analytics.outcomes.consequence + analytics.outcomes.dismissed;
+  const consequenceRatio = mockComplaintsTotal > 0 ? analytics.outcomes.consequence / mockComplaintsTotal : 0.35;
+  const dismissedRatio = Math.max(0, 1 - consequenceRatio);
   const fallbackOvertimePay = analytics.payroll.reduce(
     (sum, point) => sum + (point.totalSalary - point.baseSalary),
     0,
   );
-  const displayComplaintsTotal = liveComplaintsTotal ?? complaintsTotal;
+  const displayComplaintsTotal = liveComplaintsTotal ?? mockComplaintsTotal;
   const displayOvertimePay = liveOvertimePayTotal ?? fallbackOvertimePay;
   const displayComplaintsPercentile = liveComplaintsPercentile ?? profile.complaintsPercentile;
   const displayOvertimePercentile = liveOvertimePercentile ?? profile.overtimePercentile;
-  const displayOvertimeToBasePct = liveOvertimeToBasePct;
+  const displayOutcomeConsequence = Math.max(0, Math.round(displayComplaintsTotal * consequenceRatio));
+  const displayOutcomeDismissed = Math.max(0, displayComplaintsTotal - displayOutcomeConsequence);
+  const consequencePct = displayComplaintsTotal > 0 ? (displayOutcomeConsequence / displayComplaintsTotal) * 100 : 0;
+  const dismissedPct = displayComplaintsTotal > 0 ? (displayOutcomeDismissed / displayComplaintsTotal) * 100 : 0;
 
   useEffect(() => {
     document.documentElement.classList.add("dark");
@@ -211,9 +214,6 @@ export default function OfficerDashboardPage() {
         }
         if (data.metrics?.overtime_ratio_percentile != null) {
           setLiveOvertimePercentile(data.metrics.overtime_ratio_percentile);
-        }
-        if (data.metrics?.overtime_to_base_pct != null) {
-          setLiveOvertimeToBasePct(data.metrics.overtime_to_base_pct);
         }
       } catch {
         // Keep mock dashboard data as placeholder visuals.
@@ -277,7 +277,9 @@ export default function OfficerDashboardPage() {
                 <p className="mb-2 text-xs uppercase tracking-[0.16em] text-cyan-200/80">
                   Officer Profile
                 </p>
-                <h1 className="mb-1 text-2xl font-semibold text-[#e4efff]">{liveOfficerName ?? profile.name}</h1>
+                <h1 className="mb-1 text-2xl font-semibold text-[#e4efff]">
+                  {liveOfficerName ?? routeOfficerName ?? profile.name}
+                </h1>
                 <p className="text-sm text-[#afc2ea]">{district}</p>
               </div>
               <div className="flex items-center gap-2 self-start">
@@ -348,15 +350,13 @@ export default function OfficerDashboardPage() {
 
               <div className="rounded-lg border border-purple-300/28 bg-[#101b45]/86 p-4 shadow-[0_0_9px_rgba(147,51,234,0.3)] transition-transform duration-300 ease-out hover:scale-[1.02]">
                 <p className="text-xs uppercase tracking-[0.14em] text-[#b4acef]">
-                  Overtime/Base Pay Percentile
+                  Total Overtime Compensation
                 </p>
                 <p className="mt-2 text-3xl font-semibold text-[#f0e8ff]">
-                  {displayOvertimePercentile.toFixed(1)}
+                  {toCurrency(displayOvertimePay)}
                 </p>
                 <p className="mt-1 text-sm text-[#cbc2f2]">
-                  {displayOvertimeToBasePct != null ? `${displayOvertimeToBasePct.toFixed(2)}%` : "N/A"} of base pay
-                  {" • "}
-                  {toCurrency(displayOvertimePay)} OT pay
+                  Overtime percentile: {displayOvertimePercentile.toFixed(1)}
                 </p>
                 <div className="mt-3 h-2 w-full rounded-full bg-[#0a1433]/90">
                   <div
@@ -424,7 +424,7 @@ export default function OfficerDashboardPage() {
                   <div>
                     <div className="mb-1 flex items-center justify-between text-xs text-[#cce2ff]">
                       <span>Consequence</span>
-                      <span>{analytics.outcomes.consequence} ({consequencePct.toFixed(1)}%)</span>
+                      <span>{displayOutcomeConsequence} ({consequencePct.toFixed(1)}%)</span>
                     </div>
                     <div className="h-3 w-full rounded-full bg-[#0a1433]/90">
                       <div
@@ -436,7 +436,7 @@ export default function OfficerDashboardPage() {
                   <div>
                     <div className="mb-1 flex items-center justify-between text-xs text-[#e9dcff]">
                       <span>Dismissed</span>
-                      <span>{analytics.outcomes.dismissed} ({dismissedPct.toFixed(1)}%)</span>
+                      <span>{displayOutcomeDismissed} ({dismissedPct.toFixed(1)}%)</span>
                     </div>
                     <div className="h-3 w-full rounded-full bg-[#0a1433]/90">
                       <div
@@ -497,11 +497,19 @@ export default function OfficerDashboardPage() {
             <div className="relative flex h-full flex-col">
               <div className="mb-3">
                 <p className="text-sm font-semibold uppercase tracking-[0.14em] text-cyan-200/85">
-                  Officer Chat
+                  Ask Gemini
                 </p>
               </div>
               <div className="min-h-[220px] flex-1 rounded-md border border-blue-300/25 bg-[#040a1f]/95 p-3 text-sm text-[#b9cff7]">
-                Chat window ready. Hook this up to your AI/backend when you are ready.
+                <p className="text-[#d6e4ff]">Ask any questions about this officer.</p>
+                <div className="mt-3 text-xs text-[#a7c0ef]">
+                  <p className="uppercase tracking-[0.08em] text-cyan-200/80">Example prompts</p>
+                  <ul className="mt-2 space-y-1 list-disc pl-5">
+                    <li>Show me a visualization of this officer&apos;s overtime logging data over time compared to Officer B.</li>
+                    <li>Summarize complaint trends for this officer over the past five years.</li>
+                    <li>How does this officer&apos;s use-of-force history compare to their district average?</li>
+                  </ul>
+                </div>
               </div>
               <button
                 type="button"
