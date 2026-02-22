@@ -19,6 +19,11 @@ supabase_key = os.environ.get("SUPABASE_KEY")
 ALLOWED_COLUMNS = {"id", "name", "category", "price", "in_stock"}
 ALLOWED_OPERATORS = {"eq", "lt", "gt", "ilike"}
 
+# CLIENNNTTT 
+url = os.environ.get("SUPABASE_URL")
+key = os.environ.get("SUPABASE_KEY")
+db = create_client(url, key)
+
 app = Flask(__name__)
 CORS(app)
 
@@ -83,3 +88,12 @@ async def prompt():
     return {
         "output": result.data
     }
+
+@app.route('/officers')
+def get_officer_data():
+    """ 
+    SELECT * from officers where first_name='John' and last_name='Smith'
+    """
+    employee_id = request.args.get('employee_id')
+    response = supabase_client.table("officers").select("*").eq("Employee ID", employee_id).execute()
+    return {"message": response.data}

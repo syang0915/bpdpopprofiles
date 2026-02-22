@@ -1,0 +1,858 @@
+Unnamed: 0,Inc: IA No,Inc: Incident type,Inc: Received date,Inc: Occurred date,OffSnp: Title/rank,Off: First name,Off: Last name,Alg: Allegation,Alg: Finding,Act: Action taken,Act: Days/hours suspended,Act: Action taken date,First_Name,Middle_Initial,Incident Year,Full Name,Employee ID
+0,IAD2011-0003,Citizen complaint,01/05/2011,06/18/2009,Sergeant Detective,Albert M,Terestre,Use of Force,Exonerated,,0.0,,Albert,M,2011,Albert M Terestre,10002
+1,IAD2011-0003,Citizen complaint,01/05/2011,06/18/2009,Police Officer,John K,Rogers,Use of Force,Exonerated,,0.0,,John,K,2011,John K Rogers,11357
+8,IAD2011-0013,Citizen complaint,01/07/2011,10/27/2010,Police Officer,Andrew B,Blake,Respectful Treatment,Not Sustained,,,,Andrew,B,2011,Andrew B Blake,12104
+16,IAD2011-0023,Citizen complaint,01/14/2011,11/01/2012,Detective,Laura A,Delaney,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,,06/21/2012,Laura,A,2011,Laura A Delaney,11676
+21,IAD2011-0039,Citizen complaint,01/22/2011,01/22/2011,Police Officer,Richard L,Medina,Self Identification,Exonerated,,0.0,,Richard,L,2011,Richard L Medina,12131
+22,IAD2011-0039,Citizen complaint,01/22/2011,01/22/2011,Police Officer,James H,LaCroix,Respectful Treatment,Not Sustained,,0.0,,James,H,2011,James H LaCroix,95141
+26,IAD2011-0048,Citizen complaint,01/28/2011,01/28/2011,Police Officer,Robert C,Boyle,Use of Force,Unfounded,,0.0,,Robert,C,2011,Robert C Boyle,8934
+32,IAD2011-0048,Citizen complaint,01/28/2011,01/28/2011,Police Officer,Rory M,Coleman,Use of Force,Unfounded,,0.0,,Rory,M,2011,Rory M Coleman,102172
+34,IAD2011-0048,Citizen complaint,01/28/2011,01/28/2011,Police Officer,Phillip K,Wong,Use of Force,Unfounded,,0.0,,Phillip,K,2011,Phillip K Wong,11269
+36,IAD2011-0049,Citizen complaint,01/30/2011,01/30/2011,Police Officer,Anthony B,Platt,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Anthony,B,2011,Anthony B Platt,9601
+40,IAD2011-0052,Citizen complaint,01/31/2011,01/26/2011,Sergeant Detective,John M,Brown,Use of Force,Unfounded,,,,John,M,2011,John M Brown,11478
+45,IAD2011-0066,Citizen complaint,02/07/2011,02/07/2011,Detective,Charles M,Johnson,Conduct Unbecoming,Unfounded,Oral Reprimand,0.0,05/31/2013,Charles,M,2011,Charles M Johnson,8219
+53,IAD2011-0074,Citizen complaint,02/11/2011,02/11/2011,Police Officer,Darryl Vu,Tran,Respectful Treatment,Not Sustained,,0.0,,Darryl,Vu,2011,Darryl Vu Tran,99753
+56,IAD2011-0078,Citizen complaint,02/14/2011,07/06/2009,Sergeant Detective,Sean M,Doherty,Procedures for Handling Physical Eveidence and other Property coming into Police cusotdy,Unfounded,,0.0,,Sean,M,2011,Sean M Doherty,11406
+58,IAD2011-0083,Citizen complaint,02/15/2011,03/31/2008,Police Officer,Joseph P,Matthews,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Joseph,P,2011,Joseph P Matthews,56169
+62,IAD2011-0084,Citizen complaint,02/15/2011,09/21/2010,Police Officer,Robert F,Figueroa,Use of Force,Unfounded,,0.0,,Robert,F,2011,Robert F Figueroa,11899
+64,IAD2011-0085,Citizen complaint,02/15/2011,02/15/2011,Police Officer,Dwain R,Jackson,Use of Force,Not Sustained,,0.0,,Dwain,R,2011,Dwain R Jackson,11526
+66,IAD2011-0085,Citizen complaint,02/15/2011,02/15/2011,Sergeant,James L,Galvin,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,James,L,2011,James L Galvin,12261
+68,IAD2011-0085,Citizen complaint,02/15/2011,02/15/2011,Sergeant Detective,Timothy M,Horan,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Timothy,M,2011,Timothy M Horan,11610
+70,IAD2011-0085,Citizen complaint,02/15/2011,02/15/2011,Police Officer,Timothy J,Hancock,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Timothy,J,2011,Timothy J Hancock,11416
+74,IAD2011-0086,Citizen complaint,02/16/2011,02/06/2011,Police Officer,Jerome V,Hebard,Respectful Treatment,Not Sustained,,0.0,,Jerome,V,2011,Jerome V Hebard,8859
+83,IAD2011-0093,Citizen complaint,02/17/2011,02/17/2011,Detective,Michael J,Doogan,Directives/Orders,Sustained,Retired with Charges Pending,0.0,02/22/2019,Michael,J,2011,Michael J Doogan,9727
+90,IAD2011-0102,Citizen complaint,02/22/2011,02/22/2011,Police Officer,Roger T,Burke,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Roger,T,2011,Roger T Burke,10513
+92,IAD2011-0102,Citizen complaint,02/22/2011,02/22/2011,Lieutenant,Stephen C,Cawley,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Stephen,C,2011,Stephen C Cawley,8940
+93,IAD2011-0103,Citizen complaint,02/26/2011,02/26/2011,Sergeant Detective,Mark R,Handrahan,Respectful Treatment,Sustained,Oral Reprimand,,02/03/2015,Mark,R,2011,Mark R Handrahan,8718
+97,IAD2011-0107,Citizen complaint,03/02/2011,01/15/2011,Police Officer,John J,Bates,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,John,J,2011,John J Bates,8819
+108,IAD2011-0109,Citizen complaint,03/02/2011,11/14/2008,Police Officer,Frederick G,Marzano,Use of Force,Not Sustained,Written Reprimand/Settlement Agreement,0.0,01/07/2013,Frederick,G,2011,Frederick G Marzano,10286
+110,IAD2011-0110,Citizen complaint,03/02/2011,02/10/2011,Police Officer,Louis A,Vasquez,Respectful Treatment,Not Sustained,,,,Louis,A,2011,Louis A Vasquez,10742
+112,IAD2011-0115,Citizen complaint,03/02/2011,06/21/2010,Police Officer,Paul T,Quinn,Neg.Duty/Unreasonable Judge (2 counts),Exonerated,,0.0,,Paul,T,2011,Paul T Quinn,11449
+126,IAD2011-0130,Internal investigation,03/08/2011,11/03/2006,Sergeant,Ronald E,Pirrello,Conformance to Laws,Not Sustained,,0.0,,Ronald,E,2011,Ronald E Pirrello,10578
+131,IAD2011-0135,Internal investigation,03/11/2011,03/04/2011,Police Officer,Roland D,Sandefur,Association with Criminals,Sustained,Suspension,1.0,03/01/2012,Roland,D,2011,Roland D Sandefur,11360
+139,IAD2011-0140,Internal investigation,03/14/2011,02/19/2011,Police Officer,Dennis I,Morson,Conformance to Laws,Unfounded,Suspension/Settlement Agreement,45.0,12/22/2011,Dennis,I,2011,Dennis I Morson,12026
+152,IAD2011-0143,Citizen complaint,03/17/2011,10/07/2007,Lieutenant,James R,Tarantino,Evidence & Found Property,Not Sustained,,,,James,R,2011,James R Tarantino,12283
+160,IAD2011-0149,Citizen complaint,03/18/2011,03/18/2011,Police Officer,William F,Traft,Neg.Duty/Unreasonable Judge,Withdrawn,,,,William,F,2011,William F Traft,52976
+164,IAD2011-0153,Citizen complaint,03/22/2011,03/16/2011,Police Officer,Jose M,Teixeira,Respectful Treatment,Unfounded,,,,Jose,M,2011,Jose M Teixeira,88314
+165,IAD2011-0154,Citizen complaint,03/22/2011,03/21/2011,Police Officer,Daniel A,Fitzgerald,Neg.Duty/Unreasonable Judge,Not Sustained,,,,Daniel,A,2011,Daniel A Fitzgerald,9575
+166,IAD2011-0155,Citizen complaint,03/22/2011,01/05/2008,Sergeant Detective,Michael J,Stratton,Use of Force,Unfounded,,0.0,,Michael,J,2011,Michael J Stratton,10305
+179,IAD2011-0159,Citizen complaint,03/23/2011,10/07/2010,Detective,Rodney O,Best,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Rodney,O,2011,Rodney O Best,10944
+180,IAD2011-0159,Citizen complaint,03/23/2011,10/07/2010,Police Officer,Miguelangelo R,Pires,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Miguelangelo,R,2011,Miguelangelo R Pires,11353
+188,IAD2011-0161,Citizen complaint,03/25/2011,03/18/2011,Detective,Kevin Michael,Magoon,Respectful Treatment,Not Sustained,Suspension,1.0,06/14/2013,Kevin,Michael,2011,Kevin Michael Magoon,10723
+194,IAD2011-0161,Citizen complaint,03/25/2011,03/18/2011,Detective,Hubert G,Valmond,Manner of Recording Complaints,Not Sustained,,0.0,,Hubert,G,2011,Hubert G Valmond,11962
+195,IAD2011-0161,Citizen complaint,03/25/2011,03/18/2011,Detective,David G,Hyslip,Manner of Recording Complaints,Not Sustained,,0.0,,David,G,2011,David G Hyslip,10545
+196,IAD2011-0161,Citizen complaint,03/25/2011,03/18/2011,Lieutenantenant Detective,Brian J,Larkin,Manner of Recording Complaints,Not Sustained,,0.0,,Brian,J,2011,Brian J Larkin,10421
+198,IAD2011-0163,Citizen complaint,03/29/2011,03/29/2011,Police Officer,George J,Crowley,Neg.Duty/Unreasonable Judge,Not Sustained,,,,George,J,2011,George J Crowley,11402
+204,IAD2011-0166,Citizen complaint,03/30/2011,03/15/2011,Police Officer,Stephen W,Green,Use of Force,Exonerated,,0.0,,Stephen,W,2011,Stephen W Green,8785
+213,IAD2011-0180,Citizen complaint,04/11/2011,04/06/2011,Detective,William R,Hasson,Respectful Treatment,Not Sustained,,,,William,R,2011,William R Hasson,8957
+216,IAD2011-0182,Citizen complaint,04/12/2011,03/31/2011,Police Officer,James H,O'Brien,Use of Force,Not Sustained,,0.0,,James,H,2011,James H O'Brien,103772
+218,IAD2011-0184,Citizen complaint,04/13/2011,03/21/2011,Sergeant Detective,Karl T,Strother,Respectful Treatment,Not Sustained,,0.0,,Karl,T,2011,Karl T Strother,9303
+223,IAD2011-0190,Citizen complaint,04/14/2011,04/14/2011,Sergeant,Daniel M,Humphreys,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Daniel,M,2011,Daniel M Humphreys,11280
+225,IAD2011-0191,Citizen complaint,04/18/2011,,Detective,John G,Maloof,Conduct Unbecoming,Unfounded,,,,John,G,2011,John G Maloof,8677
+234,IAD2011-0197,Citizen complaint,04/22/2011,04/16/2011,Police Officer,William F,Dunne,Use of Force,Exonerated,,0.0,,William,F,2011,William F Dunne,9041
+238,IAD2011-0203,Citizen complaint,04/27/2011,,Police Officer,Domingo R,Montiero,Respectful Treatment,Not Sustained,Retired,0.0,06/24/2024,Domingo,R,2011,Domingo R Montiero,10291
+245,IAD2011-0214,Citizen complaint,05/04/2011,04/17/2011,Police Officer,Steven G,Parham,Respectful Treatment,Unfounded,,0.0,,Steven,G,2011,Steven G Parham,10440
+249,IAD2011-0225,Citizen complaint,05/05/2011,04/16/2011,Detective,Robert M,Tully,Respectful Treatment,Not Sustained,,,,Robert,M,2011,Robert M Tully,7366
+250,IAD2011-0226,Citizen complaint,05/05/2011,05/17/2008,Police Officer,Jeffrey W,Lynch,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Jeffrey,W,2011,Jeffrey W Lynch,102405
+252,IAD2011-0226,Citizen complaint,05/05/2011,05/17/2008,Sergeant,John P,Doris,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,John,P,2011,John P Doris,8688
+254,IAD2011-0231,Citizen complaint,05/06/2011,04/18/2011,Police Officer,Karen M,Tognarelli,Respectful Treatment,Not Sustained,,,,Karen,M,2011,Karen M Tognarelli,10091
+260,IAD2011-0234,Citizen complaint,05/06/2011,05/05/2011,Police Officer,Elizabeth Susan,Philbin,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Elizabeth,Susan,2011,Elizabeth Susan Philbin,10124
+268,IAD2011-0243,Citizen complaint,05/16/2011,03/24/2011,Lieutenant,Therese M,Kozmiski,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Therese,M,2011,Therese M Kozmiski,11707
+274,IAD2011-0250,Citizen complaint,05/17/2011,05/14/2011,Police Officer,Agnaldo P,Monteiro,Neg.Duty/Unreasonable Judge,Unfounded,,,,Agnaldo,P,2011,Agnaldo P Monteiro,57121
+279,IAD2011-0251,Citizen complaint,05/17/2011,05/10/2009,Police Officer,Robert H,Connolly,Examination for Visible Injuries,Not Sustained,,0.0,,Robert,H,2011,Robert H Connolly,8679
+280,IAD2011-0252,Internal investigation,05/17/2011,05/06/2011,Sergeant Detective,Brian E,Riley,Reporting for Duty,Sustained,Suspension,1.0,05/17/2011,Brian,E,2011,Brian E Riley,8773
+281,IAD2011-0253,Citizen complaint,05/18/2011,02/23/2011,Police Officer,Jesse E,Goff,Neg.Duty/Unreasonable Judge Bias,Unfounded,,0.0,,Jesse,E,2011,Jesse E Goff,11690
+287,IAD2011-0258,Citizen complaint,05/20/2011,05/01/2011,Police Officer,Willie B,Lyons,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,0.0,05/29/2012,Willie,B,2011,Willie B Lyons,10072
+289,IAD2011-0261,Citizen complaint,05/24/2011,05/20/2011,Police Officer,Joseph M,Miskel,Respectful Treatment,Not Sustained,,,,Joseph,M,2011,Joseph M Miskel,10078
+290,IAD2011-0262,Citizen complaint,05/24/2011,05/24/2011,Police Officer,Cleveland A,Burwell,Respectful Treatment,Not Sustained,,,,Cleveland,A,2011,Cleveland A Burwell,9557
+291,IAD2011-0264,Citizen complaint,05/25/2011,05/12/2011,Police Officer,Wayne Emory,Hester,Respectful Treatment,Not Sustained,,0.0,,Wayne,Emory,2011,Wayne Emory Hester,11322
+304,IAD2011-0268,Citizen complaint,05/26/2011,05/22/2011,Sergeant Detective,John J,Fitzgerald,Respectful Treatment,Unfounded,,0.0,,John,J,2011,John J Fitzgerald,11683
+311,IAD2011-0272,Citizen complaint,06/01/2011,,Police Officer,James D,Scopa,Use of Force,Exonerated,,0.0,,James,D,2011,James D Scopa,71434
+314,IAD2011-0276,Citizen complaint,06/04/2011,05/31/2011,Police Officer,Matthew K,Carey,Collection & Identification of Physical Evidence,Not Sustained,Oral Reprimand,0.0,09/05/2012,Matthew,K,2011,Matthew K Carey,76078
+315,IAD2011-0276,Citizen complaint,06/04/2011,05/31/2011,Police Officer,Kelvin M,Ervin,Collection & Identification of Physical Evidence,Sustained,,0.0,,Kelvin,M,2011,Kelvin M Ervin,76156
+319,IAD2011-0281,Citizen complaint,06/08/2011,06/04/2011,Lieutenantenant,Steven M,Ciccolo,Respectful Treatment,Not Sustained,,0.0,,Steven,M,2011,Steven M Ciccolo,9266
+322,IAD2011-0282,Citizen complaint,06/08/2011,05/26/2011,Police Officer,Daniel A,Long,Respectful Treatment,Not Sustained,,,,Daniel,A,2011,Daniel A Long,10557
+331,IAD2011-0287,Citizen complaint,06/10/2011,,Police Officer,Ann Marie,Barrett,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Ann,Marie,2011,Ann Marie Barrett,11668
+333,IAD2011-0288,Citizen complaint,06/10/2011,,Sergeant,Joseph A,Gallarelli,Use of Force,Exonerated,,0.0,,Joseph,A,2011,Joseph A Gallarelli,10537
+336,IAD2011-0289,Citizen complaint,06/10/2011,,Sergeant,Martin B,Kraft,Neg.Duty/Unreasonable Judge,Not Sustained,,,,Martin,B,2011,Martin B Kraft,8865
+337,IAD2011-0290,Citizen complaint,06/13/2011,06/10/2010,Police Officer,Alvin S,Holder,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Alvin,S,2011,Alvin S Holder,12125
+340,IAD2011-0292,Internal investigation,06/14/2011,,Police Officer,Stephen R,Landrum,Reporting for Duty,Sustained,Suspension,1.0,06/14/2011,Stephen,R,2011,Stephen R Landrum,8727
+344,IAD2011-0303,Citizen complaint,06/22/2011,06/20/2011,Sergeant,John P,Wright,Respectful Treatment,Unfounded,,0.0,,John,P,2011,John P Wright,10746
+353,IAD2011-0310,Citizen complaint,06/28/2011,,Sergeant,Brian K,Latson,Respectful Treatment,Not Sustained,,,,Brian,K,2011,Brian K Latson,9369
+360,IAD2011-0314,Citizen complaint,07/01/2011,06/18/2011,Police Officer,Darryn L,Brown,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Darryn,L,2011,Darryn L Brown,11294
+362,IAD2011-0315,Citizen complaint,07/01/2011,06/30/2011,Sergeant,John M,Johnson,Respectful Treatment,Exonerated,,0.0,,John,M,2011,John M Johnson,9757
+364,IAD2011-0316,Citizen complaint,07/01/2011,01/16/2008,Police Officer,Mark C,Hennessy,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Mark,C,2011,Mark C Hennessy,10410
+366,IAD2011-0316,Citizen complaint,07/01/2011,01/16/2008,Police Officer,Anthony L,Dantona,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Anthony,L,2011,Anthony L Dantona,10255
+370,IAD2011-0318,Citizen complaint,07/05/2011,07/05/2011,Police Officer,Patrick J,McDonough,Use of Force,Not Sustained,,0.0,,Patrick,J,2011,Patrick J McDonough,11951
+375,IAD2011-0321,Citizen complaint,07/05/2011,07/05/2011,Sergeant,James B,Conley,Abuse of Discretion,Exonerated,,0.0,,James,B,2011,James B Conley,74877
+384,IAD2011-0324,Citizen complaint,07/12/2011,07/11/2011,Police Officer,Kenneth R,Reid,Respectful Treatment,Not Sustained,,0.0,,Kenneth,R,2011,Kenneth R Reid,11123
+389,IAD2011-0330,Citizen complaint,07/20/2011,07/05/2011,Police Officer,Ronald P,Curtis,Conduct Unbecoming,Not Sustained,,,,Ronald,P,2011,Ronald P Curtis,10523
+390,IAD2011-0331,Citizen complaint,07/22/2011,07/20/2011,Police Officer,Lance R,Norwood,Respectful Treatment,Not Sustained,,,,Lance,R,2011,Lance R Norwood,52218
+394,IAD2011-0334,Internal investigation,07/24/2011,07/24/2011,Sergeant Detective,Daniel M,Keeler,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,0.0,08/07/2012,Daniel,M,2011,Daniel M Keeler,8220
+402,IAD2011-0341,Citizen complaint,07/29/2011,07/26/2011,Detective,Ellis E,Thornton,Respectful Treatment,Unfounded,,,,Ellis,E,2011,Ellis E Thornton,8236
+403,IAD2011-0343,Citizen complaint,08/01/2011,07/22/2011,Police Officer,Jeffrey Maurice,Worthy,Respectful Treatment,Not Sustained,Suspension,1.0,08/16/2012,Jeffrey,Maurice,2011,Jeffrey Maurice Worthy,7481
+407,IAD2011-0344,Citizen complaint,08/01/2011,07/29/2011,Police Officer,Kurt J,Stokinger,Use of Force,Exonerated,,0.0,,Kurt,J,2011,Kurt J Stokinger,102342
+414,IAD2011-0345,Citizen complaint,08/01/2011,07/18/2011,Police Officer,Tyrone E,Smith,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Tyrone,E,2011,Tyrone E Smith,11956
+417,IAD2011-0347,Citizen complaint,08/03/2011,07/30/2011,Sergeant,Joseph R,Horton,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Joseph,R,2011,Joseph R Horton,9755
+421,IAD2011-0350,Citizen complaint,08/03/2011,11/17/2007,Police Officer,Patrick Edward,Byrne,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Patrick,Edward,2011,Patrick Edward Byrne,95168
+422,IAD2011-0351,Citizen complaint,08/03/2011,08/02/2011,Police Officer,Edward J,Boylan,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Edward,J,2011,Edward J Boylan,11395
+423,IAD2011-0351,Citizen complaint,08/03/2011,08/02/2011,Police Officer,Caetano A,Teixeira,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Caetano,A,2011,Caetano A Teixeira,11465
+430,IAD2011-0356,Citizen complaint,08/05/2011,,Sergeant,Thomas F,Rose,Respectful Treatment,Unfounded,,0.0,,Thomas,F,2011,Thomas F Rose,12138
+433,IAD2011-0356,Citizen complaint,08/05/2011,,Police Officer,Frederick M,Mendes,Respectful Treatment,Not Sustained,,0.0,,Frederick,M,2011,Frederick M Mendes,10568
+438,IAD2011-0362,Citizen complaint,08/08/2011,08/04/2011,Police Officer,Brigido Orlando,Leon,BIAS-Free Policing Policy,Unfounded,,0.0,,Brigido,Orlando,2011,Brigido Orlando Leon,72751
+440,IAD2011-0362,Citizen complaint,08/08/2011,08/04/2011,Police Officer,Henry J,Doherty,Use of Force (2 counts),Not Sustained,,0.0,,Henry,J,2011,Henry J Doherty,9726
+441,IAD2011-0366,Citizen complaint,08/10/2011,08/01/2011,Sergeant,Thomas C,Brooks,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Thomas,C,2011,Thomas C Brooks,86201
+442,IAD2011-0366,Citizen complaint,08/10/2011,08/01/2011,Detective,Bruce W,Higgins,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Bruce,W,2011,Bruce W Higgins,12204
+446,IAD2011-0366,Citizen complaint,08/10/2011,08/01/2011,Detective,Robert A,Griffin,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Robert,A,2011,Robert A Griffin,11693
+452,IAD2011-0366,Citizen complaint,08/10/2011,08/01/2011,Sergeant,Daryle Patrick,Dwan,Self Identification,Unfounded,,0.0,,Daryle,Patrick,2011,Daryle Patrick Dwan,11521
+458,IAD2011-0387,Citizen complaint,08/18/2011,08/17/2011,Police Officer,Jason C,Reid,Conduct Unbecoming,Not Sustained,,0.0,,Jason,C,2011,Jason C Reid,10582
+462,IAD2011-0388,Citizen complaint,08/19/2011,03/05/2011,Police Officer,Paul William,Sheehan,Use of Force,Exonerated,,0.0,,Paul,William,2011,Paul William Sheehan,108893
+468,IAD2011-0403,Citizen complaint,08/24/2011,05/31/2011,Sergeant Detective,Kevin T,Power,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Kevin,T,2011,Kevin T Power,9035
+469,IAD2011-0403,Citizen complaint,08/24/2011,05/31/2011,Police Officer,Jorge M,Dias,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Jorge,M,2011,Jorge M Dias,11308
+470,IAD2011-0405,Citizen complaint,08/24/2011,08/10/2011,Police Officer,Craig A,Wozniak,Respectful Treatment,Not Sustained,,,,Craig,A,2011,Craig A Wozniak,86206
+471,IAD2011-0408,Citizen complaint,08/25/2011,07/07/2009,Police Officer,Christopher Mark,Keaney,Use of Force,Exonerated,,0.0,,Christopher,Mark,2011,Christopher Mark Keaney,52286
+475,IAD2011-0409,Citizen complaint,08/25/2011,08/23/2011,Detective,Terrance V,O'Toole,Use of Force,Not Sustained,Oral Reprimand,0.0,09/07/2012,Terrance,V,2011,Terrance V O'Toole,10298
+478,IAD2011-0409,Citizen complaint,08/25/2011,08/23/2011,Police Officer,Keith P,Kaplan,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,0.0,09/07/2012,Keith,P,2011,Keith P Kaplan,51476
+482,IAD2011-0411,Citizen complaint,08/26/2011,08/26/2011,Police Officer,Craig D,Jones,Use of Force,Not Sustained,,,,Craig,D,2011,Craig D Jones,9758
+484,IAD2011-0415,Citizen complaint,09/02/2011,08/02/2011,Sergeant Detective,Isaac L,Thomas,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Isaac,L,2011,Isaac L Thomas,9304
+488,IAD2011-0419,Citizen complaint,09/06/2011,08/17/2011,Police Officer,Yves L,Orne,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Yves,L,2011,Yves L Orne,10083
+494,IAD2011-0420,Citizen complaint,09/07/2011,09/07/2011,Police Officer,Stephen E,Puopolo,F.I.O Reports,Unfounded,,0.0,,Stephen,E,2011,Stephen E Puopolo,108895
+496,IAD2011-0421,Citizen complaint,09/09/2011,09/06/2011,Police Officer,Edward J,Fleming,Respectful Treatment,Not Sustained,,,,Edward,J,2011,Edward J Fleming,11106
+499,IAD2011-0426,Citizen complaint,09/13/2011,08/21/2011,Detective,Andrew J,Gambon,Respectful Treatment,Sustained,Retired,0.0,03/22/2019,Andrew,J,2011,Andrew J Gambon,8262
+501,IAD2011-0427,Internal investigation,09/13/2011,11/17/2009,Police Officer,Lorenzo I,Woodley,Neg.Duty/Unreasonable Judge,Sustained,Suspension/Settlement Agreement,1.0,02/10/2013,Lorenzo,I,2011,Lorenzo I Woodley,10453
+502,IAD2011-0428,Citizen complaint,09/14/2011,09/14/2011,Police Officer,Richard E,Davis,Respectful Treatment,Sustained,Suspension,1.0,09/05/2012,Richard,E,2011,Richard E Davis,12112
+503,IAD2011-0429,Internal investigation,09/14/2011,,Sergeant,James F,Meredith,Respectful Treatment,Not Sustained,,,,James,F,2011,James F Meredith,10727
+505,IAD2011-0437,Internal investigation,09/15/2011,,Police Officer,Mark A,Clark,Directives/Orders,Sustained,Suspension,3.0,10/14/2011,Mark,A,2011,Mark A Clark,10706
+518,IAD2011-0442,Internal investigation,09/16/2011,09/10/2011,Detective,Richard E,Henshaw,Directives/Orders,Sustained,Suspension,1.0,09/16/2011,Richard,E,2011,Richard E Henshaw,8719
+542,IAD2011-0455,Citizen complaint,09/29/2011,08/16/2011,Police Officer,Steven L,Horne,Conformance to Laws,Unfounded,,0.0,,Steven,L,2011,Steven L Horne,11611
+558,IAD2011-0464,Citizen complaint,10/06/2011,10/06/2011,Police Officer,Michael V,Calabro,Use of Force,Exonerated,,0.0,,Michael,V,2011,Michael V Calabro,10047
+559,IAD2011-0464,Citizen complaint,10/06/2011,10/06/2011,Police Officer,Timothy Joseph,Duggan,Use of Force,Exonerated,,0.0,,Timothy,Joseph,2011,Timothy Joseph Duggan,51224
+561,IAD2011-0465,Citizen complaint,10/07/2011,10/06/2011,Police Officer,Andrew L,Johnson,Respectful Treatment,Unfounded,,,,Andrew,L,2011,Andrew L Johnson,86170
+566,IAD2011-0472,Citizen complaint,10/12/2011,10/11/2011,Police Officer,Matthew J,Morris,Respectful Treatment,Sustained,Retired,0.0,04/09/2021,Matthew,J,2011,Matthew J Morris,12236
+572,IAD2011-0473,Citizen complaint,10/12/2011,10/11/2011,Police Officer,James D,Hawkins,Neg.Duty/Unreasonable Judge,Exonerated,,,,James,D,2011,James D Hawkins,8010
+573,IAD2011-0474,Citizen complaint,10/12/2011,09/07/2011,Police Officer,Michael D,Rideout,Respectful Treatment,Not Sustained,,,,Michael,D,2011,Michael D Rideout,10085
+579,IAD2011-0481,Citizen complaint,10/14/2011,08/12/2011,Detective,Michael M,Primm,Neg.Duty/Unreasonable Judge,Unfounded,,,,Michael,M,2011,Michael M Primm,8228
+580,IAD2011-0482,Citizen complaint,10/14/2011,09/15/2010,Detective,Joseph S,King,Respectful Treatment,Unfounded,,,,Joseph,S,2011,Joseph S King,11057
+581,IAD2011-0484,Citizen complaint,10/18/2011,09/02/2010,Police Officer,Brian J,Linehan,Conformance to Laws,Unfounded,,0.0,,Brian,J,2011,Brian J Linehan,12208
+583,IAD2011-0484,Citizen complaint,10/18/2011,09/02/2010,Police Officer,Brian C,Mahoney,Conformance to Laws,Unfounded,,0.0,,Brian,C,2011,Brian C Mahoney,10801
+584,IAD2011-0484,Citizen complaint,10/18/2011,09/02/2010,Sergeant,John J,Dineen,Conformance to Laws,Unfounded,,0.0,,John,J,2011,John J Dineen,11202
+587,IAD2011-0484,Citizen complaint,10/18/2011,09/02/2010,Sergeant Detective,Andrew G,Garvey,Conformance to Laws,Unfounded,,0.0,,Andrew,G,2011,Andrew G Garvey,9736
+590,IAD2011-0484,Citizen complaint,10/18/2011,09/02/2010,Sergeant Detective,William J,Dwan,Conformance to Laws,Unfounded,,0.0,,William,J,2011,William J Dwan,10060
+598,IAD2011-0495,Citizen complaint,10/24/2011,09/08/2011,Detective,Donald P,Stone,Respectful Treatment,Not Sustained,,0.0,,Donald,P,2011,Donald P Stone,8975
+600,IAD2011-0496,Citizen complaint,10/24/2011,09/02/2011,Police Officer,Kevin E,Griffiths,Department Reports-Inacurrate Reporting,Unfounded,,,,Kevin,E,2011,Kevin E Griffiths,10408
+601,IAD2011-0497,Citizen complaint,10/25/2011,10/21/2011,Police Officer,Donroy G,Grant,Conformance to Laws,Not Sustained,,0.0,,Donroy,G,2011,Donroy G Grant,96545
+610,IAD2011-0509,Internal investigation,10/31/2011,10/25/2011,Sergeant,James V,Giardina,Respectful Treatment,Not Sustained,,0.0,,James,V,2011,James V Giardina,6903
+621,IAD2011-0513,Citizen complaint,11/02/2011,11/18/2009,Sergeant,James A,Moore,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,James,A,2011,James A Moore,10845
+625,IAD2011-0518,Citizen complaint,11/04/2011,11/04/2011,Police Officer,Scott R,Roby,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Scott,R,2011,Scott R Roby,11452
+645,IAD2011-0525,Citizen complaint,11/11/2011,11/03/2011,Police Officer,Michael P,Pankievich,Neg.Duty/Unreasonable Judge,Exonerated,,,,Michael,P,2011,Michael P Pankievich,11262
+646,IAD2011-0528,Citizen complaint,11/14/2011,10/09/2011,Detective,Jerome A,Hall-Brewster,Neg.Duty/Unreasonable Judge,Sustained,Demotion,,05/03/2013,Jerome,A,2011,Jerome A Hall-Brewster,11317
+647,IAD2011-0529,Citizen complaint,11/15/2011,10/23/2011,Police Officer,Earl G,Jacob,Neg.Duty/Unreasonable Judge (2 counts),Exonerated,,0.0,,Earl,G,2011,Earl G Jacob,11699
+650,IAD2011-0530,Citizen complaint,11/15/2011,06/16/2011,Police Officer,Roderick L,Lewis,Police Service,Unfounded,,0.0,,Roderick,L,2011,Roderick L Lewis,95802
+651,IAD2011-0530,Citizen complaint,11/15/2011,06/16/2011,Police Officer,Carlos A,Martinez,Police Service,Unfounded,,0.0,,Carlos,A,2011,Carlos A Martinez,11629
+653,IAD2011-0532,Citizen complaint,11/17/2011,05/18/2011,Police Officer,Raymundo E,Melo,Traffic Enforcement,Exonerated,,,,Raymundo,E,2011,Raymundo E Melo,11433
+655,IAD2011-0534,Citizen complaint,11/21/2011,11/10/2011,Police Officer,Robert M,Lundbohm,Use of Force,Not Sustained,,0.0,,Robert,M,2011,Robert M Lundbohm,75659
+661,IAD2011-0536,Citizen complaint,11/22/2011,11/22/2011,Detective,Paul J,Bercume,Use of Force,Not Sustained,,0.0,,Paul,J,2011,Paul J Bercume,11393
+670,IAD2011-0538,Internal investigation,11/25/2011,02/03/2011,Police Officer,Dana S,Barrett,Neg.Duty/Unreasonable Judge,Not Sustained,Suspension/Settlement Agreement,1.0,07/03/2012,Dana,S,2011,Dana S Barrett,56516
+676,IAD2011-0538,Internal investigation,11/25/2011,02/03/2011,Police Officer,Sean F,Deery,Courts (3 counts),Sustained,Suspension held in abeyance,20.0,07/03/2012,Sean,F,2011,Sean F Deery,11597
+691,IAD2011-0538,Internal investigation,11/25/2011,02/03/2011,Sergeant Detective,William J,Robertson,Directives/Orders,Sustained,Retired with Charges Pending,0.0,04/07/2012,William,J,2011,William J Robertson,1223
+709,IAD2011-0541,Internal investigation,12/01/2011,02/10/2011,Superintendent,Daniel P,Linskey,Abuse of Process,Unfounded,,0.0,,Daniel,P,2011,Daniel P Linskey,9764
+716,IAD2011-0543,Citizen complaint,12/02/2011,12/02/2011,Police Officer,Henderson O,Parker,Situations Involving Family & Frien,Sustained,,0.0,,Henderson,O,2011,Henderson O Parker,11047
+734,IAD2011-0548,Citizen complaint,12/05/2011,,Police Officer,Patrick W,Wood,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,0.0,03/10/2016,Patrick,W,2011,Patrick W Wood,11749
+735,IAD2011-0550,Internal investigation,12/06/2011,12/06/2011,Police Officer,Cornell G,Paterson,Conformance to Laws,Sustained,Oral Reprimand,0.0,12/10/2012,Cornell,G,2011,Cornell G Paterson,10575
+743,IAD2011-0552,Citizen complaint,12/12/2011,06/05/2011,Police Officer,Mario R,Lozano,Use of Force,Exonerated,,0.0,,Mario,R,2011,Mario R Lozano,8729
+745,IAD2011-0552,Citizen complaint,12/12/2011,06/05/2011,Police Officer,Davey Kenneth,Stephens,Use of Force,Exonerated,,0.0,,Davey,Kenneth,2011,Davey Kenneth Stephens,10145
+747,IAD2011-0552,Citizen complaint,12/12/2011,06/05/2011,Sergeant,Robert J,Donaruma,Use of Force,Exonerated,,0.0,,Robert,J,2011,Robert J Donaruma,11171
+749,IAD2011-0553,Internal investigation,12/12/2011,12/11/2011,Detective,Robert M,Zingg,Conduct Unbecoming,Sustained,Counselling,,03/21/2019,Robert,M,2011,Robert M Zingg,10750
+754,IAD2011-0555,Citizen complaint,12/14/2011,12/11/2011,Police Officer,David A,Holleran,Use of Force,Exonerated,,0.0,,David,A,2011,David A Holleran,8692
+756,IAD2011-0557,Citizen complaint,12/19/2011,,Police Officer,Michael John,Boulger,Use of Force,Not Sustained,,,,Michael,John,2011,Michael John Boulger,11819
+765,IAD2011-0560,Citizen complaint,02/14/2011,12/15/2010,Captain,Paul B,O'Connor,Respectful Treatment,Withdrawn,,,,Paul,B,2011,Paul B O'Connor,8364
+766,IAD2011-0561,Citizen complaint,02/10/2011,,Police Officer,William R,Hubbard,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,William,R,2011,William R Hubbard,90499
+770,IAD2011-0561,Citizen complaint,02/10/2011,,Police Officer,Robert P,Colburn,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Robert,P,2011,Robert P Colburn,9007
+772,IAD2011-0561,Citizen complaint,02/10/2011,,Detective,Donald O,Caisey,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Donald,O,2011,Donald O Caisey,10391
+778,IAD2011-0563,Citizen complaint,03/11/2011,,Police Officer,Roseann A,Atkins-Tyler,Vehicle Surveillance Procedures,Unfounded,,0.0,,Roseann,A,2011,Roseann A Atkins-Tyler,10740
+780,IAD2011-0563,Citizen complaint,03/11/2011,,Police Officer,Molwyn A,Shaw,Vehicle Surveillance Procedures,Unfounded,,0.0,,Molwyn,A,2011,Molwyn A Shaw,11459
+783,IAD2011-0564,Citizen complaint,03/15/2011,12/12/2008,Police Officer,Gerald L,Cofield,Use of Force,Not Sustained,,,,Gerald,L,2011,Gerald L Cofield,8711
+784,IAD2011-0565,Citizen complaint,03/17/2011,04/19/2010,Police Officer,Joseph M,Narduzzo,Use of Force,Filed,,0.0,,Joseph,M,2011,Joseph M Narduzzo,99877
+789,IAD2011-0566,Citizen complaint,03/31/2011,,Police Officer,Dana C,Lamb,Use of Force,Exonerated,,0.0,,Dana,C,2011,Dana C Lamb,9980
+797,IAD2011-0568,Citizen complaint,10/27/2011,,Police Officer,Christopher P,Adams,Use of Force,Exonerated,,0.0,,Christopher,P,2011,Christopher P Adams,50576
+802,IAD2011-0571,Citizen complaint,05/24/2011,10/01/2010,Police Officer,Darnell V,Toomer,Use of Force,Not Sustained,,,,Darnell,V,2011,Darnell V Toomer,11186
+805,IAD2011-0573,Citizen complaint,02/14/2011,,Sergeant Detective,Steven G,Downs,Respectful Treatment,Unfounded,,,,Steven,G,2011,Steven G Downs,8714
+813,IAD2011-0577,Citizen complaint,07/01/2011,08/26/2009,Police Officer,Shawn P,Marando,Use of Force,Exonerated,,0.0,,Shawn,P,2011,Shawn P Marando,12130
+814,IAD2011-0577,Citizen complaint,07/01/2011,08/26/2009,Police Officer,Lysander E,Wright,Use of Force,Unfounded,,0.0,,Lysander,E,2011,Lysander E Wright,10608
+818,IAD2011-0580,Citizen complaint,08/17/2011,04/29/2010,Sergeant Detective,Paul R,Donovan,Respectful Treatment,Unfounded,,0.0,,Paul,R,2011,Paul R Donovan,8949
+824,IAD2011-0581,Citizen complaint,08/18/2011,08/15/2010,Police Officer,Christopher J,Curtin,Use of Force,Not Sustained,,0.0,,Christopher,J,2011,Christopher J Curtin,11941
+825,IAD2011-0581,Citizen complaint,08/18/2011,08/15/2010,Police Officer,Richard H,Fitzpatrick,Use of Force,Not Sustained,,0.0,,Richard,H,2011,Richard H Fitzpatrick,11410
+833,IAD2011-0589,Citizen complaint,12/15/2011,11/24/2011,Police Officer,Otis C,Harewood,Use of Force,Unfounded,,0.0,,Otis,C,2011,Otis C Harewood,11248
+835,IAD2011-0591,Citizen complaint,12/22/2011,11/30/2011,Police Officer,Walter R,Reed,Respectful Treatment,Not Sustained,,0.0,,Walter,R,2011,Walter R Reed,7469
+836,IAD2011-0591,Citizen complaint,12/22/2011,11/30/2011,Police Officer,Brian J,Doherty,Respectful Treatment,Not Sustained,,0.0,,Brian,J,2011,Brian J Doherty,10258
+841,IAD2011-0595,Internal investigation,12/28/2011,12/15/2011,Police Officer,Michael Patrick,Stewart,Reporting for Duty,Sustained,Suspension,1.0,12/29/2011,Michael,Patrick,2011,Michael Patrick Stewart,9801
+848,IAD2011-0597,Citizen complaint,12/28/2011,10/06/2011,Police Officer,Daniel J,Adams,Respectful Treatment,Not Sustained,,0.0,,Daniel,J,2011,Daniel J Adams,11575
+853,IAD2011-0600,Citizen complaint,02/25/2011,,Sergeant Detective,Bruce E,Smith,Untruthfulness,Not Sustained,,,,Bruce,E,2011,Bruce E Smith,10591
+854,IAD2011-0604,Citizen complaint,12/31/2011,04/18/2006,Police Officer,Sheldon T,Morgan,Untruthfulness,Unfounded,,0.0,,Sheldon,T,2011,Sheldon T Morgan,86217
+857,IAD2011-0604,Citizen complaint,12/31/2011,04/18/2006,Lieutenant,James P,Leary,Untruthfulness,Unfounded,,0.0,,James,P,2011,James P Leary,1317
+870,IAD2012-0002,Citizen complaint,01/08/2012,01/07/2012,Police Officer,Brian J,Lydon,Respectful Treatment,Not Sustained,,0.0,,Brian,J,2012,Brian J Lydon,10280
+872,IAD2012-0002,Citizen complaint,01/08/2012,01/07/2012,Police Officer,Jason M,Ezekiel,Respectful Treatment,Not Sustained,,0.0,,Jason,M,2012,Jason M Ezekiel,11817
+881,IAD2012-0006,Citizen complaint,01/10/2012,12/19/2011,Police Officer,Korey L,Franklin,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Korey,L,2012,Korey L Franklin,102951
+883,IAD2012-0008,Citizen complaint,01/16/2012,01/20/2011,Police Officer,Samil T,Silta,Respectful Treatment,Not Sustained,Oral Reprimand,0.0,07/03/2013,Samil,T,2012,Samil T Silta,11461
+886,IAD2012-0008,Citizen complaint,01/16/2012,01/20/2011,Police Officer,John C,Ho,Neg.Duty/Unreasonable Judge,Not Sustained,Oral Reprimand,0.0,07/03/2013,John,C,2012,John C Ho,50998
+890,IAD2012-0008,Citizen complaint,01/16/2012,01/20/2011,Police Officer,William L,Chen,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,William,L,2012,William L Chen,103741
+899,IAD2012-0014,Citizen complaint,01/18/2012,01/17/2012,Police Officer,Kenneth K,Gee,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Kenneth,K,2012,Kenneth K Gee,10956
+909,IAD2012-0017,Citizen complaint,01/03/2012,11/28/2011,Police Officer,William J,Cullinane,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,William,J,2012,William J Cullinane,8945
+911,IAD2012-0018,Citizen complaint,01/03/2012,01/04/2011,Police Officer,Jose D,Amado,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Jose,D,2012,Jose D Amado,103514
+912,IAD2012-0018,Citizen complaint,01/03/2012,01/04/2011,Police Officer,Mathew N,Blakeslee,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Mathew,N,2012,Mathew N Blakeslee,108885
+914,IAD2012-0018,Citizen complaint,01/03/2012,01/04/2011,Sergeant,Timothy G,Fitzpatrick,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Timothy,G,2012,Timothy G Fitzpatrick,11810
+915,IAD2012-0018,Citizen complaint,01/03/2012,01/04/2011,Sergeant,Edward T,Norton,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Edward,T,2012,Edward T Norton,11833
+924,IAD2012-0028,Citizen complaint,01/11/2012,01/11/2012,Police Officer,Thomas Grimes,Doherty,Respectful Treatment,Not Sustained,,0.0,,Thomas,Grimes,2012,Thomas Grimes Doherty,11821
+926,IAD2012-0028,Citizen complaint,01/11/2012,01/11/2012,Police Officer,Martin O,Velez,Use of Force,Not Sustained,,0.0,,Martin,O,2012,Martin O Velez,11746
+930,IAD2012-0029,Citizen complaint,01/11/2012,01/11/2012,Sergeant,Mark J,Fleming,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Mark,J,2012,Mark J Fleming,8952
+933,IAD2012-0030,Citizen complaint,01/11/2012,01/11/2012,Detective,Greg T,Walsh,Respectful Treatment,Unfounded,,0.0,,Greg,T,2012,Greg T Walsh,11646
+935,IAD2012-0031,Citizen complaint,01/17/2012,01/14/2012,Police Officer,Jon-Michael S,Harber,Use of Force,Not Sustained,,,,Jon-Michael,S,2012,Jon-Michael S Harber,11129
+936,IAD2012-0033,Internal investigation,01/27/2012,01/09/2012,Police Officer,Clifton W,Singletary,Directives/Orders,Sustained,Suspension,1.0,01/27/2012,Clifton,W,2012,Clifton W Singletary,10088
+944,IAD2012-0042,Internal investigation,02/01/2012,01/09/2012,Police Officer,Stephen M,O'Neil,Discontinuance of Pursuit,Sustained,Suspension,1.0,02/15/2012,Stephen,M,2012,Stephen M O'Neil,103567
+945,IAD2012-0043,Citizen complaint,02/02/2012,11/17/2011,Police Officer,John D,Teixeira,Respectful Treatment,Not Sustained,,0.0,,John,D,2012,John D Teixeira,11959
+949,IAD2012-0051,Citizen complaint,02/06/2012,02/04/2012,Police Officer,Terrique E,Chambers,Use of Force,Not Sustained,,0.0,,Terrique,E,2012,Terrique E Chambers,102331
+952,IAD2012-0053,Citizen complaint,02/03/2012,02/03/2012,Police Officer,John Fredrick,Horan,Respectful Treatment,Not Sustained,,,,John,Fredrick,2012,John Fredrick Horan,50297
+953,IAD2012-0054,Citizen complaint,02/07/2012,,Detective,Carmen N,Rodriguez,Respectful Treatment,Not Sustained,,,,Carmen,N,2012,Carmen N Rodriguez,8326
+955,IAD2012-0056,Citizen complaint,02/08/2012,06/06/2010,Detective,Michael P,Harper,Neg.Duty/Unreasonable Judge,Sustained,Written Reprimand/Settlement Agreement,,12/21/2012,Michael,P,2012,Michael P Harper,8676
+957,IAD2012-0059,Citizen complaint,02/09/2012,03/09/2009,Sergeant,John F,Puglia,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,John,F,2012,John F Puglia,11385
+958,IAD2012-0059,Citizen complaint,02/09/2012,03/09/2009,Sergeant Detective,William J,Feeney,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,William,J,2012,William J Feeney,10259
+962,IAD2012-0066,Citizen complaint,02/14/2012,,Detective,Jean Moise,Acloque,Patrol Officer Duties,Exonerated,,0.0,,Jean,Moise,2012,Jean Moise Acloque,10238
+965,IAD2012-0066,Citizen complaint,02/14/2012,,Police Officer,Daran D,Edwards,Untruthfulness,Unfounded,,0.0,,Daran,D,2012,Daran D Edwards,80419
+970,IAD2012-0067,Internal investigation,02/14/2012,,Sergeant Detective,Stephen P,Romano,DS Responsible for Paraphernalia Stored within Drug Storage Safe,Sustained,Oral Reprimand,0.0,02/01/2023,Stephen,P,2012,Stephen P Romano,11733
+976,IAD2012-0075,Citizen complaint,02/27/2012,02/23/2012,Police Officer,Ethan C,Cole,Neg.Duty/Unreasonable Judge,Not Sustained,,,,Ethan,C,2012,Ethan C Cole,102413
+988,IAD2012-0089,Citizen complaint,03/02/2012,03/02/2012,Detective,William J,Kelley,Conformance to Laws,Not Sustained,,,,William,J,2012,William J Kelley,11619
+989,IAD2012-0090,Internal investigation,03/05/2012,03/03/2012,Police Officer,Joseph M,Collins,Conformance to Laws (2 counts),Not Sustained,,0.0,,Joseph,M,2012,Joseph M Collins,11242
+1017,IAD2012-0103,Citizen complaint,03/19/2012,02/25/2012,Police Officer,Shawn J,Grant,Respectful Treatment,Not Sustained,,0.0,,Shawn,J,2012,Shawn J Grant,11524
+1024,IAD2012-0106,Citizen complaint,03/21/2012,02/04/2012,Police Officer,Charles J,Kelley,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Charles,J,2012,Charles J Kelley,11703
+1027,IAD2012-0106,Citizen complaint,03/21/2012,02/04/2012,Detective,Christopher F,Carroll,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Christopher,F,2012,Christopher F Carroll,11586
+1029,IAD2012-0106,Citizen complaint,03/21/2012,02/04/2012,Sergeant Detective,Edward J,Garvey,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Edward,J,2012,Edward J Garvey,10712
+1040,IAD2012-0109,Citizen complaint,03/21/2012,03/18/2012,Police Officer,Paula F,Pearson,Respectful Treatment,Not Sustained,,,,Paula,F,2012,Paula F Pearson,11352
+1047,IAD2012-0116,Citizen complaint,03/26/2012,03/21/2012,Police Officer,Clarence T,Morris,Conformance to Laws (3 counts),Sustained,Settlement Agreement-6 month suspension,0.0,03/01/2017,Clarence,T,2012,Clarence T Morris,10730
+1079,IAD2012-0131,Citizen complaint,03/31/2012,01/31/2012,Lieutenant Detective,Mark William,Harrington,Abuse of Discretion,Exonerated,,0.0,,Mark,William,2012,Mark William Harrington,8855
+1082,IAD2012-0133,Internal investigation,04/06/2012,03/28/2012,Police Officer,Michael Colin,Doherty,Conformance to Laws,Sustained,Termination,0.0,06/26/2019,Michael,Colin,2012,Michael Colin Doherty,12202
+1090,IAD2012-0137,Internal investigation,04/12/2012,,Police Officer,John P,Mullan,Conduct Unbecoming,Sustained,Oral Reprimand,,10/20/2016,John,P,2012,John P Mullan,7700
+1094,IAD2012-0142,Citizen complaint,04/16/2012,11/07/2011,Police Officer,James M,Stoddard,Neg.Duty/Unreasonable Judge Bias,Unfounded,,0.0,,James,M,2012,James M Stoddard,53987
+1103,IAD2012-0142,Citizen complaint,04/16/2012,11/07/2011,Sergeant Detective,Thomas A,Joyce,Conduct Unbecoming,Unfounded,,0.0,,Thomas,A,2012,Thomas A Joyce,11947
+1125,IAD2012-0145,Citizen complaint,04/17/2012,04/15/2012,Police Officer,Vaden F,Scantlebury,Use of Force,Not Sustained,,,,Vaden,F,2012,Vaden F Scantlebury,10970
+1129,IAD2012-0146,Internal investigation,04/15/2012,04/14/2012,Police Officer,Michael C,Wilson,Neg.Duty/Unreasonable Judge,Not Sustained,Administrative Hearing Decision,0.0,12/23/2013,Michael,C,2012,Michael C Wilson,10745
+1133,IAD2012-0151,Citizen complaint,04/17/2012,04/16/2012,Police Officer,James M.,Thompson,Respectful Treatment,Not Sustained,,,,James,M,2012,James M Thompson,10004
+1137,IAD2012-0154,Citizen complaint,04/06/2012,,Detective,Joseph R,Leeman,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Joseph,R,2012,Joseph R Leeman,9894
+1141,IAD2012-0157,Citizen complaint,04/26/2012,,Sergeant,David S,Gavin,Neg.Duty/Unreasonable Judge,Exonerated,,,,David,S,2012,David S Gavin,11689
+1142,IAD2012-0158,Citizen complaint,04/26/2012,04/25/2012,Police Officer,Matthew J,Kulesza,Respectful Treatment,Exonerated,,0.0,,Matthew,J,2012,Matthew J Kulesza,116906
+1148,IAD2012-0161,Citizen complaint,05/03/2012,05/03/2012,Police Officer,Daniel P,Donahue,Self Identification,Unfounded,,,,Daniel,P,2012,Daniel P Donahue,102346
+1152,IAD2012-0165,Citizen complaint,05/09/2012,05/09/2012,Detective,Ivan A,Bermejo,Conformance to Laws,Not Sustained,,,,Ivan,A,2012,Ivan A Bermejo,11582
+1159,IAD2012-0175,Citizen complaint,05/17/2012,05/09/2012,Police Officer,Patrick S,Flaherty,Respectful Treatment,Exonerated,,,,Patrick,S,2012,Patrick S Flaherty,102959
+1161,IAD2012-0179,Citizen complaint,05/14/2012,05/10/2012,Police Officer,Rhethia Y,Stewart,Respectful Treatment,Not Sustained,,0.0,,Rhethia,Y,2012,Rhethia Y Stewart,8329
+1179,IAD2012-0190,Citizen complaint,05/24/2012,03/23/2012,Police Officer,Thomas Michael,Finn,Neg.Duty/Unreasonable Judge,Exonerated,,,,Thomas,Michael,2012,Thomas Michael Finn,99719
+1192,IAD2012-0191,Internal investigation,05/25/2012,,Detective,Timothy P,Stanton,Courts (2 counts),Sustained,Suspension/Settlement Agreement,3.0,07/16/2012,Timothy,P,2012,Timothy P Stanton,10594
+1202,IAD2012-0191,Internal investigation,05/25/2012,,Police Officer,Michael A,Brown,Neg.Duty/Unreasonable Judge,Sustained,Suspension/Settlement Agreement,1.0,07/16/2012,Michael,A,2012,Michael A Brown,95175
+1205,IAD2012-0193,Citizen complaint,05/30/2012,05/29/2012,Police Officer,Anthony D,Willis,Respectful Treatment,Sustained,Oral Reprimand,,02/26/2013,Anthony,D,2012,Anthony D Willis,10176
+1207,IAD2012-0195,Internal investigation,05/30/2012,03/17/2012,Police Officer,Robert Thomas,Lucas,Reporting for Duty,Sustained,Oral Reprimand,,,Robert,Thomas,2012,Robert Thomas Lucas,10558
+1211,IAD2012-0198,Citizen complaint,06/04/2012,05/27/2012,Police Officer,Paul J,Downey,Use of Force,Not Sustained,,0.0,,Paul,J,2012,Paul J Downey,10162
+1217,IAD2012-0201,Citizen complaint,06/04/2012,03/25/2009,Police Officer,Lawrence A,Calderone,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Lawrence,A,2012,Lawrence A Calderone,10803
+1219,IAD2012-0201,Citizen complaint,06/04/2012,03/25/2009,Police Officer,Jeffrey S,Firnstein,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Jeffrey,S,2012,Jeffrey S Firnstein,102355
+1223,IAD2012-0202,Citizen complaint,05/15/2012,04/17/2012,Police Officer,Stephen P,O'Connell,Use of Force,Exonerated,,0.0,,Stephen,P,2012,Stephen P O'Connell,102668
+1225,IAD2012-0204,Internal investigation,05/22/2012,02/10/2012,Police Officer,Andrell J,Jones,Reporting for Duty,Sustained,Oral Reprimand,,05/23/2012,Andrell,J,2012,Andrell J Jones,11059
+1226,IAD2012-0205,Internal investigation,06/05/2012,03/10/2012,Detective,John J,Gould,Reporting for Duty,Sustained,Oral Reprimand,,,John,J,2012,John J Gould,11691
+1231,IAD2012-0210,Citizen complaint,06/06/2012,05/25/2012,Police Officer,Brian P,Lundy,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,,05/18/2015,Brian,P,2012,Brian P Lundy,12210
+1242,IAD2012-0215,Citizen complaint,06/14/2012,06/11/2012,Police Officer,Ana c,Almeida,Directives/Orders,Sustained,Oral Reprimand,0.0,07/18/2012,Ana,c,2012,Ana c Almeida,86196
+1246,IAD2012-0217,Citizen complaint,06/14/2012,06/09/2012,Detective,Jeffrey C,Cecil,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Jeffrey,C,2012,Jeffrey C Cecil,11297
+1248,IAD2012-0217,Citizen complaint,06/14/2012,06/09/2012,Detective,Kathleen P,Doris,Neg.Duty/Unreasonable Judge Bias,Exonerated,,0.0,,Kathleen,P,2012,Kathleen P Doris,9572
+1250,IAD2012-0219,Citizen complaint,06/19/2012,06/15/2012,Police Officer,Marie A,Miller,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,,07/12/2016,Marie,A,2012,Marie A Miller,11118
+1263,IAD2012-0224,Internal investigation,06/25/2012,06/20/2012,Lieutenant,Fred R,Williams,Respectful Treatment,Sustained,Oral Reprimand,,12/04/2014,Fred,R,2012,Fred R Williams,10133
+1289,IAD2012-0236,Citizen complaint,07/05/2012,06/15/2012,Sergeant,Joseph P,Cintolo,Respectful Treatment,Not Sustained,,,,Joseph,P,2012,Joseph P Cintolo,11169
+1290,IAD2012-0237,Internal investigation,07/06/2012,06/13/2012,Police Officer,Brian D,Cameron,Drug Test,Sustained,Suspension/Settlement Agreement,45.0,07/17/2012,Brian,D,2012,Brian D Cameron,9711
+1292,IAD2012-0239,Citizen complaint,07/10/2012,08/03/2007,Detective,Dante B,Williams,Neg.Duty/Unreasonable Judge,Not Sustained,,,,Dante,B,2012,Dante B Williams,11474
+1296,IAD2012-0243,Citizen complaint,07/11/2012,05/03/2012,Police Officer,Paul E,Delaney,Neg.Duty/Unreasonable Judge,Exonerated,,,,Paul,E,2012,Paul E Delaney,9968
+1297,IAD2012-0244,Citizen complaint,07/11/2012,07/11/2012,Police Officer,Christopher J,Kennefick,Neg.Duty/Unreasonable Judge,Not Sustained,Resigned,0.0,05/06/2014,Christopher,J,2012,Christopher J Kennefick,102406
+1299,IAD2012-0245,Citizen complaint,07/16/2012,07/13/2012,Police Officer,Mary F,Dibella,Conformance to Laws,Unfounded,,,,Mary,F,2012,Mary F Dibella,11732
+1300,IAD2012-0246,Citizen complaint,07/16/2012,,Police Officer,Quion T,Riley,Respectful Treatment,Not Sustained,,,,Quion,T,2012,Quion T Riley,8736
+1303,IAD2012-0247,Citizen complaint,07/13/2012,05/28/2012,Police Officer,Brian R,Delahanty,Respectful Treatment,Not Sustained,,0.0,,Brian,R,2012,Brian R Delahanty,55238
+1322,IAD2012-0254,Citizen complaint,07/23/2012,07/16/2012,Police Officer,Lyndon F,Christian,Respectful Treatment,Not Sustained,,,,Lyndon,F,2012,Lyndon F Christian,11675
+1330,IAD2012-0262,Citizen complaint,07/24/2012,,Police Officer,Lawrence D,Welch,Conduct Unbecoming,Not Sustained,,,,Lawrence,D,2012,Lawrence D Welch,10601
+1333,IAD2012-0266,Citizen complaint,07/27/2012,07/07/2012,Police Officer,Frank G,Williams,Respectful Treatment,Not Sustained,,,,Frank,G,2012,Frank G Williams,10312
+1343,IAD2012-0282,Citizen complaint,08/02/2012,08/01/2012,Police Officer,Timothy Andrew,Brady,Respectful Treatment,Unfounded,,,,Timothy,Andrew,2012,Timothy Andrew Brady,51480
+1347,IAD2012-0288,Citizen complaint,07/30/2012,07/30/2012,Police Officer,William M,Willis,Respectful Treatment,Not Sustained,,0.0,,William,M,2012,William M Willis,9812
+1349,IAD2012-0289,Citizen complaint,08/03/2012,08/03/2012,Sergeant,Larry C,Hobson,Conduct Unbecoming,Not Sustained,,0.0,,Larry,C,2012,Larry C Hobson,7445
+1353,IAD2012-0290,Internal investigation,08/08/2012,07/09/2012,Police Officer,Richard L,Greer,Conformance to Laws,Unfounded,Oral Reprimand,0.0,08/21/2018,Richard,L,2012,Richard L Greer,9017
+1355,IAD2012-0293,Citizen complaint,08/05/2012,08/05/2012,Police Officer,Jarrod A,Gero,Respectful Treatment,Not Sustained,Oral Reprimand,0.0,03/24/2021,Jarrod,A,2012,Jarrod A Gero,53603
+1371,IAD2012-0299,Citizen complaint,08/13/2012,08/12/2012,Superintendent,Bruce A,Holloway,Conformance to Laws,Filed,,,,Bruce,A,2012,Bruce A Holloway,7908
+1375,IAD2012-0304,Citizen complaint,08/19/2012,08/18/2012,Police Officer,Matthew McNeil,Conley,Use of Force,Exonerated,,0.0,,Matthew,McNeil,2012,Matthew McNeil Conley,102955
+1379,IAD2012-0310,Internal investigation,08/08/2012,07/19/2012,Police Officer,Robert C,Young,Safegaurd & Destruction of Drugs,Sustained,Oral Reprimand,,10/25/2018,Robert,C,2012,Robert C Young,10749
+1381,IAD2012-0312,Citizen complaint,08/14/2012,08/14/2012,Police Officer,Edward A,Moquete,Neg.Duty/Unreasonable Judge,Not Sustained,,,,Edward,A,2012,Edward A Moquete,95148
+1383,IAD2012-0314,Citizen complaint,08/22/2012,06/26/2011,Police Officer,Stephen J,Horgan,Conformance to Laws,Exonerated,,0.0,,Stephen,J,2012,Stephen J Horgan,9754
+1392,IAD2012-0323,Internal investigation,08/27/2012,08/22/2012,Police Officer,Roberta C,Craven,Respectful Treatment,Not Sustained,Oral Reprimand,0.0,05/07/2015,Roberta,C,2012,Roberta C Craven,8116
+1408,IAD2012-0332,Citizen complaint,08/31/2012,06/10/2010,Police Officer,Matthew J,Ryan,Conduct Unbecoming,Unfounded,,0.0,,Matthew,J,2012,Matthew J Ryan,76151
+1409,IAD2012-0332,Citizen complaint,08/31/2012,06/10/2010,Police Officer,Anthony F,Lamonica,Conduct Unbecoming,Unfounded,,0.0,,Anthony,F,2012,Anthony F Lamonica,75660
+1422,IAD2012-0343,Citizen complaint,09/12/2012,07/31/2012,Police Officer,John J,Connolly,Conduct Unbecoming,Sustained,Oral Reprimand,,10/16/2012,John,J,2012,John J Connolly,8296
+1429,IAD2012-0350,Citizen complaint,09/17/2012,09/05/2012,Police Officer,Edward L,Roach,Respectful Treatment,Exonerated,,,,Edward,L,2012,Edward L Roach,9997
+1437,IAD2012-0356,Citizen complaint,09/17/2012,09/17/2012,Police Officer,Patrick J,Donovan,Neg.Duty/Unreasonable Judge,Unfounded,,,,Patrick,J,2012,Patrick J Donovan,86147
+1448,IAD2012-0363,Citizen complaint,09/19/2012,09/18/2012,Police Officer,William James,Sullivan,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,William,James,2012,William James Sullivan,11464
+1455,IAD2012-0368,Internal investigation,09/21/2012,09/25/2010,Sergeant,Brian T,Farrell,Manner of Recording Complaints,Sustained,Written Reprimand/Settlement Agreement,,05/17/2013,Brian,T,2012,Brian T Farrell,11522
+1457,IAD2012-0370,Citizen complaint,09/25/2012,09/24/2012,Police Officer,Richard F,Harrington,Respectful Treatment,Sustained,Oral Reprimand,0.0,05/06/2016,Richard,F,2012,Richard F Harrington,8856
+1467,IAD2012-0374,Internal investigation,09/26/2012,09/24/2009,Sergeant,Kenneth J,Gaines,Conformance to Laws,Unfounded,,0.0,,Kenneth,J,2012,Kenneth J Gaines,11312
+1470,IAD2012-0376,Citizen complaint,09/26/2012,09/26/2012,Police Officer,John M,Ridge,Respectful Treatment,Not Sustained,,0.0,,John,M,2012,John M Ridge,12277
+1472,IAD2012-0376,Citizen complaint,09/26/2012,09/26/2012,Police Officer,Melissa A,Lombardo,Respectful Treatment,Not Sustained,,0.0,,Melissa,A,2012,Melissa A Lombardo,116210
+1492,IAD2012-0384,Citizen complaint,10/01/2012,09/29/2012,Police Officer,Kevin J,Toomey,Respectful Treatment,Unfounded,,0.0,,Kevin,J,2012,Kevin J Toomey,116931
+1499,IAD2012-0390,Internal investigation,10/09/2012,10/06/2012,Police Officer,John G,Fitzgerald,Conformance to Laws,Not Sustained,Written Reprimand/Settlement Agreement,0.0,12/15/2015,John,G,2012,John G Fitzgerald,11205
+1501,IAD2012-0391,Internal investigation,10/09/2012,10/04/2012,Police Officer,John T,Bergquist,Respectful Treatment,Sustained,Suspension,1.0,10/25/2012,John,T,2012,John T Bergquist,8691
+1502,IAD2012-0395,Citizen complaint,10/10/2012,07/19/2012,Sergeant,Tomas Coilin,Kearney,Neg.Duty/Unreasonable Judge,Exonerated,,,,Tomas,Coilin,2012,Tomas Coilin Kearney,11617
+1522,IAD2012-0412,Citizen complaint,10/18/2012,10/16/2012,Police Officer,Scott M,Stenstrom,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Scott,M,2012,Scott M Stenstrom,92601
+1546,IAD2012-0421,Citizen complaint,10/26/2012,10/26/2012,Detective,Kenneth C,Dorch,Respectful Treatment,Not Sustained,,,,Kenneth,C,2012,Kenneth C Dorch,8713
+1548,IAD2012-0423,Citizen complaint,10/31/2012,10/31/2012,Police Officer,Alfred A,James,Neg.Duty/Unreasonable Judge,Exonerated,,,,Alfred,A,2012,Alfred A James,10960
+1550,IAD2012-0425,Citizen complaint,11/01/2012,10/27/2012,Police Officer,Joseph R,Dominguez,Use of Force,Not Sustained,,,,Joseph,R,2012,Joseph R Dominguez,11519
+1553,IAD2012-0428,Citizen complaint,11/01/2012,11/01/2012,Detective,David J,Edwards,Respectful Treatment,Unfounded,,,,David,J,2012,David J Edwards,12259
+1569,IAD2012-0438,Citizen complaint,11/15/2012,11/15/2012,Police Officer,Gary J,Adams,Respectful Treatment,Unfounded,,,,Gary,J,2012,Gary J Adams,8764
+1570,IAD2012-0439,Citizen complaint,11/15/2012,11/15/2012,Police Officer,Hugo R,Alvarez,Neg.Duty/Unreasonable Judge,Unfounded,,,,Hugo,R,2012,Hugo R Alvarez,11286
+1573,IAD2012-0442,Citizen complaint,11/06/2012,,Lieutenant,Michael C,O'Hara,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,,06/17/2019,Michael,C,2012,Michael C O'Hara,8269
+1605,IAD2012-0454,Citizen complaint,11/23/2012,11/22/2012,Police Officer,Ricky M,Rabb,Neg.Duty/Unreasonable Judge,Unfounded,,,,Ricky,M,2012,Ricky M Rabb,9996
+1610,IAD2012-0458,Internal investigation,11/28/2012,08/15/2012,Captain,John Edward,Kervin,Rape Shield Consideration in Official Police Reports,Sustained,Suspension,2.0,12/12/2012,John,Edward,2012,John Edward Kervin,7342
+1618,IAD2012-0461,Citizen complaint,12/06/2012,06/08/2012,Detective,Paul A,Painten,Conformance to Laws,Unfounded,,0.0,,Paul,A,2012,Paul A Painten,10439
+1624,IAD2012-0464,Citizen complaint,12/07/2012,12/07/2012,Police Officer,Joseph A,Murray,Respectful Treatment,Not Sustained,,,,Joseph,A,2012,Joseph A Murray,10292
+1626,IAD2012-0466,Citizen complaint,12/10/2012,12/09/2012,Sergeant Detective,William F,Duggan,Neg.Duty/Unreasonable Judge,Unfounded,,,,William,F,2012,William F Duggan,9970
+1627,IAD2012-0467,Internal investigation,12/12/2012,05/07/2012,Sergeant,James M,Foley,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,,10/05/2015,James,M,2012,James M Foley,12260
+1630,IAD2012-0470,Citizen complaint,12/14/2012,,Detective,Christopher A,Moreno,Neg.Duty/Unreasonable Judge,Unfounded,,,,Christopher,A,2012,Christopher A Moreno,8225
+1632,IAD2012-0472,Citizen complaint,12/19/2012,12/07/2012,Detective,Robert M,Charbonnier,Neg.Duty/Unreasonable Judge,Not Sustained,Oral Reprimand,0.0,06/17/2019,Robert,M,2012,Robert M Charbonnier,11588
+1648,IAD2012-0482,Citizen complaint,12/21/2012,12/21/2012,Police Officer,Frederick J,Stevens,Respectful Treatment,Not Sustained,,,,Frederick,J,2012,Frederick J Stevens,9302
+1657,IAD2013-0002,Citizen complaint,01/07/2013,01/07/2013,Police Officer,Evon J,Burroughs,Respectful Treatment,Exonerated,,,,Evon,J,2013,Evon J Burroughs,95150
+1659,IAD2013-0004,Citizen complaint,01/02/2013,,Lieutenantenant Detective,Bernard Edward,Greene,Conduct Unbecoming,Unfounded,,,,Bernard,Edward,2013,Bernard Edward Greene,10405
+1669,IAD2013-0008,Citizen complaint,01/10/2013,12/27/2012,Police Officer,Leonard F,Brown,Neg.Duty/Unreasonable Judge,Not Sustained,,,,Leonard,F,2013,Leonard F Brown,10139
+1675,IAD2013-0011,Citizen complaint,01/10/2013,01/05/2013,Sergeant Detective,Mark L,Assad,Use of Force,Exonerated,,0.0,,Mark,L,2013,Mark L Assad,10501
+1690,IAD2013-0016,Internal investigation,01/14/2013,01/13/2013,Police Officer,Steven W,Howard,Conduct Unbecoming,Sustained,Retired,0.0,04/06/2020,Steven,W,2013,Steven W Howard,8958
+1695,IAD2013-0017,Citizen complaint,01/14/2013,01/12/2013,Police Officer,Richard G,Moriarty,Use of Force,Not Sustained,,0.0,,Richard,G,2013,Richard G Moriarty,11120
+1703,IAD2013-0019,Citizen complaint,01/18/2013,01/17/2013,Detective,Juan A,Diaz,Prisoners/Booking Procedures,Not Sustained,,0.0,,Juan,A,2013,Juan A Diaz,11896
+1704,IAD2013-0019,Citizen complaint,01/18/2013,01/17/2013,Police Officer,Luis M,Anjos,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Luis,M,2013,Luis M Anjos,74873
+1706,IAD2013-0020,Citizen complaint,01/18/2013,01/08/2013,Police Officer,Daniel S,O'Donnell,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Daniel,S,2013,Daniel S O'Donnell,12028
+1707,IAD2013-0020,Citizen complaint,01/18/2013,01/08/2013,Police Officer,Frederick P,Kennedy,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Frederick,P,2013,Frederick P Kennedy,11249
+1715,IAD2013-0026,Internal investigation,01/26/2013,01/26/2013,Police Officer,James D,Bowden,Conformance to Laws,Sustained,Suspension/Settlement Agreement,45.0,09/06/2013,James,D,2013,James D Bowden,86200
+1753,IAD2013-0066,Citizen complaint,02/14/2013,01/14/2013,Police Officer,Robert T,England,Use of Force,Unfounded,,0.0,,Robert,T,2013,Robert T England,10532
+1755,IAD2013-0066,Citizen complaint,02/14/2013,01/14/2013,Sergeant,Wayne G,Clarke,Abuse of Process,Unfounded,,0.0,,Wayne,G,2013,Wayne G Clarke,10519
+1768,IAD2013-0071,Citizen complaint,02/19/2013,09/14/2012,Police Officer,Vincent Michael,Cullen,Use of Force,Unfounded,,0.0,,Vincent,Michael,2013,Vincent Michael Cullen,50499
+1778,IAD2013-0071,Citizen complaint,02/19/2013,09/14/2012,Sergeant,Sean P,Smith,Use of Force,Unfounded,,0.0,,Sean,P,2013,Sean P Smith,10090
+1781,IAD2013-0073,Internal investigation,02/20/2013,02/19/2013,Detective,Patricia M,Durant,Securing and Maintenance of Firearm,Sustained,Written Reprimand/Settlement Agreement,,09/17/2013,Patricia,M,2013,Patricia M Durant,11067
+1786,IAD2013-0078,Citizen complaint,02/22/2013,02/12/2013,Police Officer,David J,Miller,Conduct Unbecoming,Not Sustained,,,,David,J,2013,David J Miller,8678
+1792,IAD2013-0081,Citizen complaint,02/26/2013,02/26/2013,Sergeant,Ian P,Mahoney,Respectful Treatment,Not Sustained,,,,Ian,P,2013,Ian P Mahoney,10800
+1799,IAD2013-0084,Citizen complaint,02/28/2013,02/23/2013,Lieut,Keith D,Dalrymple,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Keith,D,2013,Keith D Dalrymple,10057
+1800,IAD2013-0085,Citizen complaint,03/01/2013,02/27/2013,Police Officer,Margaret A,Ricard,Respectful Treatment,Not Sustained,,,,Margaret,A,2013,Margaret A Ricard,11288
+1803,IAD2013-0087,Citizen complaint,03/01/2013,02/28/2013,Police Officer,William P,Moran,Use of Force,Not Sustained,,0.0,,William,P,2013,William P Moran,102350
+1807,IAD2013-0092,Citizen complaint,03/08/2013,03/08/2013,Police Officer,Ildo D,Goncalves,Neg.Duty/Unreasonable Judge,Sustained,Counselling,,03/14/2013,Ildo,D,2013,Ildo D Goncalves,11900
+1811,IAD2013-0096,Internal investigation,03/13/2013,02/22/2013,Police Officer,Robert A,Sheridan,Respectful Treatment,Not Sustained,,,,Robert,A,2013,Robert A Sheridan,10587
+1818,IAD2013-0102,Internal investigation,03/13/2013,12/13/2012,Police Officer,Stephen D,Roe,Alcohol off Duty,Sustained,Suspension held in abeyance,20.0,05/01/2013,Stephen,D,2013,Stephen D Roe,11263
+1824,IAD2013-0107,Citizen complaint,03/09/2013,,Lieutenant,Gerard W,Bailey,Neg.Duty/Unreasonable Judge,Exonerated,,,,Gerard,W,2013,Gerard W Bailey,10502
+1833,IAD2013-0112,Citizen complaint,03/18/2013,03/17/2013,Captain,Robert W,Ciccolo,Alcohol on Duty,Not Sustained,,0.0,,Robert,W,2013,Robert W Ciccolo,9006
+1836,IAD2013-0114,Citizen complaint,03/19/2013,03/15/2013,Detective,Paul J,Joyce,Conduct Unbecoming,Not Sustained,,,,Paul,J,2013,Paul J Joyce,1762
+1837,IAD2013-0115,Citizen complaint,03/20/2013,,Police Officer,Carole D,Holmes,Conduct Unbecoming,Not Sustained,,,,Carole,D,2013,Carole D Holmes,11946
+1839,IAD2013-0116,Citizen complaint,03/21/2013,03/15/2013,Detective,Michael M,Ross,Use of Force,Exonerated,,0.0,,Michael,M,2013,Michael M Ross,11358
+1841,IAD2013-0116,Citizen complaint,03/21/2013,03/15/2013,Police Officer,Kevin P,Cook,Use of Force,Exonerated,,0.0,,Kevin,P,2013,Kevin P Cook,76157
+1867,IAD2013-0138,Citizen complaint,03/29/2013,03/29/2013,Police Officer,Walter T,Mitchell,Conformance to Laws,Unfounded,Suspension,5.0,05/15/2014,Walter,T,2013,Walter T Mitchell,11257
+1892,IAD2013-0150,Internal investigation,04/01/2013,03/29/2013,Sergeant,Daniel J,Tracey,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,0.0,09/25/2025,Daniel,J,2013,Daniel J Tracey,10092
+1898,IAD2013-0151,Citizen complaint,04/02/2013,04/01/2013,Detective,Robert F,Costine,Neg.Duty/Unreasonable Judge,Sustained,Suspension/Settlement Agreement,5.0,05/28/2013,Robert,F,2013,Robert F Costine,8682
+1954,IAD2013-0180,Citizen complaint,05/06/2013,04/25/2013,Captain,James G,Hasson,Use of Force,Not Sustained,,0.0,,James,G,2013,James G Hasson,10272
+1983,IAD2013-0200,Citizen complaint,05/13/2013,,Detective,Robert C,Flynn,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Robert,C,2013,Robert C Flynn,8464
+1987,IAD2013-0204,Internal investigation,05/16/2013,,Lieutenantenant Detective,Gregory P,Long,Respectful Treatment,Unfounded,,0.0,,Gregory,P,2013,Gregory P Long,11712
+1989,IAD2013-0205,Citizen complaint,05/20/2013,12/29/2012,Police Officer,Michael R,Doyle,Respectful Treatment,Exonerated,,0.0,,Michael,R,2013,Michael R Doyle,12257
+1991,IAD2013-0206,Citizen complaint,05/21/2013,05/18/2013,Sergeant,Paul F,Brooks,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Paul,F,2013,Paul F Brooks,9709
+1994,IAD2013-0208,Citizen complaint,05/21/2013,05/17/2013,Sergeant Detective,Richard G,Lewis,Neg.Duty/Unreasonable Judge,Unfounded,,,,Richard,G,2013,Richard G Lewis,11332
+1995,IAD2013-0209,Citizen complaint,05/22/2013,05/21/2013,Police Officer,Gregory N,Webb,Respectful Treatment,Exonerated,,,,Gregory,N,2013,Gregory N Webb,11063
+1999,IAD2013-0212,Citizen complaint,05/23/2013,05/23/2011,Police Officer,Thomas J,Finn,Use of Force,Not Sustained,,0.0,,Thomas,J,2013,Thomas J Finn,102353
+2012,IAD2013-0219,Citizen complaint,05/29/2013,05/04/2013,Police Officer,Edward L,Gately,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Edward,L,2013,Edward L Gately,11413
+2013,IAD2013-0219,Citizen complaint,05/29/2013,05/04/2013,Police Officer,Charles F,Flagg,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Charles,F,2013,Charles F Flagg,10062
+2019,IAD2013-0222,Citizen complaint,06/03/2013,,Police Officer,Beth E,Donovan,Conformance to Laws,Unfounded,,0.0,,Beth,E,2013,Beth E Donovan,11633
+2032,IAD2013-0233,Citizen complaint,06/11/2013,06/12/2013,Police Officer,Horace N,Kincade,Respectful Treatment,Not Sustained,,0.0,,Horace,N,2013,Horace N Kincade,8013
+2033,IAD2013-0233,Citizen complaint,06/11/2013,06/12/2013,Police Officer,John A,Conway,Respectful Treatment,Not Sustained,,0.0,,John,A,2013,John A Conway,8260
+2036,IAD2013-0235,Citizen complaint,06/13/2013,06/13/2013,Police Officer,Aaron F,Dell,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Aaron,F,2013,Aaron F Dell,108896
+2037,IAD2013-0235,Citizen complaint,06/13/2013,06/13/2013,Police Officer,Caitlin B,Haugh,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Caitlin,B,2013,Caitlin B Haugh,102942
+2038,IAD2013-0238,Citizen complaint,06/14/2013,06/13/2013,Police Officer,Cynthia M,Beckford-Brewington,Respectful Treatment,Not Sustained,,,,Cynthia,M,2013,Cynthia M Beckford-Brewington,11952
+2048,IAD2013-0245,Citizen complaint,06/10/2013,09/09/2013,Police Officer,Jorge L,Hernandez,Respectful Treatment,Not Sustained,,,,Jorge,L,2013,Jorge L Hernandez,11321
+2063,IAD2013-0252,Internal investigation,06/25/2013,05/27/2013,Police Officer,John R,McInerney,Directives/Orders,Sustained,Retired,,05/29/2015,John,R,2013,John R McInerney,107105
+2071,IAD2013-0256,Citizen complaint,11/16/2012,02/18/2012,Police Officer,Ludwig H,Castillo,Conformance to Laws,Unfounded,,0.0,,Ludwig,H,2012,Ludwig H Castillo,11168
+2092,IAD2013-0275,Citizen complaint,07/11/2013,07/10/2013,Police Officer,Tony Y,Szeto,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Tony,Y,2013,Tony Y Szeto,11132
+2095,IAD2013-0276,Citizen complaint,07/15/2013,07/15/2013,Police Officer,Peter N,Fontanez,Respectful Treatment,Not Sustained,,,,Peter,N,2013,Peter N Fontanez,9282
+2097,IAD2013-0279,Citizen complaint,07/17/2013,05/28/2008,Detective,Roque D,Heath,Neg.Duty/Unreasonable Judge,Unfounded,,,,Roque,D,2013,Roque D Heath,9751
+2098,IAD2013-0280,Citizen complaint,07/17/2013,07/04/2013,Police Officer,Denis J,Fitzpatrick,Respectful Treatment,Unfounded,,,,Denis,J,2013,Denis J Fitzpatrick,9734
+2100,IAD2013-0284,Internal investigation,07/17/2013,07/14/2013,Police Officer,Terrence Shane,Burke,Conduct Unbecoming,Sustained,Suspension,1.0,07/12/2016,Terrence,Shane,2013,Terrence Shane Burke,95174
+2116,IAD2013-0291,Internal investigation,07/26/2013,09/28/2012,Lieutenantenant Detective,Patrick J,Cullity,Accountability,Sustained,Oral Reprimand,0.0,10/16/2013,Patrick,J,2013,Patrick J Cullity,8835
+2134,IAD2013-0299,Citizen complaint,07/26/2013,07/26/2013,Police Officer,Reginald J,Pinckney,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Reginald,J,2013,Reginald J Pinckney,11446
+2142,IAD2013-0304,Citizen complaint,07/29/2013,07/28/2013,Police Officer,Eric C,Byron,Respectful Treatment,Not Sustained,,0.0,,Eric,C,2013,Eric C Byron,120927
+2157,IAD2013-0318,Citizen complaint,08/05/2013,08/04/2013,Police Officer,Maria P,Galvao,Neg.Duty/Unreasonable Judge,Exonerated,,,,Maria,P,2013,Maria P Galvao,76342
+2161,IAD2013-0319,Citizen complaint,08/06/2013,06/07/2013,Lieutenantenant Detective,Robert M,Merner,Respectful Treatment,Not Sustained,,0.0,,Robert,M,2013,Robert M Merner,9771
+2166,IAD2013-0324,Citizen complaint,08/09/2013,08/09/2013,Police Officer,David A,Macioce,Respectful Treatment,Not Sustained,,,,David,A,2013,David A Macioce,120901
+2167,IAD2013-0325,Citizen complaint,08/09/2013,08/04/2013,Police Officer,Edward Joseph,Nolan,Respectful Treatment,Sustained,Oral Reprimand,,07/12/2016,Edward,Joseph,2013,Edward Joseph Nolan,10082
+2174,IAD2013-0330,Citizen complaint,08/11/2013,08/11/2013,Police Officer,David L,Hale,Respectful Treatment,Unfounded,,0.0,,David,L,2013,David L Hale,11316
+2175,IAD2013-0330,Citizen complaint,08/11/2013,08/11/2013,Police Officer,Timothy S,Cunningham,Respectful Treatment,Unfounded,,0.0,,Timothy,S,2013,Timothy S Cunningham,9966
+2180,IAD2013-0332,Citizen complaint,08/15/2013,08/01/2013,Police Officer,Steven P,Ashman,Conduct Unbecoming,Exonerated,,,,Steven,P,2013,Steven P Ashman,93825
+2181,IAD2013-0333,Citizen complaint,08/14/2013,08/14/2013,Police Officer,Michael E,Felton,Respectful Treatment,Exonerated,,,,Michael,E,2013,Michael E Felton,9971
+2186,IAD2013-0338,Citizen complaint,08/17/2013,09/26/2011,Police Officer,Luke B,Holbrook,Abuse of Process,Unfounded,Oral Reprimand,0.0,03/16/2015,Luke,B,2013,Luke B Holbrook,11609
+2208,IAD2013-0347,Citizen complaint,08/22/2013,08/22/2013,Detective,Steven M,Charbonnier,Neg.Duty/Unreasonable Judge,Exonerated,,,,Steven,M,2013,Steven M Charbonnier,12109
+2213,IAD2013-0349,Citizen complaint,08/23/2013,08/20/2013,Police Officer,Thuan D,Lai,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Thuan,D,2013,Thuan D Lai,86221
+2217,IAD2013-0353,Citizen complaint,08/22/2013,08/16/2013,Police Officer,Edward K,Kwok,Use of Force,Unfounded,,0.0,,Edward,K,2013,Edward K Kwok,10961
+2218,IAD2013-0354,Citizen complaint,08/26/2013,07/06/2013,Lieutenantenant Detective,Charles E,Wilson,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Charles,E,2013,Charles E Wilson,8180
+2221,IAD2013-0356,Citizen complaint,08/29/2013,08/29/2013,Police Officer,Samuel J,Berte,Respectful Treatment,Exonerated,,,,Samuel,J,2013,Samuel J Berte,11293
+2223,IAD2013-0358,Citizen complaint,08/27/2013,07/14/2013,Detective,John N,Foundas,Conduct Unbecoming,Sustained,Oral Reprimand,0.0,05/11/2015,John,N,2013,John N Foundas,10807
+2225,IAD2013-0359,Citizen complaint,08/29/2013,07/30/2013,Police Officer,Stephen J,Canto,Conduct Unbecoming,Exonerated,,,,Stephen,J,2013,Stephen J Canto,11890
+2229,IAD2013-0363,Citizen complaint,09/03/2013,09/03/2013,Police Officer,Allison Patricia,McHale,Respectful Treatment,Not Sustained,,,,Allison,Patricia,2013,Allison Patricia McHale,114273
+2234,IAD2013-0369,Citizen complaint,09/06/2013,09/05/2013,Police Officer,Karl C,Truong,Respectful Treatment,Exonerated,,,,Karl,C,2013,Karl C Truong,12030
+2235,IAD2013-0370,Citizen complaint,09/09/2013,07/12/2013,Police Officer,Paul J,Passanisi,Police Service,Sustained,Oral Reprimand,0.0,06/30/2016,Paul,J,2013,Paul J Passanisi,10574
+2244,IAD2013-0374,Citizen complaint,09/10/2013,09/09/2013,Police Officer,Frederick D,Rice,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Frederick,D,2013,Frederick D Rice,12137
+2251,IAD2013-0377,Citizen complaint,09/12/2013,09/12/2013,Detective,Brian L,Ball,Respectful Treatment Bias,Not Sustained,,0.0,,Brian,L,2013,Brian L Ball,12198
+2260,IAD2013-0382,Citizen complaint,09/12/2013,12/24/2012,Detective,Gloria D,Kinkead,Respectful Treatment,Not Sustained,,0.0,,Gloria,D,2013,Gloria D Kinkead,10277
+2274,IAD2013-0390,Citizen complaint,09/20/2013,03/21/2013,Police Officer,Nicole W,LaPointe,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Nicole,W,2013,Nicole W LaPointe,116209
+2278,IAD2013-0396,Internal investigation,09/25/2013,09/03/2013,Detective,Stephen G,Kelly,Directives/Orders,Sustained,Oral Reprimand,0.0,09/25/2013,Stephen,G,2013,Stephen G Kelly,10418
+2291,IAD2013-0406,Citizen complaint,09/27/2013,09/27/2013,Police Officer,Tarus Jay,Jefferson,Respectful Treatment,Not Sustained,,,,Tarus,Jay,2013,Tarus Jay Jefferson,11420
+2294,IAD2013-0408,Citizen complaint,09/26/2013,09/26/2013,Police Officer,Juana V,Hernandez,Conduct Unbecoming,Unfounded,,,,Juana,V,2013,Juana V Hernandez,75661
+2298,IAD2013-0414,Citizen complaint,10/03/2013,10/02/2013,Detective,Andrew C,Miskell,Neg.Duty/Unreasonable Judge,Exonerated,Oral Reprimand,0.0,03/06/2020,Andrew,C,2013,Andrew C Miskell,11719
+2301,IAD2013-0416,Internal investigation,10/03/2013,07/05/2013,Police Officer,Evon F,Burke,Reporting for Duty,Sustained,Oral Reprimand,,10/04/2013,Evon,F,2013,Evon F Burke,9710
+2306,IAD2013-0421,Citizen complaint,10/08/2013,10/06/2013,Police Officer,Jeffrey C,Connolly,Neg.Duty/Unreasonable Judge (2 counts),Exonerated,,0.0,,Jeffrey,C,2013,Jeffrey C Connolly,89907
+2308,IAD2013-0421,Citizen complaint,10/08/2013,10/06/2013,Police Officer,Kevin R,Plunkett,Neg.Duty/Unreasonable Judge Bias,Unfounded,,0.0,,Kevin,R,2013,Kevin R Plunkett,116899
+2331,IAD2013-0433,Citizen complaint,10/15/2013,10/15/2013,Sergeant Detective,William E,Doogan,Conduct Unbecoming,Not Sustained,,,,William,E,2013,William E Doogan,9571
+2342,IAD2013-0437,Internal investigation,10/21/2013,04/18/2013,Detective,James A,Coyne,Neg.Duty/Unreasonable Judge (2 counts),Sustained,Retired with Charges Pending,0.0,08/30/2019,James,A,2013,James A Coyne,10952
+2346,IAD2013-0439,Citizen complaint,10/22/2013,10/07/2013,Detective,William Leo,Parlon,Respectful Treatment,Not Sustained,,,,William,Leo,2013,William Leo Parlon,10186
+2347,IAD2013-0443,Citizen complaint,10/24/2013,10/24/2013,Lieutenant,Charles G,Kelly,Leaves of Absence,Exonerated,,0.0,,Charles,G,2013,Charles G Kelly,11327
+2361,IAD2013-0443,Citizen complaint,10/24/2013,10/24/2013,Sergeant Detective,Thomas E,Lembo,Conformance to Laws (3 counts),Unfounded,,0.0,,Thomas,E,2013,Thomas E Lembo,8784
+2400,IAD2013-0467,Internal investigation,11/06/2013,11/05/2013,Sergeant,Paul M,Joseph,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,,12/04/2013,Paul,M,2013,Paul M Joseph,10548
+2406,IAD2013-0477,Citizen complaint,11/12/2013,11/07/2013,Sergeant Detective,John A,Rouvalis,Respectful Treatment,Not Sustained,,0.0,,John,A,2013,John A Rouvalis,11359
+2412,IAD2013-0485,Citizen complaint,11/19/2013,11/17/2013,Police Officer,Jose L,Acosta,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Jose,L,2013,Jose L Acosta,9698
+2421,IAD2013-0490,Citizen complaint,11/21/2013,02/24/2012,Police Officer,Dudley N,Hill,Respectful Treatment,Not Sustained,,0.0,,Dudley,N,2013,Dudley N Hill,11698
+2425,IAD2013-0492,Citizen complaint,11/21/2013,11/14/2013,Police Officer,Gregory L,Vickers,Respectful Treatment,Not Sustained,,,,Gregory,L,2013,Gregory L Vickers,10598
+2433,IAD2013-0507,Citizen complaint,12/04/2013,12/04/2013,Detective,Peter O,Norton,Abuse of Process,Unfounded,,,,Peter,O,2013,Peter O Norton,9989
+2437,IAD2013-0511,Citizen complaint,12/12/2013,,Lieutenant,Dennis A,White,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Dennis,A,2013,Dennis A White,10451
+2441,IAD2013-0514,Citizen complaint,12/16/2013,12/13/2013,Sergeant,Daniel C,Keane,Respectful Treatment,Not Sustained,,,,Daniel,C,2013,Daniel C Keane,11948
+2450,IAD2013-0520,Citizen complaint,12/20/2013,12/17/2013,Police Officer,Daniel E,Smith,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Daniel,E,2013,Daniel E Smith,102936
+2453,IAD2013-0523,Internal investigation,12/29/2013,12/29/2013,Detective,Todd M,Hartgrove,Paid Details Fitness for Duty,Sustained,Retired,,04/05/2024,Todd,M,2013,Todd M Hartgrove,8346
+2484,IAD2014-0010,Citizen complaint,01/09/2014,12/22/2013,Sergeant Detective,Keith A,Webb,Neg.Duty/Unreasonable Judge (2 counts),Unfounded,,0.0,,Keith,A,2014,Keith A Webb,10743
+2490,IAD2014-0010,Citizen complaint,01/09/2014,12/22/2013,Police Officer,Arthur W,Green,Neg.Duty/Unreasonable Judge (2 counts),Unfounded,,0.0,,Arthur,W,2014,Arthur W Green,120930
+2500,IAD2014-0015,Internal investigation,01/17/2014,01/15/2014,Police Officer,Jeremy M,Mahoney,Neg.Duty/Unreasonable Judge,Sustained,Suspension,1.0,09/17/2019,Jeremy,M,2014,Jeremy M Mahoney,126526
+2501,IAD2014-0015,Internal investigation,01/17/2014,01/15/2014,Police Officer,Stephen M,Borbee,Neg.Duty/Unreasonable Judge,Sustained,,1.0,,Stephen,M,2014,Stephen M Borbee,10700
+2502,IAD2014-0015,Internal investigation,01/17/2014,01/15/2014,Police Officer,Richard Sean,Spillane,Neg.Duty/Unreasonable Judge,Sustained,,1.0,,Richard,Sean,2014,Richard Sean Spillane,50503
+2508,IAD2014-0019,Citizen complaint,01/15/2014,01/14/2014,Sergeant Detective,Christopher J,Cunniff,Respectful Treatment,Not Sustained,,0.0,,Christopher,J,2014,Christopher J Cunniff,10522
+2509,IAD2014-0019,Citizen complaint,01/15/2014,01/14/2014,Detective,Adrian S,Worrell,Failure to be Knowledgeable & Informed,Exonerated,,0.0,,Adrian,S,2014,Adrian S Worrell,12285
+2519,IAD2014-0028,Citizen complaint,01/31/2014,01/30/2014,Police Officer,Perry R,Roy,Respectful Treatment Bias,Not Sustained,,0.0,,Perry,R,2014,Perry R Roy,9300
+2526,IAD2014-0031,Citizen complaint,01/08/2014,01/03/2014,Sergeant,Lucas E,Taxter,Self Identification,Not Sustained,,0.0,,Lucas,E,2014,Lucas E Taxter,11743
+2532,IAD2014-0032,Citizen complaint,01/12/2014,01/10/2014,Sergeant Detective,Kenneth M,Conley,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Kenneth,M,2014,Kenneth M Conley,10191
+2538,IAD2014-0034,Citizen complaint,01/30/2014,01/23/2014,Police Officer,Dean B,Quinby,Respectful Treatment,Not Sustained,,0.0,,Dean,B,2014,Dean B Quinby,126548
+2542,IAD2014-0038,Citizen complaint,02/02/2014,02/02/2014,Police Officer,Jonathan H,Quigg,Respectful Treatment,Unfounded,,0.0,,Jonathan,H,2014,Jonathan H Quigg,116896
+2545,IAD2014-0039,Citizen complaint,02/03/2014,01/28/2014,Police Officer,Christopher M,Kennedy,Respectful Treatment,Not Sustained,,0.0,,Christopher,M,2014,Christopher M Kennedy,116945
+2569,IAD2014-0047,Citizen complaint,02/10/2014,02/09/2014,Police Officer,William J,Flaherty,Neg.Duty/Unreasonable Judge,Exonerated,,,,William,J,2014,William J Flaherty,126502
+2592,IAD2014-0067,Internal investigation,02/17/2014,02/17/2014,Police Officer,Royce R,Veal,Conformance to Laws,Sustained,Resigned Charges Pending,0.0,09/10/2014,Royce,R,2014,Royce R Veal,120918
+2597,IAD2014-0069,Citizen complaint,02/14/2014,12/21/2013,Police Officer,Emmanuel C,Dambreville,Respectful Treatment,Not Sustained,,0.0,,Emmanuel,C,2014,Emmanuel C Dambreville,11518
+2605,IAD2014-0077,Citizen complaint,02/27/2014,02/21/2014,Detective,Mark A,Maregni,Conformance to Laws,Unfounded,,0.0,,Mark,A,2014,Mark A Maregni,10152
+2608,IAD2014-0078,Citizen complaint,02/25/2014,02/21/2014,Detective,Brian M,Smigielski,Respectful Treatment,Not Sustained,,0.0,,Brian,M,2014,Brian M Smigielski,11530
+2609,IAD2014-0078,Citizen complaint,02/25/2014,02/21/2014,Detective,William F,Donga,Respectful Treatment,Not Sustained,,0.0,,William,F,2014,William F Donga,9570
+2617,IAD2014-0081,Citizen complaint,02/04/2014,02/03/2014,Police Officer,Matthew L,Albanese,Respectful Treatment,Not Sustained,,0.0,,Matthew,L,2014,Matthew L Albanese,126509
+2628,IAD2014-0088,Citizen complaint,03/07/2014,03/07/2013,Police Officer,Shawn L,West,Use of Force (2 counts),Not Sustained,Oral Reprimand,0.0,11/20/2017,Shawn,L,2014,Shawn L West,11748
+2631,IAD2014-0088,Citizen complaint,03/07/2014,03/07/2013,Police Officer,Antoine J,Ramos,Unreasonable Judgement (2 counts),Not Sustained,,0.0,,Antoine,J,2014,Antoine J Ramos,116222
+2635,IAD2014-0091,Citizen complaint,03/11/2014,02/22/2014,Sergeant,Thomas E,Meade,Neg.Duty/Unreasonable Judge,Exonerated,,,,Thomas,E,2014,Thomas E Meade,9985
+2649,IAD2014-0101,Internal investigation,03/21/2014,04/05/2013,Sergeant,Kenneth A,Sousa,Substance Abuse Policy,Sustained,Suspension/Settlement Agreement,5.0,03/10/2014,Kenneth,A,2014,Kenneth A Sousa,10593
+2650,IAD2014-0103,Internal investigation,03/26/2014,03/19/2014,Police Officer,David E,Melvin,Directives/Orders,Not Sustained,Suspension/Settlement Agreement,365.0,05/22/2015,David,E,2014,David E Melvin,10429
+2656,IAD2014-0105,Citizen complaint,03/25/2014,03/17/2014,Police Officer,Edwin Manuel,Lopez,Conduct Unbecoming,Not Sustained,,0.0,,Edwin,Manuel,2014,Edwin Manuel Lopez,126474
+2658,IAD2014-0108,Citizen complaint,03/31/2014,03/30/2014,Sergeant,Lisa J,Sullivan,Respectful Treatment,Unfounded,,0.0,,Lisa,J,2014,Lisa J Sullivan,11130
+2671,IAD2014-0121,Citizen complaint,04/08/2014,04/04/2014,Police Officer,Salvatore A,Calabrese,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Salvatore,A,2014,Salvatore A Calabrese,126485
+2687,IAD2014-0128,Citizen complaint,04/14/2014,04/14/2014,Detective,Scott M,Mackie,Respectful Treatment,Not Sustained,,0.0,,Scott,M,2014,Scott M Mackie,11627
+2688,IAD2014-0128,Citizen complaint,04/14/2014,04/14/2014,Detective,Charles J,Cellucci,Respectful Treatment,Not Sustained,,0.0,,Charles,J,2014,Charles J Cellucci,10621
+2707,IAD2014-0141,Citizen complaint,04/25/2014,04/23/2014,Police Officer,James L,Walsh,Respectful Treatment,Not Sustained,,,,James,L,2014,James L Walsh,116948
+2723,IAD2014-0146,Citizen complaint,05/02/2014,05/01/2014,Police Officer,Richard A,Porter,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Richard,A,2014,Richard A Porter,10579
+2727,IAD2014-0148,Internal investigation,05/02/2014,,Depsup,Michael A,Cox,Respectful Treatment,Unfounded,,,,Michael,A,2014,Michael A Cox,10394
+2728,IAD2014-0165,Citizen complaint,04/29/2014,,Police Officer,Ismael Lopes,Almeida,Respectful Treatment,Exonerated,,,,Ismael,Lopes,2014,Ismael Lopes Almeida,99715
+2742,IAD2014-0239,Citizen complaint,05/23/2014,05/21/2014,Sergeant,Thomas J,Teahan,Abuse of Process,Unfounded,,,,Thomas,J,2014,Thomas J Teahan,10739
+2744,IAD2014-0246,Citizen complaint,05/30/2014,05/29/2014,Sergeant,William J,Walsh,Conduct Unbecoming,Exonerated,,,,William,J,2014,William J Walsh,8366
+2749,IAD2014-0250,Citizen complaint,06/03/2014,,Detective,Miguel A,Novo,Neg.Duty/Unreasonable Judge,Unfounded,,,,Miguel,A,2014,Miguel A Novo,8021
+2751,IAD2014-0252,Citizen complaint,06/04/2014,06/03/2014,Police Officer,Gregory G,Matthews,Respectful Treatment,Not Sustained,,,,Gregory,G,2014,Gregory G Matthews,8730
+2755,IAD2014-0257,Citizen complaint,06/06/2014,06/06/2014,Police Officer,Patrick T,Murphy,Respectful Treatment,Not Sustained,,,,Patrick,T,2014,Patrick T Murphy,88741
+2766,IAD2014-0258,Citizen complaint,06/09/2014,05/02/2014,Police Officer,Michael F,Fanning,Use of Force,Not Sustained,,0.0,,Michael,F,2014,Michael F Fanning,102365
+2783,IAD2014-0264,Citizen complaint,06/11/2014,06/10/2014,Police Officer,Matthew J,Conley,Respectful Treatment,Unfounded,,0.0,,Matthew,J,2014,Matthew J Conley,11197
+2785,IAD2014-0264,Citizen complaint,06/11/2014,06/10/2014,Police Officer,Donald B,Powell,Respectful Treatment,Unfounded,,0.0,,Donald,B,2014,Donald B Powell,11965
+2788,IAD2014-0268,Citizen complaint,06/11/2014,06/11/2014,Police Officer,Francis N,Garcia,Neg.Duty/Unreasonable Judge (3 counts),Exonerated,,,,Francis,N,2014,Francis N Garcia,10955
+2796,IAD2014-0271,Citizen complaint,06/13/2014,,Detective,John P,Boyle,Conduct Unbecoming,Unfounded,,0.0,,John,P,2014,John P Boyle,11517
+2814,IAD2014-0273,Citizen complaint,06/16/2014,06/11/2014,Police Officer,Basil Mark,Buchanan,Use of Force,Exonerated,Retired,,02/28/2017,Basil,Mark,2014,Basil Mark Buchanan,8456
+2833,IAD2014-0297,Citizen complaint,06/25/2014,06/06/2014,Superintendent,Randall J,Halstead,Respectful Treatment,Not Sustained,,,,Randall,J,2014,Randall J Halstead,7443
+2837,IAD2014-0302,Citizen complaint,06/30/2014,06/02/2014,Police Officer,Ellys E,Lee,Use of Force,Exonerated,,0.0,,Ellys,E,2014,Ellys E Lee,62601
+2852,IAD2014-0322,Citizen complaint,07/15/2014,06/23/2014,Police Officer,Monique R,Cesar,Conduct Unbecoming,Unfounded,,,,Monique,R,2014,Monique R Cesar,11094
+2853,IAD2014-0323,Internal investigation,07/17/2014,07/02/2014,Detective,Veritta M,Pitts,Substance Abuse Policy,Not Sustained,,,,Veritta,M,2014,Veritta M Pitts,9379
+2860,IAD2014-0332,Citizen complaint,07/21/2014,07/20/2014,Sergeant,Edward T,Gillespie,Respectful Treatment,Unfounded,,0.0,,Edward,T,2014,Edward T Gillespie,9016
+2862,IAD2014-0332,Citizen complaint,07/21/2014,07/20/2014,Police Officer,Deirdre M,Pinkham,Respectful Treatment,Unfounded,,0.0,,Deirdre,M,2014,Deirdre M Pinkham,93276
+2869,IAD2014-0336,Citizen complaint,07/25/2014,07/25/2014,Police Officer,Richard D,Freedman,Unreasonable Judgment Bias,Unfounded,,0.0,,Richard,D,2014,Richard D Freedman,126566
+2873,IAD2014-0342,Internal investigation,07/28/2014,03/30/2013,Police Officer,Albert C,Christie,Reporting for Duty,Sustained,Oral Reprimand,,09/23/2013,Albert,C,2014,Albert C Christie,10050
+2875,IAD2014-0344,Internal investigation,07/29/2014,05/04/2013,Detective,Aaron T,Blocker,Reporting for Duty,Sustained,Oral Reprimand,,10/17/2013,Aaron,T,2014,Aaron T Blocker,9705
+2891,IAD2014-0365,Citizen complaint,07/30/2014,07/29/2014,Police Officer,John J,Manning,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,0.0,11/20/2018,John,J,2014,John J Manning,9223
+2921,IAD2014-0377,Citizen complaint,08/04/2014,07/30/2014,Police Officer,Joseph Garrette,Tate,Respectful Treatment,Exonerated,,0.0,,Joseph,Garrette,2014,Joseph Garrette Tate,10307
+2922,IAD2014-0377,Citizen complaint,08/04/2014,07/30/2014,Police Officer,Guy Anthony,Bowens,Respectful Treatment,Exonerated,,0.0,,Guy,Anthony,2014,Guy Anthony Bowens,10045
+2932,IAD2014-0396,Internal investigation,08/25/2014,08/24/2014,Sergeant,Michael C,Hanson,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Michael,C,2014,Michael C Hanson,12122
+2942,IAD2014-0404,Internal investigation,08/27/2014,04/05/2014,Police Officer,Jeffrey F,Hannigan,Reporting for Duty,Sustained,Oral Reprimand,,,Jeffrey,F,2014,Jeffrey F Hannigan,11417
+2956,IAD2014-0418,Citizen complaint,09/05/2014,09/05/2014,Police Officer,Charlie H,Daniels,Respectful Treatment,Exonerated,,0.0,,Charlie,H,2014,Charlie H Daniels,93814
+2958,IAD2014-0418,Citizen complaint,09/05/2014,09/05/2014,Lieutenant,Joseph H,Canney,Respectful Treatment,Unfounded,,0.0,,Joseph,H,2014,Joseph H Canney,8363
+2963,IAD2014-0425,Citizen complaint,08/18/2014,08/16/2014,Sergeant,Edward F,McMahon,Neg.Duty/Unreasonable Judge,Exonerated,,,,Edward,F,2014,Edward F McMahon,11342
+2983,IAD2014-0450,Citizen complaint,09/12/2014,09/10/2014,Police Officer,John N,Calisi,Respectful Treatment,Not Sustained,,0.0,,John,N,2014,John N Calisi,11239
+2984,IAD2014-0450,Citizen complaint,09/12/2014,09/10/2014,Police Officer,Andrew P,Mastrorillo,Respectful Treatment,Not Sustained,,0.0,,Andrew,P,2014,Andrew P Mastrorillo,11630
+2985,IAD2014-0450,Citizen complaint,09/12/2014,09/10/2014,Police Officer,Mark Joseph,Loewen,Respectful Treatment,Not Sustained,,0.0,,Mark,Joseph,2014,Mark Joseph Loewen,11210
+2990,IAD2014-0450,Citizen complaint,09/12/2014,09/10/2014,Police Officer,Albert A,McDonough,Respectful Treatment,Not Sustained,,0.0,,Albert,A,2014,Albert A McDonough,9768
+2991,IAD2014-0450,Citizen complaint,09/12/2014,09/10/2014,Police Officer,Philip V,Barden,Respectful Treatment,Not Sustained,,0.0,,Philip,V,2014,Philip V Barden,8694
+2992,IAD2014-0450,Citizen complaint,09/12/2014,09/10/2014,Police Officer,Jimmy R,Cox,Respectful Treatment,Not Sustained,,0.0,,Jimmy,R,2014,Jimmy R Cox,10950
+2993,IAD2014-0453,Citizen complaint,09/22/2014,06/10/2014,Detective,Christopher A,Hartgrove,Evidence & Found Property,Exonerated,,,,Christopher,A,2014,Christopher A Hartgrove,8349
+3000,IAD2014-0464,Internal investigation,09/22/2014,09/21/2014,Police Officer,Carolyn L,Kennedy,Reporting for Duty,Sustained,Oral Reprimand,,07/28/2016,Carolyn,L,2014,Carolyn L Kennedy,11423
+3001,IAD2014-0467,Citizen complaint,09/24/2014,09/02/2014,Police Officer,Jason M,Albanese,Use of Force,Not Sustained,Termination,0.0,06/26/2019,Jason,M,2014,Jason M Albanese,102329
+3004,IAD2014-0469,Citizen complaint,09/26/2014,09/24/2014,Police Officer,Yrene E,Castillo,Respectful Treatment,Pending,,0.0,,Yrene,E,2014,Yrene E Castillo,116110
+3009,IAD2014-0477,Citizen complaint,09/29/2014,09/26/2014,Police Officer,Richard P,Caulfield,Neg.Duty/Unreasonable Judge,Sustained,Counselling,,10/02/2014,Richard,P,2014,Richard P Caulfield,8458
+3011,IAD2014-0482,Citizen complaint,09/29/2014,06/23/2014,Detective,Steven J,Morgan,Respectful Treatment,Unfounded,,,,Steven,J,2014,Steven J Morgan,9987
+3039,IAD2014-0514,Citizen complaint,10/15/2014,10/15/2014,Police Officer,Daniel Elliott,Ciccolo,Neg.Duty/Unreasonable Judge,Unfounded,,,,Daniel,Elliott,2014,Daniel Elliott Ciccolo,50598
+3044,IAD2014-0522,Citizen complaint,10/24/2014,03/21/2014,Sergeant Detective,Eric W,Bulman,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Eric,W,2014,Eric W Bulman,10511
+3045,IAD2014-0522,Citizen complaint,10/24/2014,03/21/2014,Sergeant,Robert J,Ridge,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Robert,J,2014,Robert J Ridge,10445
+3050,IAD2014-0530,Internal investigation,10/29/2014,,Detective,James R,Sheehan,Drug Test,Sustained,Suspension/Settlement Agreement,5.0,11/07/2014,James,R,2014,James R Sheehan,11806
+3070,IAD2014-0547,Citizen complaint,11/17/2014,11/15/2014,Police Officer,Linda M,Strother-Lyons,Respectful Treatment,Exonerated,,0.0,,Linda,M,2014,Linda M Strother-Lyons,9472
+3089,IAD2014-0556,Citizen complaint,11/25/2014,11/22/2014,Police Officer,Lisa M,Wright,Prisoner Inspection,Not Sustained,,0.0,,Lisa,M,2014,Lisa M Wright,10158
+3101,IAD2014-0561,Citizen complaint,11/05/2014,10/17/2014,Police Officer,Justin D,Cremins,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Justin,D,2014,Justin D Cremins,102361
+3129,IAD2014-0610,Citizen complaint,12/28/2014,12/27/2014,Police Officer,Frank James,O'Brien,Conduct Unbecoming,Unfounded,Oral Reprimand,0.0,03/26/2020,Frank,James,2014,Frank James O'Brien,116900
+3147,IAD2015-0001,Citizen complaint,01/02/2015,01/01/2015,Police Officer,Brian J,Perry,Use of Force,Unfounded,,0.0,,Brian,J,2015,Brian J Perry,53244
+3162,IAD2015-0008,Citizen complaint,01/06/2015,01/02/2015,Sergeant,Kevin F,Jones,Use of Force,Unfounded,,0.0,,Kevin,F,2015,Kevin F Jones,11613
+3169,IAD2015-0011,Citizen complaint,01/08/2015,08/28/2013,Detective,William P,Dunn,Neg.Duty/Unreasonable Judge,Unfounded,,,,William,P,2015,William P Dunn,8462
+3182,IAD2015-0023,Citizen complaint,01/14/2015,10/18/2014,Police Officer,Stephen P,Law,Conduct Unbecoming,Unfounded,,,,Stephen,P,2015,Stephen P Law,8866
+3192,IAD2015-0026,Citizen complaint,01/16/2015,01/13/2015,Police Officer,Joseph J,DeAngelo,Use of Force,Exonerated,,0.0,,Joseph,J,2015,Joseph J DeAngelo,100415
+3195,IAD2015-0027,Internal investigation,01/20/2015,01/08/2015,Police Officer,Angela M,Williams-Mitchell,Securing and Maintenance of Firearm,Sustained,Suspension/Settlement Agreement,10.0,07/22/2015,Angela,M,2015,Angela M Williams-Mitchell,10603
+3200,IAD2015-0029,Citizen complaint,01/20/2015,01/17/2015,Police Officer,Oscar A,Guerrero,Respectful Treatment,Unfounded,,0.0,,Oscar,A,2015,Oscar A Guerrero,131244
+3216,IAD2015-0042,Citizen complaint,01/26/2015,01/26/2015,Police Officer,John E,Ball,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,John,E,2015,John E Ball,126561
+3218,IAD2015-0042,Citizen complaint,01/26/2015,01/26/2015,Police Officer,Christopher R,Stevens,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Christopher,R,2015,Christopher R Stevens,81364
+3219,IAD2015-0042,Citizen complaint,01/26/2015,01/26/2015,Police Officer,William Y,Walker,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,William,Y,2015,William Y Walker,126520
+3227,IAD2015-0051,Internal investigation,02/04/2015,12/10/2014,Police Officer,Brian P,Holmes,Reporting for Duty,Sustained,Oral Reprimand,,01/08/2015,Brian,P,2015,Brian P Holmes,116947
+3233,IAD2015-0055,Citizen complaint,02/09/2015,02/08/2015,Police Officer,Gregory D,Waldrip,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Gregory,D,2015,Gregory D Waldrip,116941
+3249,IAD2015-0064,Citizen complaint,02/17/2015,01/08/2015,Police Officer,Leroy A,Streat,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Leroy,A,2015,Leroy A Streat,11362
+3256,IAD2015-0084,Citizen complaint,02/24/2015,11/06/2014,Police Officer,Michael A,Forde,Conduct Unbecoming,Sustained,Oral Reprimand,,11/06/2017,Michael,A,2015,Michael A Forde,8847
+3263,IAD2015-0093,Citizen complaint,02/25/2015,02/22/2015,Police Officer,Zachary Andrew,Crossen,BIAS-Free Policing Policy,Not Sustained,,0.0,,Zachary,Andrew,2015,Zachary Andrew Crossen,131216
+3273,IAD2015-0096,Citizen complaint,02/26/2015,03/17/2013,Police Officer,Terry L,Cotton,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Terry,L,2015,Terry L Cotton,10520
+3280,IAD2015-0102,Internal investigation,03/04/2015,11/01/2014,Police Officer,Devon M,Cornelius,Reporting for Duty,Sustained,Oral Reprimand,,03/04/2015,Devon,M,2015,Devon M Cornelius,131215
+3284,IAD2015-0109,Citizen complaint,03/09/2015,02/12/2015,Police Officer,Patrick Olaf,Abrahamson,Self Identification,Unfounded,,0.0,,Patrick,Olaf,2015,Patrick Olaf Abrahamson,131203
+3287,IAD2015-0111,Citizen complaint,03/09/2015,03/09/2015,Detective,Ryan W,Mason,Neg.Duty/Unreasonable Judge,Unfounded,,,,Ryan,W,2015,Ryan W Mason,75658
+3290,IAD2015-0114,Citizen complaint,03/10/2015,03/10/2015,Detective,Daniel T,Conboy,Tabacco on Duty,Sustained,Oral Reprimand,0.0,01/28/2020,Daniel,T,2015,Daniel T Conboy,11940
+3295,IAD2015-0116,Citizen complaint,03/10/2015,03/05/2015,Police Officer,Arthur V,Lonergan,Use of Force,Not Sustained,,0.0,,Arthur,V,2015,Arthur V Lonergan,11623
+3298,IAD2015-0117,Citizen complaint,03/13/2015,02/27/2015,Police Officer,Raymond A,Bowen,Conduct Unbecoming,Not Sustained,,0.0,,Raymond,A,2015,Raymond A Bowen,10507
+3300,IAD2015-0118,Internal investigation,03/13/2015,11/06/2014,Police Officer,Dave E,Juba,Reporting for Duty,Sustained,Oral Reprimand,,03/18/2015,Dave,E,2015,Dave E Juba,11615
+3320,IAD2015-0130,Internal investigation,03/16/2015,03/16/2015,Sergeant,Ralph W,Caulfield,Securing and Maintenance of Firearm,Sustained,Written Reprimand/Settlement Agreement,,07/03/2017,Ralph,W,2015,Ralph W Caulfield,9561
+3342,IAD2015-0176,Citizen complaint,05/05/2015,09/06/2014,Police Officer,Scott R,Mangino,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Scott,R,2015,Scott R Mangino,12129
+3352,IAD2015-0182,Citizen complaint,05/06/2015,12/26/2014,Police Officer,Mark Steven,Brooks,Use of Force,Exonerated,,0.0,,Mark,Steven,2015,Mark Steven Brooks,51340
+3354,IAD2015-0182,Citizen complaint,05/06/2015,12/26/2014,Police Officer,Frederick J,Boyle,Use of Force,Exonerated,,0.0,,Frederick,J,2015,Frederick J Boyle,9707
+3355,IAD2015-0182,Citizen complaint,05/06/2015,12/26/2014,Police Officer,Robert Quinten,Casper,Use of Force,Exonerated,,0.0,,Robert,Quinten,2015,Robert Quinten Casper,51415
+3360,IAD2015-0186,Citizen complaint,05/07/2015,05/06/2015,Police Officer,Edward F,Fitzgerald,Respectful Treatment,Not Sustained,,,,Edward,F,2015,Edward F Fitzgerald,8842
+3397,IAD2015-0208,Internal investigation,05/11/2015,05/11/2015,Police Officer,Shaun M,McBrien,Alcohol off Duty,Sustained,Suspension/Settlement Agreement,15.0,01/03/2020,Shaun,M,2015,Shaun M McBrien,126582
+3430,IAD2015-0223,Internal investigation,03/13/2015,09/02/2013,Police Officer,Javier E,Perez,Respectful Treatment,Sustained,Oral Reprimand,0.0,09/04/2013,Javier,E,2015,Javier E Perez,11445
+3437,IAD2015-0231,Internal investigation,04/29/2015,10/20/2014,Police Officer,Richard D,Cintolo,Paid Details Fitness for Duty,Sustained,Oral Reprimand,,04/30/2015,Richard,D,2015,Richard D Cintolo,10516
+3442,IAD2015-0237,Citizen complaint,04/10/2015,04/07/2015,Police Officer,Michael R,Szegda,Respectful Treatment,Not Sustained,Oral Reprimand,0.0,07/20/2020,Michael,R,2015,Michael R Szegda,12317
+3444,IAD2015-0237,Citizen complaint,04/10/2015,04/07/2015,Police Officer,Christopher J,McCarthy,Respectful Treatment,Not Sustained,Oral Reprimand,0.0,09/11/2019,Christopher,J,2015,Christopher J McCarthy,116218
+3450,IAD2015-0250,Citizen complaint,05/26/2015,05/25/2015,Police Officer,Matthew E,Haslett,Respectful Treatment,Exonerated,,,,Matthew,E,2015,Matthew E Haslett,116199
+3459,IAD2015-0258,Citizen complaint,04/29/2015,04/27/2015,Sergeant,Henry Joseph,Staines,Neg.Duty/Unreasonable Judge,Sustained,Counselling,,08/30/2018,Henry,Joseph,2015,Henry Joseph Staines,11738
+3463,IAD2015-0272,Citizen complaint,06/09/2015,05/25/2015,Police Officer,Kevin W,Cullen,Respectful Treatment,Exonerated,,0.0,,Kevin,W,2015,Kevin W Cullen,11809
+3464,IAD2015-0272,Citizen complaint,06/09/2015,05/25/2015,Police Officer,Timothy R,Donovan,Respectful Treatment,Exonerated,,0.0,,Timothy,R,2015,Timothy R Donovan,10397
+3488,IAD2015-0305,Internal investigation,07/07/2015,03/14/2015,Police Officer,William M,Bulger,Reporting for Duty,Sustained,Oral Reprimand,,07/07/2015,William,M,2015,William M Bulger,8937
+3489,IAD2015-0306,Internal investigation,05/13/2015,12/31/2014,Police Officer,Erick Kelvin,James,Paid Details Fitness for Duty,Sustained,Oral Reprimand,,05/13/2015,Erick,Kelvin,2015,Erick Kelvin James,10716
+3496,IAD2015-0315,Internal investigation,06/23/2015,01/13/2015,Police Officer,Robert Allen,Preble,Paid Details Fitness for Duty,Sustained,Oral Reprimand,,07/12/2016,Robert,Allen,2015,Robert Allen Preble,9796
+3502,IAD2015-0321,Citizen complaint,06/19/2015,,Sergeant Detective,Kenneth R,O'Brien,Respectful Treatment,Unfounded,,,,Kenneth,R,2015,Kenneth R O'Brien,8022
+3503,IAD2015-0322,Internal investigation,06/18/2015,06/17/2015,Police Officer,Martin M,Ryan,Drug Test,Sustained,Retired with Charges Pending,0.0,05/17/2017,Martin,M,2015,Martin M Ryan,11455
+3530,IAD2015-0345,Citizen complaint,07/20/2015,07/17/2015,Police Officer,Christopher J,Ross,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Christopher,J,2015,Christopher J Ross,12139
+3531,IAD2015-0347,Internal investigation,05/06/2015,04/24/2015,Police Officer,Debra G,Blandin,Paid Details,Sustained,Oral Reprimand,,04/24/2015,Debra,G,2015,Debra G Blandin,11670
+3583,IAD2015-0386,Citizen complaint,08/24/2015,08/21/2015,Sergeant,Susan R,Edghill-Yard,Self Identification,Not Sustained,,0.0,,Susan,R,2015,Susan R Edghill-Yard,11409
+3585,IAD2015-0386,Citizen complaint,08/24/2015,08/21/2015,Police Officer,Philip F,Coleman,Self Identification,Unfounded,,0.0,,Philip,F,2015,Philip F Coleman,56173
+3601,IAD2015-0399,Citizen complaint,08/27/2015,08/26/2015,Police Officer,Anthony J,Poulos,Use of Force,Not Sustained,,0.0,,Anthony,J,2015,Anthony J Poulos,103903
+3620,IAD2015-0414,Citizen complaint,09/02/2015,12/26/2009,Detective,Michelle A,Williams,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Michelle,A,2015,Michelle A Williams,10736
+3621,IAD2015-0414,Citizen complaint,09/02/2015,12/26/2009,Sergeant Detective,Brian D,Albert,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Brian,D,2015,Brian D Albert,11088
+3626,IAD2015-0414,Citizen complaint,09/02/2015,12/26/2009,Detective,Stephen J,Ridge,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Stephen,J,2015,Stephen J Ridge,10966
+3633,IAD2015-0421,Citizen complaint,09/14/2015,09/13/2015,Sergeant,Peter B,Morris,Neg.Duty/Unreasonable Judge,Sustained,,0.0,,Peter,B,2015,Peter B Morris,9593
+3650,IAD2015-0446,Citizen complaint,09/23/2015,09/21/2015,Sergeant,James H,Buckley,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,James,H,2015,James H Buckley,11295
+3661,IAD2015-0475,Internal investigation,10/05/2015,03/14/2015,Detective,Anthony H,Francis,Reporting for Duty,Sustained,Oral Reprimand,,07/13/2015,Anthony,H,2015,Anthony H Francis,11172
+3669,IAD2015-0481,Citizen complaint,10/13/2015,07/17/2015,Detective,Paul J,Coffey,BIAS-Free Policing Policy,Unfounded,,0.0,,Paul,J,2015,Paul J Coffey,9564
+3708,IAD2015-0592,Citizen complaint,10/26/2015,10/25/2015,Police Officer,Carl J,Nemes,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Carl,J,2015,Carl J Nemes,131198
+3726,IAD2015-0615,Citizen complaint,11/09/2015,10/31/2015,Police Officer,Patrick M,Curtin,Respectful Treatment,Not Sustained,,0.0,,Patrick,M,2015,Patrick M Curtin,103668
+3731,IAD2015-0622,Citizen complaint,11/05/2015,11/02/2015,Police Officer,Curtis A,Jones,Respectful Treatment,Not Sustained,,,,Curtis,A,2015,Curtis A Jones,131272
+3732,IAD2015-0623,Citizen complaint,11/18/2015,11/18/2015,Police Officer,Robin D,Pruitt,Respectful Treatment,Exonerated,,,,Robin,D,2015,Robin D Pruitt,10853
+3746,IAD2015-0628,Citizen complaint,11/23/2015,11/23/2015,Police Officer,Timothy J,Golden,Respectful Treatment,Not Sustained,,,,Timothy,J,2015,Timothy J Golden,10796
+3755,IAD2015-0644,Citizen complaint,12/03/2015,12/02/2015,Police Officer,Melissa I,Medina,Respectful Treatment,Not Sustained,,,,Melissa,I,2015,Melissa I Medina,12238
+3756,IAD2015-0656,Citizen complaint,12/08/2015,12/07/2015,Police Officer,Elizabeth C,Evans,Respectful Treatment,Exonerated,,0.0,,Elizabeth,C,2015,Elizabeth C Evans,75944
+3758,IAD2015-0656,Citizen complaint,12/08/2015,12/07/2015,Police Officer,Jacqueline A,Sellon,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Jacqueline,A,2015,Jacqueline A Sellon,75928
+3770,IAD2015-0680,Citizen complaint,12/21/2015,12/20/2015,Police Officer,Moises J,Abreu,Respectful Treatment,Unfounded,,0.0,,Moises,J,2015,Moises J Abreu,135923
+3782,IAD2015-0709,Internal investigation,03/19/2015,,Sergeant,James R,Lynch,Neg.Duty/Unreasonable Judge B,Sustained,Retired,,08/31/2017,James,R,2015,James R Lynch,8469
+3793,IAD2016-0015,Internal investigation,01/15/2016,01/15/2016,Police Officer,Eric D,Bradshaw,Conformance to Laws,Not Sustained,,,,Eric,D,2016,Eric D Bradshaw,10509
+3804,IAD2016-0024,Citizen complaint,01/28/2016,04/15/2013,Police Officer,Christopher M,Colby,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Christopher,M,2016,Christopher M Colby,11591
+3816,IAD2016-0030,Citizen complaint,02/01/2016,02/01/2016,Police Officer,William B,Jones,Tabacco on Duty,Sustained,Counselling,,03/25/2016,William,B,2016,William B Jones,11325
+3829,IAD2016-0047,Citizen complaint,01/28/2016,01/28/2016,Police Officer,Jose M,Araujo,CJIS Access,Not Sustained,,0.0,,Jose,M,2016,Jose M Araujo,135927
+3848,IAD2016-0074,Internal investigation,03/01/2016,06/25/2015,Sergeant,Brian S,Waters,Detail Cards,Sustained,Oral Reprimand,,03/01/2016,Brian,S,2016,Brian S Waters,10600
+3850,IAD2016-0075,Citizen complaint,03/02/2016,03/01/2016,Police Officer,Matthew G,Shea,Respectful Treatment,Not Sustained,,0.0,,Matthew,G,2016,Matthew G Shea,51578
+3869,IAD2016-0092,Citizen complaint,03/21/2016,03/20/2016,Lieutenant,Richard J,Driscoll,Respectful Treatment,Not Sustained,,0.0,,Richard,J,2016,Richard J Driscoll,54108
+3871,IAD2016-0092,Citizen complaint,03/21/2016,03/20/2016,Sergeant,Thomas G,Brennan,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Thomas,G,2016,Thomas G Brennan,11092
+3882,IAD2016-0097,Citizen complaint,03/28/2016,03/27/2016,Police Officer,James C,Clark,Respectful Treatment,Not Sustained,,0.0,,James,C,2016,James C Clark,11891
+3905,IAD2016-0132,Internal investigation,04/20/2016,10/08/2015,Police Officer,Thomas J,Porter,Paid Details Fitness for Duty,Sustained,Oral Reprimand,,04/19/2016,Thomas,J,2016,Thomas J Porter,120914
+3906,IAD2016-0138,Citizen complaint,04/27/2016,04/26/2016,Police Officer,Ryan P,Sullivan,Conformance to Laws,Sustained,Resigned Charges Pending,0.0,06/16/2016,Ryan,P,2016,Ryan P Sullivan,135938
+3918,IAD2016-0150,Citizen complaint,05/04/2016,01/11/2016,Police Officer,Derek Scott,Jefferson,Respectful Treatment,Not Sustained,,0.0,,Derek,Scott,2016,Derek Scott Jefferson,131283
+3925,IAD2016-0155,Internal investigation,05/05/2016,10/05/2015,Police Officer,Joseph E,Garcia,Paid Details Fitness for Duty,Sustained,Oral Reprimand,,05/05/2016,Joseph,E,2016,Joseph E Garcia,11206
+3933,IAD2016-0165,Citizen complaint,05/15/2016,05/15/2016,Police Officer,Jeremiah C,Hogan,Conduct Unbecoming,Unfounded,,0.0,,Jeremiah,C,2016,Jeremiah C Hogan,135957
+3942,IAD2016-0168,Internal investigation,05/18/2016,05/25/2014,Police Officer,Thomas F,Maloney,Booking Procedures,Not Sustained,,0.0,,Thomas,F,2016,Thomas F Maloney,11338
+3943,IAD2016-0168,Internal investigation,05/18/2016,05/25/2014,Police Officer,Thomas C,Corbett,Neg.Duty/Unreasonable Judge,Sustained,,0.0,,Thomas,C,2016,Thomas C Corbett,10054
+3965,IAD2016-0192,Citizen complaint,05/26/2016,05/24/2016,Police Officer,Edward P,Barrett,Self Identification,Sustained,Oral Reprimand,0.0,01/28/2020,Edward,P,2016,Edward P Barrett,11579
+3975,IAD2016-0197,Citizen complaint,05/27/2016,05/26/2016,Detective,Thomas J,Keeley,Respectful Treatment,Sustained,Retired,,07/05/2020,Thomas,J,2016,Thomas J Keeley,9588
+3989,IAD2016-0209,Citizen complaint,06/06/2016,06/03/2016,Police Officer,Jay D,Soares,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Jay,D,2016,Jay D Soares,11128
+3992,IAD2016-0214,Citizen complaint,06/09/2016,06/09/2016,Police Officer,Mark Andrew,Potter,Respectful Treatment,Exonerated,,0.0,,Mark,Andrew,2016,Mark Andrew Potter,108899
+3996,IAD2016-0223,Citizen complaint,06/15/2016,06/15/2016,Lieutenant,David C,Murphy,Respectful Treatment,Sustained,Oral Reprimand,0.0,08/22/2018,David,C,2016,David C Murphy,9375
+4020,IAD2016-0247,Citizen complaint,06/22/2016,,Police Officer,Brendan M,Bosse,Neg.Duty/Unreasonable Judge,Unfounded,,,,Brendan,M,2016,Brendan M Bosse,126558
+4023,IAD2016-0248,Citizen complaint,06/29/2016,06/28/2016,Police Officer,Brendan E,Cavanaugh,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Brendan,E,2016,Brendan E Cavanaugh,126560
+4024,IAD2016-0251,Citizen complaint,06/29/2016,,Detective,Lenin H,Frederick,Situations Involving Family & Frien,Unfounded,,,,Lenin,H,2016,Lenin H Frederick,11523
+4033,IAD2016-0261,Citizen complaint,07/01/2016,,Police Officer,Patrick J,Enwright,Respectful Treatment,Not Sustained,,0.0,,Patrick,J,2016,Patrick J Enwright,135947
+4035,IAD2016-0261,Citizen complaint,07/01/2016,,Police Officer,Joseph Michael,Burke,Respectful Treatment,Not Sustained,,0.0,,Joseph,Michael,2016,Joseph Michael Burke,135928
+4060,IAD2016-0290,Citizen complaint,07/21/2016,07/21/2016,Sergeant,Garrett G,Mitchell,Respectful Treatment,Not Sustained,,,,Garrett,G,2016,Garrett G Mitchell,10569
+4064,IAD2016-0300,Citizen complaint,08/09/2016,08/08/2016,Police Officer,Emmet T,Walsh,Conformance to Laws,Unfounded,Retired with Charges Pending,0.0,07/29/2019,Emmet,T,2016,Emmet T Walsh,10327
+4070,IAD2016-0303,Citizen complaint,08/11/2016,02/16/2016,Police Officer,Luis A,Rivera,Use of Force,Not Sustained,,0.0,,Luis,A,2016,Luis A Rivera,11124
+4076,IAD2016-0311,Citizen complaint,08/18/2016,06/17/2016,Sergeant,William Reid,Toner,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,William,Reid,2016,William Reid Toner,11744
+4079,IAD2016-0311,Citizen complaint,08/18/2016,06/17/2016,Police Officer,Frederick D,Lane,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Frederick,D,2016,Frederick D Lane,12269
+4119,IAD2016-0345,Citizen complaint,09/07/2016,09/06/2016,Police Officer,Eric A,Francis,Respectful Treatment,Not Sustained,,,,Eric,A,2016,Eric A Francis,10064
+4132,IAD2016-0366,Citizen complaint,09/22/2016,09/20/2016,Police Officer,Brian E,Tracey,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Brian,E,2016,Brian E Tracey,116940
+4153,IAD2016-0375,Internal investigation,09/26/2016,05/19/2016,Detective,Juan J,Seoane,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,0.0,11/24/2025,Juan,J,2016,Juan J Seoane,11458
+4154,IAD2016-0376,Citizen complaint,09/26/2016,09/23/2016,Police Officer,Ryan M,Connolly,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Ryan,M,2016,Ryan M Connolly,126496
+4163,IAD2016-0384,Citizen complaint,09/30/2016,09/29/2016,Police Officer,Fabian J,Belgrave,Self Identification,Not Sustained,,0.0,,Fabian,J,2016,Fabian J Belgrave,126478
+4196,IAD2016-0436,Citizen complaint,11/11/2016,11/10/2016,Police Officer,Ivan P,Gonzalez,Conduct Unbecoming,Not Sustained,,,,Ivan,P,2016,Ivan P Gonzalez,8007
+4202,IAD2016-0452,Citizen complaint,11/17/2016,11/16/2016,Police Officer,Allison D,Ross,Respectful Treatment,Not Sustained,,,,Allison,D,2016,Allison D Ross,106697
+4206,IAD2016-0461,Citizen complaint,11/28/2016,11/28/2016,Lieutenant,Christopher T,Walsh,Respectful Treatment,Unfounded,,,,Christopher,T,2016,Christopher T Walsh,11366
+4207,IAD2016-0462,Citizen complaint,11/24/2016,11/22/2016,Police Officer,Franklin E,Ortiz,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,,01/23/2020,Franklin,E,2016,Franklin E Ortiz,107125
+4208,IAD2016-0466,Citizen complaint,12/02/2016,07/18/2016,Police Officer,Patrick K,Foley,Neg.Duty/Unreasonable Judge Bias,Exonerated,,0.0,,Patrick,K,2016,Patrick K Foley,140296
+4210,IAD2016-0466,Citizen complaint,12/02/2016,07/18/2016,Police Officer,Andrew M,Caron,BIAS-Free Policing Policy,Unfounded,,0.0,,Andrew,M,2016,Andrew M Caron,126493
+4217,IAD2016-0471,Citizen complaint,12/05/2016,10/27/2016,Sergeant,Michael P,McDougall,Respectful Treatment,Not Sustained,,0.0,,Michael,P,2016,Michael P McDougall,116220
+4221,IAD2016-0471,Citizen complaint,12/05/2016,10/27/2016,Police Officer,Myron W,Phillips,Use of Force,Not Sustained,,0.0,,Myron,W,2016,Myron W Phillips,10441
+4227,IAD2016-0472,Citizen complaint,12/05/2016,03/20/2013,Police Officer,Brandon Shane,Carey,Self Identification,Not Sustained,,0.0,,Brandon,Shane,2016,Brandon Shane Carey,107289
+4234,IAD2016-0473,Citizen complaint,12/07/2016,12/01/2016,Police Officer,Nolan R,Burns,Self Identification,Unfounded,,0.0,,Nolan,R,2016,Nolan R Burns,126479
+4241,IAD2016-0477,Citizen complaint,11/23/2016,12/12/2015,Detective,James L,Rattigan,Abuse of Process,Unfounded,,0.0,,James,L,2016,James L Rattigan,10581
+4242,IAD2016-0478,Citizen complaint,12/05/2016,12/03/2016,Police Officer,Matthew P,Morrissey,Respectful Treatment,Not Sustained,,,,Matthew,P,2016,Matthew P Morrissey,131206
+4245,IAD2016-0481,Internal investigation,12/14/2016,12/14/2016,Police Officer,Sean O,Gannon,Directives/Orders,Sustained,Retired with Charges Pending,,09/01/2018,Sean,O,2016,Sean O Gannon,11688
+4247,IAD2016-0483,Citizen complaint,12/16/2016,08/10/2016,Police Officer,Christopher J,Simpson,Respectful Treatment,Not Sustained,,0.0,,Christopher,J,2016,Christopher J Simpson,111814
+4276,IAD2017-0002,Citizen complaint,01/02/2017,01/02/2017,Police Officer,Sinead M,Coyne,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Sinead,M,2017,Sinead M Coyne,126564
+4279,IAD2017-0002,Citizen complaint,01/02/2017,01/02/2017,Police Officer,Santino S,Daddieco,Conduct Unbecoming,Not Sustained,,0.0,,Santino,S,2017,Santino S Daddieco,102679
+4282,IAD2017-0003,Citizen complaint,01/05/2017,12/29/2016,Police Officer,John James,Feeney,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,John,James,2017,John James Feeney,131230
+4290,IAD2017-0005,Citizen complaint,01/06/2017,01/05/2017,Police Officer,Matthew L,Walsh,Respectful Treatment,Not Sustained,,0.0,,Matthew,L,2017,Matthew L Walsh,126521
+4304,IAD2017-0024,Citizen complaint,01/17/2017,01/17/2017,Captain,John H,Danilecki,Respectful Treatment,Not Sustained,,0.0,,John,H,2017,John H Danilecki,8947
+4326,IAD2017-0052,Citizen complaint,02/06/2017,02/04/2017,Police Officer,James M,Gigliello,Respectful Treatment,Exonerated,,,,James,M,2017,James M Gigliello,135955
+4328,IAD2017-0057,Citizen complaint,02/02/2017,,Detective,David R,Cataldo,Neg.Duty/Unreasonable Judge,Exonerated,,,,David,R,2017,David R Cataldo,9717
+4337,IAD2017-0069,Citizen complaint,02/15/2017,02/05/2017,Police Officer,Michael T,Principe,Respectful Treatment,Not Sustained,,0.0,,Michael,T,2017,Michael T Principe,12136
+4367,IAD2017-0112,Citizen complaint,03/16/2017,03/15/2017,Police Officer,Daniel Casanova,Thompson,Respectful Treatment,Exonerated,,0.0,,Daniel,Casanova,2017,Daniel Casanova Thompson,9809
+4382,IAD2017-0133,Internal investigation,03/30/2017,03/16/2017,Police Officer,Craig E,Crowley,Neg.Duty/Unreasonable Judge,Sustained,Suspension,2.0,04/14/2017,Craig,E,2017,Craig E Crowley,101940
+4388,IAD2017-0141,Citizen complaint,04/04/2017,04/04/2017,Police Officer,Christopher P,Dunn,Respectful Treatment,Not Sustained,,0.0,,Christopher,P,2017,Christopher P Dunn,135946
+4393,IAD2017-0142,Internal investigation,04/04/2017,02/26/2011,Police Officer,Vincent H,Stephens,Association with Criminals,Unfounded,,0.0,,Vincent,H,2017,Vincent H Stephens,10446
+4404,IAD2017-0148,Citizen complaint,04/10/2017,04/09/2017,Police Officer,James M,Cheevers,Respectful Treatment,Exonerated,,0.0,,James,M,2017,James M Cheevers,10049
+4434,IAD2017-0192,Citizen complaint,05/08/2017,05/05/2017,Police Officer,Mark Anthony,Bruno,BIAS-Free Policing Policy,Unfounded,,,,Mark,Anthony,2017,Mark Anthony Bruno,10510
+4467,IAD2017-0218,Citizen complaint,05/23/2017,05/22/2017,Police Officer,Patrick J,McGillicuddy,Respectful Treatment,Exonerated,,,,Patrick,J,2017,Patrick J McGillicuddy,116904
+4511,IAD2017-0249,Citizen complaint,06/09/2017,06/09/2017,Police Officer,Roland S,Robinson,Conformance to Laws,Sustained,Suspension/Settlement Agreement,3.0,03/01/2020,Roland,S,2017,Roland S Robinson,12279
+4524,IAD2017-0258,Internal investigation,06/14/2017,09/13/2016,Police Officer,Francis J,St Peter,Paid Details Fitness for Duty,Sustained,Oral Reprimand,,06/13/2017,Francis,J,2017,Francis J St Peter,12029
+4526,IAD2017-0261,Citizen complaint,06/15/2017,06/13/2017,Detective,Michael A,Kane,Conduct Unbecoming,Unfounded,,,,Michael,A,2017,Michael A Kane,10416
+4528,IAD2017-0263,Citizen complaint,06/15/2017,05/18/2017,Police Officer,Nathan P,Robbins,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,,02/11/2020,Nathan,P,2017,Nathan P Robbins,99252
+4530,IAD2017-0269,Internal investigation,06/21/2017,04/06/2017,Police Officer,Paul G,Broderick,Detail Cards,Not Sustained,,,,Paul,G,2017,Paul G Broderick,9003
+4552,IAD2017-0295,Citizen complaint,07/12/2017,06/28/2017,Police Officer,Sergio D,Medrano,Conduct Unbecoming,Unfounded,,,,Sergio,D,2017,Sergio D Medrano,140330
+4559,IAD2017-0303,Internal investigation,07/17/2017,04/19/2017,Police Officer,Carlos o,Aponte,Conduct Unbecoming,Sustained,Resigned Charges Pending,0.0,05/07/2018,Carlos,o,2017,Carlos o Aponte,140283
+4584,IAD2017-0328,Citizen complaint,08/01/2017,06/27/2017,Police Officer,Robert John,Walton,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Robert,John,2017,Robert John Walton,124893
+4599,IAD2017-0353,Citizen complaint,08/14/2017,08/10/2017,Police Officer,Adam Charles,MacMaster,Respectful Treatment,Not Sustained,,0.0,,Adam,Charles,2017,Adam Charles MacMaster,131275
+4607,IAD2017-0360,Internal investigation,08/22/2017,05/28/2016,Police Officer,Tiffany R,Chaplin,Association with Criminals,Not Sustained,,,,Tiffany,R,2017,Tiffany R Chaplin,75963
+4616,IAD2017-0372,Citizen complaint,08/29/2017,,Detective,Erin T,Schroeder-Withington,Respectful Treatment,Exonerated,,,,Erin,T,2017,Erin T Schroeder-Withington,11456
+4621,IAD2017-0375,Internal investigation,08/30/2017,08/01/2017,Police Officer,Todd T,Ho,Paid Details,Unfounded,,,,Todd,T,2017,Todd T Ho,12266
+4627,IAD2017-0385,Citizen complaint,08/31/2017,05/17/2017,Police Officer,Brian F,Yandle,Respectful Treatment,Not Sustained,,0.0,,Brian,F,2017,Brian F Yandle,140321
+4638,IAD2017-0403,Citizen complaint,09/12/2017,09/11/2017,Police Officer,Tracey A,Fenton,Neg.Duty/Unreasonable Judge,Unfounded,,,,Tracey,A,2017,Tracey A Fenton,102358
+4641,IAD2017-0405,Internal investigation,09/12/2017,09/03/2017,Detective,Keith A,Turner,Alcohol off Duty,Unfounded,Oral Reprimand,0.0,01/31/2018,Keith,A,2017,Keith A Turner,8352
+4672,IAD2017-0422,Citizen complaint,10/04/2017,10/04/2017,Police Officer,Paul D,Wright,Respectful Treatment,Not Sustained,,,,Paul,D,2017,Paul D Wright,11750
+4673,IAD2017-0423,Internal investigation,10/05/2017,10/04/2017,Police Officer,Michael T,Geary,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,,01/30/2019,Michael,T,2017,Michael T Geary,9579
+4682,IAD2017-0435,Citizen complaint,10/11/2017,10/10/2017,Police Officer,Andrew G,Wilcox,Use of Force,Exonerated,,0.0,,Andrew,G,2017,Andrew G Wilcox,116934
+4683,IAD2017-0435,Citizen complaint,10/11/2017,10/10/2017,Police Officer,William A,Connor,Use of Force,Exonerated,,0.0,,William,A,2017,William A Connor,116924
+4684,IAD2017-0435,Citizen complaint,10/11/2017,10/10/2017,Police Officer,Christopher L,Vazquez,Use of Force,Exonerated,,0.0,,Christopher,L,2017,Christopher L Vazquez,140604
+4687,IAD2017-0443,Citizen complaint,10/19/2017,,Police Officer,Renzo A,Monzon,BIAS-Free Policing Policy,Not Sustained,,0.0,,Renzo,A,2017,Renzo A Monzon,144476
+4713,IAD2017-0468,Citizen complaint,11/03/2017,11/03/2017,Police Officer,William F,Sargent,Respectful Treatment,Sustained,Retired,0.0,11/30/2023,William,F,2017,William F Sargent,10304
+4714,IAD2017-0468,Citizen complaint,11/03/2017,11/03/2017,Lieutenant,Leighton B,Facey,Manner of Recording Complaints,Exonerated,,0.0,,Leighton,B,2017,Leighton B Facey,12117
+4728,IAD2017-0489,Internal investigation,11/22/2017,,Sergeant Detective,Pamela Lynne,Besold,Respectful Treatment Bias,Sustained,Suspension/Settlement Agreement (12 months),260.0,06/25/2019,Pamela,Lynne,2017,Pamela Lynne Besold,11669
+4730,IAD2017-0497,Internal investigation,11/24/2017,05/23/2017,Superintendent,Paul A,Fitzgerald,Alcohol off Duty,Unfounded,Retired,0.0,11/27/2017,Paul,A,2017,Paul A Fitzgerald,9732
+4733,IAD2017-0500,Internal investigation,11/27/2017,11/25/2017,Police Officer,Christopher David,Goff,Search Suspect after Handcuffing,Not Sustained,,0.0,,Christopher,David,2017,Christopher David Goff,131281
+4735,IAD2017-0500,Internal investigation,11/27/2017,11/25/2017,Police Officer,James M,O'Loughlin,Search Suspect after Handcuffing,Not Sustained,,0.0,,James,M,2017,James M O'Loughlin,131212
+4744,IAD2017-0506,Internal investigation,12/05/2017,08/05/2017,Police Officer,Nytisha D,Brown,Reporting for Duty,Sustained,Oral Reprimand,,12/04/2017,Nytisha,D,2017,Nytisha D Brown,11583
+4746,IAD2017-0508,Internal investigation,12/08/2017,11/07/2017,Police Officer,Patricia M,Darosa,Prohibited Conduct,Not Sustained,,,,Patricia,M,2017,Patricia M Darosa,11100
+4751,IAD2017-0516,Citizen complaint,12/07/2017,12/04/2017,Police Officer,Owen C,Murray,Respectful Treatment,Not Sustained,,0.0,,Owen,C,2017,Owen C Murray,131207
+4752,IAD2017-0516,Citizen complaint,12/07/2017,12/04/2017,Police Officer,Ryan T,MacRoberts,Respectful Treatment,Not Sustained,,0.0,,Ryan,T,2017,Ryan T MacRoberts,120902
+4760,IAD2017-0525,Citizen complaint,12/15/2017,12/15/2017,Police Officer,Frederick R,Allen,Respectful Treatment,Not Sustained,,,,Frederick,R,2017,Frederick R Allen,9951
+4787,IAD2018-0014,Citizen complaint,01/19/2018,01/15/2018,Police Officer,Daniel M,Conway,Use of Force,Not Sustained,,0.0,,Daniel,M,2018,Daniel M Conway,120212
+4798,IAD2018-0033,Internal investigation,01/30/2018,01/05/2017,Police Officer,Christopher M,Long,Directives/Orders,Unfounded,,0.0,,Christopher,M,2018,Christopher M Long,9867
+4805,IAD2018-0040,Citizen complaint,02/05/2018,08/06/2017,Police Officer,Michael F,Gill,Respectful Treatment,Not Sustained,,,,Michael,F,2018,Michael F Gill,12263
+4807,IAD2018-0046,Citizen complaint,02/06/2018,02/05/2018,Police Officer,Kyle J,Holmes,Respectful Treatment,Unfounded,,0.0,,Kyle,J,2018,Kyle J Holmes,140324
+4812,IAD2018-0052,Citizen complaint,02/05/2018,01/21/2018,Police Officer,Christopher G,Hegerich,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Christopher,G,2018,Christopher G Hegerich,144495
+4814,IAD2018-0054,Citizen complaint,02/12/2018,02/06/2018,Police Officer,Jeff R,Carrio,Handcuffing a Suspect,Not Sustained,,,,Jeff,R,2018,Jeff R Carrio,95226
+4828,IAD2018-0062,Internal investigation,02/21/2018,,Police Officer,James E,Powell,Substance Abuse Policy,Exonerated,Retired,0.0,05/10/2024,James,E,2018,James E Powell,10798
+4853,IAD2018-0082,Internal investigation,02/23/2018,02/23/2018,Police Officer,Randall D,Martin,Neg.Duty/Unreasonable Judge,Sustained,Suspension,1.0,06/26/2019,Randall,D,2018,Randall D Martin,131276
+4855,IAD2018-0082,Internal investigation,02/23/2018,02/23/2018,Police Officer,Michael D,Peters,Neg.Duty/Unreasonable Judge,Sustained,Suspension,1.0,06/27/2019,Michael,D,2018,Michael D Peters,126547
+4860,IAD2018-0089,Citizen complaint,03/02/2018,,Police Officer,Allison P,Gunther,Use of Force,Exonerated,,0.0,,Allison,P,2018,Allison P Gunther,98750
+4861,IAD2018-0089,Citizen complaint,03/02/2018,,Police Officer,Dennis J,Leahy,Use of Force,Exonerated,,0.0,,Dennis,J,2018,Dennis J Leahy,140311
+4862,IAD2018-0089,Citizen complaint,03/02/2018,,Police Officer,Martin A,Dunlap,Use of Force,Exonerated,,0.0,,Martin,A,2018,Martin A Dunlap,140281
+4892,IAD2018-0106,Citizen complaint,03/12/2018,03/05/2018,Police Officer,Paul T,Perry,Respectful Treatment,Unfounded,,,,Paul,T,2018,Paul T Perry,8480
+4920,IAD2018-0147,Citizen complaint,03/26/2018,03/25/2018,Police Officer,Maura A,Byrne,Respectful Treatment,Sustained,Suspension,1.0,04/10/2018,Maura,A,2018,Maura A Byrne,11673
+4938,IAD2018-0153,Citizen complaint,04/04/2018,04/04/2018,Police Officer,Patrick J,Creavin,Use of Force,Not Sustained,,0.0,,Patrick,J,2018,Patrick J Creavin,11200
+4944,IAD2018-0165,Citizen complaint,04/10/2018,04/08/2018,Police Officer,David Paul,MacDonald,Respectful Treatment,Not Sustained,,0.0,,David,Paul,2018,David Paul MacDonald,131274
+4945,IAD2018-0165,Citizen complaint,04/10/2018,04/08/2018,Police Officer,Cara E,Doyle,Respectful Treatment,Not Sustained,,0.0,,Cara,E,2018,Cara E Doyle,112108
+4949,IAD2018-0167,Citizen complaint,04/11/2018,04/11/2018,Police Officer,Kevin Michael,Bernazzani,Respectful Treatment,Not Sustained,,0.0,,Kevin,Michael,2018,Kevin Michael Bernazzani,107421
+4957,IAD2018-0168,Citizen complaint,04/11/2018,04/10/2018,Sergeant Detective,Eric G,Krause,Respectful Treatment,Sustained,Oral Reprimand,0.0,09/04/2025,Eric,G,2018,Eric G Krause,11708
+4965,IAD2018-0183,Internal investigation,04/17/2018,04/17/2018,Police Officer,Stephanie J,Marrow,Directives/Orders,Sustained,Oral Reprimand,,01/27/2020,Stephanie,J,2018,Stephanie J Marrow,9766
+4973,IAD2018-0190,Citizen complaint,05/03/2018,04/22/2018,Police Officer,Bryan Marcel,Augustine,Respectful Treatment,Sustained,Suspension/Settlement Agreement,30.0,09/09/2025,Bryan,Marcel,2018,Bryan Marcel Augustine,148242
+5004,IAD2018-0213,Citizen complaint,05/17/2018,05/16/2018,Police Officer,James Michael,McDonnell,Respectful Treatment,Not Sustained,,0.0,,James,Michael,2018,James Michael McDonnell,51652
+5005,IAD2018-0214,Citizen complaint,05/18/2018,04/19/2018,Police Officer,Sean Patrick,OBrien,Use of Force,Not Sustained,,0.0,,Sean,Patrick,2018,Sean Patrick OBrien,148289
+5006,IAD2018-0214,Citizen complaint,05/18/2018,04/19/2018,Police Officer,Leah E,Bagas,Use of Force,Not Sustained,,0.0,,Leah,E,2018,Leah E Bagas,126476
+5035,IAD2018-0232,Citizen complaint,05/30/2018,09/15/2018,Sergeant Detective,Joseph E,Sullivan,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Joseph,E,2018,Joseph E Sullivan,11185
+5039,IAD2018-0240,Citizen complaint,05/25/2018,05/24/2018,Police Officer,Benjamin M,Katz,Respectful Treatment,Not Sustained,,,,Benjamin,M,2018,Benjamin M Katz,144496
+5054,IAD2018-0270,Internal investigation,06/18/2018,11/29/2017,Police Officer,Dennis R,Linehan,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,0.0,07/07/2020,Dennis,R,2018,Dennis R Linehan,97323
+5099,IAD2018-0320,Internal investigation,07/20/2018,04/07/2018,Police Officer,Mark S,Bordley,Reporting for Duty,Sustained,Oral Reprimand,,07/17/2018,Mark,S,2018,Mark S Bordley,11061
+5101,IAD2018-0322,Internal investigation,07/23/2018,07/05/2018,Police Officer,Richard Anthony,Errico,Emergency Driving,Sustained,Oral Reprimand,,07/23/2018,Richard,Anthony,2018,Richard Anthony Errico,144329
+5128,IAD2018-0360,Internal investigation,08/09/2018,,Police Officer,Jose V,Fontanez,Sleeping On Duty,Filed,Deceased,0.0,04/15/2020,Jose,V,2018,Jose V Fontanez,10711
+5133,IAD2018-0361,Internal investigation,08/10/2018,07/04/2018,Police Officer,Wandy A,Rosario,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,0.0,09/10/2025,Wandy,A,2018,Wandy A Rosario,118532
+5153,IAD2018-0380,Citizen complaint,07/23/2018,07/19/2018,Police Officer,Micah W,Chapman,Conformance to Laws,Unfounded,,,,Micah,W,2018,Micah W Chapman,135965
+5181,IAD2018-0427,Citizen complaint,09/13/2018,09/13/2018,Police Officer,Kevin M,Donahue,Respectful Treatment,Not Sustained,,0.0,,Kevin,M,2018,Kevin M Donahue,56354
+5185,IAD2018-0428,Citizen complaint,09/13/2018,08/15/2018,Police Officer,Timothy F,Wilson,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,0.0,02/06/2020,Timothy,F,2018,Timothy F Wilson,117846
+5193,IAD2018-0440,Citizen complaint,09/20/2018,09/19/2018,Police Officer,John E,Pels,Respectful Treatment,Sustained,Oral Reprimand,,03/02/2020,John,E,2018,John E Pels,140344
+5219,IAD2018-0475,Citizen complaint,10/22/2018,10/19/2018,Police Officer,Kenneth M,Curley,BIAS-Free Policing Policy,Unfounded,,0.0,,Kenneth,M,2018,Kenneth M Curley,126498
+5230,IAD2018-0501,Citizen complaint,11/01/2018,10/28/2018,Police Officer,James M,Doiron,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,0.0,03/04/2020,James,M,2018,James M Doiron,11310
+5234,IAD2018-0516,Citizen complaint,11/05/2018,10/27/2018,Police Officer,Michael T,Walton,Conformance to Laws,Not Sustained,Oral Reprimand,0.0,11/10/2025,Michael,T,2018,Michael T Walton,148311
+5259,IAD2018-0531,Citizen complaint,11/26/2018,10/22/2018,Police Officer,Lee S,Merlino,Use of Force,Unfounded,,0.0,,Lee,S,2018,Lee S Merlino,120434
+5288,IAD2018-0571,Citizen complaint,12/11/2018,12/10/2018,Sergeant Detective,Thomas L,Sexton,Respectful Treatment,Unfounded,,,,Thomas,L,2018,Thomas L Sexton,10586
+5291,IAD2018-0584,Citizen complaint,12/20/2018,12/16/2018,Police Officer,James Michael,Sullivan-Venezia,Use of Force,Not Sustained,,0.0,,James,Michael,2018,James Michael Sullivan-Venezia,148306
+5297,IAD2018-0596,Citizen complaint,12/03/2018,11/29/2018,Police Officer,David P,McMenamy,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,David,P,2018,David P McMenamy,126524
+5299,IAD2018-0596,Citizen complaint,12/03/2018,11/29/2018,Police Officer,Benjamin N,Linsky,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Benjamin,N,2018,Benjamin N Linsky,144460
+5307,IAD2019-0005,Internal investigation,01/10/2019,01/01/2018,Police Officer,Joao C,Rodrigues,Alcohol on Duty,Sustained,Suspension,3.0,04/04/2019,Joao,C,2019,Joao C Rodrigues,93855
+5309,IAD2019-0005,Internal investigation,01/10/2019,01/01/2018,Sergeant,John F,Hynes,Alcohol on Duty,Sustained,Suspension,5.0,02/15/2019,John,F,2019,John F Hynes,11612
+5333,IAD2019-0006,Citizen complaint,01/14/2019,07/18/2018,Sergeant,Brian R,Dunford,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Brian,R,2019,Brian R Dunford,92298
+5335,IAD2019-0011,Citizen complaint,01/11/2019,01/11/2019,Police Officer,Sean P,Mulligan,Sleeping On Duty,Not Sustained,,0.0,,Sean,P,2019,Sean P Mulligan,140327
+5336,IAD2019-0012,Citizen complaint,01/15/2019,01/05/2019,Police Officer,Rebecca J,Leo,Neg.Duty/Unreasonable Judge,Not Sustained,,,,Rebecca,J,2019,Rebecca J Leo,135977
+5349,IAD2019-0033,Internal investigation,01/30/2019,01/22/2019,Detective,Matthew J,Fogarty,Searching Prisoner Under Arrest/Transport,Exonerated,,0.0,,Matthew,J,2019,Matthew J Fogarty,93797
+5350,IAD2019-0033,Internal investigation,01/30/2019,01/22/2019,Police Officer,Ryan Richard,Kelly,Searching Prisoner Under Arrest/Transport,Exonerated,,0.0,,Ryan,Richard,2019,Ryan Richard Kelly,148277
+5353,IAD2019-0033,Internal investigation,01/30/2019,01/22/2019,Lieutenantenant Detective,John P,Conroy,Prisoners/Booking Procedures,Exonerated,,0.0,,John,P,2019,John P Conroy,11401
+5371,IAD2019-0041,Citizen complaint,02/07/2019,03/18/2018,Detective,Carlton A,Williamson,Conformance to Laws,Sustained,Suspension/Settlement Agreement,3.0,06/19/2024,Carlton,A,2019,Carlton A Williamson,10605
+5374,IAD2019-0042,Internal investigation,02/08/2019,08/23/2017,Lieutenant,Timothy J,Torigian,Conformance to Laws (2 counts),Sustained,Resigned Charges Pending,0.0,10/12/2020,Timothy,J,2019,Timothy J Torigian,9807
+5381,IAD2019-0042,Internal investigation,02/08/2019,08/23/2017,Sergeant,Robert J,Twitchell,Conformance to Laws (2 counts),Sustained,Retired with Charges Pending,0.0,03/20/2020,Robert,J,2019,Robert J Twitchell,10093
+5404,IAD2019-0042,Internal investigation,02/08/2019,08/23/2017,Police Officer,Michael P,Murphy,Conformance to Laws (3 counts),Sustained,Resigned,0.0,01/02/2024,Michael,P,2019,Michael P Murphy,11906
+5407,IAD2019-0042,Internal investigation,02/08/2019,08/23/2017,Police Officer,Sybil F,Mason,Conformance to Laws (2 counts),Sustained,Retired with Charges Pending,0.0,06/14/2022,Sybil,F,2019,Sybil F Mason,11064
+5410,IAD2019-0042,Internal investigation,02/08/2019,08/23/2017,Police Officer,Kendra J,Conway,Conformance to Laws (2 counts),Sustained,Suspension,90.0,07/01/2025,Kendra,J,2019,Kendra J Conway,12282
+5428,IAD2019-0055,Citizen complaint,02/19/2019,11/18/2018,Police Officer,Mariana Victoria,Avila,Use of Force,Unfounded,,0.0,,Mariana,Victoria,2019,Mariana Victoria Avila,144324
+5449,IAD2019-0078,Citizen complaint,03/11/2019,03/08/2019,Sergeant,Brian C,Black,Respectful Treatment,Not Sustained,,0.0,,Brian,C,2019,Brian C Black,10387
+5455,IAD2019-0083,Citizen complaint,03/15/2019,08/15/2018,Lieutenant,Timothy P,Gaughan,BIAS-Free Policing Policy,Not Sustained,,0.0,,Timothy,P,2019,Timothy P Gaughan,10177
+5493,IAD2019-0125,Citizen complaint,04/09/2019,03/20/2019,Police Officer,Derek H,Chan,Respectful Treatment,Not Sustained,,0.0,,Derek,H,2019,Derek H Chan,110930
+5495,IAD2019-0125,Citizen complaint,04/09/2019,03/20/2019,Police Officer,Moses Jose,DaSilva,Respectful Treatment,Not Sustained,,0.0,,Moses,Jose,2019,Moses Jose DaSilva,110128
+5500,IAD2019-0127,Internal investigation,04/10/2019,,Police Officer,Stephen G,Crimmins,Harassment Policy,Not Sustained,Oral Reprimand,0.0,03/04/2020,Stephen,G,2019,Stephen G Crimmins,10395
+5507,IAD2019-0149,Internal investigation,04/30/2019,04/11/2019,Police Officer,Michael J,Geary,Dept. Motor Vehicle Accidents,Sustained,Suspension,1.0,07/15/2019,Michael,J,2019,Michael J Geary,135954
+5513,IAD2019-0164,Citizen complaint,05/07/2019,04/21/2019,Police Officer,David J,Marshall,Neg.Duty/Unreasonable Judge,Unfounded,Oral Reprimand,0.0,02/20/2023,David,J,2019,David J Marshall,144425
+5522,IAD2019-0178,Citizen complaint,05/13/2019,04/30/2019,Police Officer,Robert M,Lemire,Use of Force,Exonerated,,0.0,,Robert,M,2019,Robert M Lemire,144456
+5525,IAD2019-0178,Citizen complaint,05/13/2019,04/30/2019,Sergeant,Michael A,O'Hara,Use of Force,Exonerated,,0.0,,Michael,A,2019,Michael A O'Hara,96710
+5528,IAD2019-0180,Citizen complaint,05/16/2019,05/16/2019,Police Officer,Matthew W,McCarthy,Emergency Driving,Exonerated,,0.0,,Matthew,W,2019,Matthew W McCarthy,102407
+5540,IAD2019-0183,Internal investigation,04/04/2019,12/22/2018,Police Officer,Shawn N,Harris,Reporting for Duty,Sustained,Oral Reprimand,,05/14/2019,Shawn,N,2019,Shawn N Harris,12264
+5541,IAD2019-0184,Internal investigation,05/17/2019,01/16/2019,Police Officer,Nicole L,Grant,Untruthfulness,Not Sustained,,0.0,,Nicole,L,2019,Nicole L Grant,11831
+5544,IAD2019-0193,Citizen complaint,05/23/2019,05/20/2019,Police Officer,Siobhan Bernadette,Elvin,Respectful Treatment,Not Sustained,,,,Siobhan,Bernadette,2019,Siobhan Bernadette Elvin,148261
+5550,IAD2019-0209,Citizen complaint,06/03/2019,06/03/2019,Police Officer,Bernard A,Doyle,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Bernard,A,2019,Bernard A Doyle,10165
+5572,IAD2019-0293,Citizen complaint,06/24/2019,06/23/2019,Police Officer,Angelo R,Hernandez,Respectful Treatment,Not Sustained,,,,Angelo,R,2019,Angelo R Hernandez,11320
+5598,IAD2019-0321,Citizen complaint,07/18/2019,07/17/2019,Police Officer,Michael Anthony,Mustacchio,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Michael,Anthony,2019,Michael Anthony Mustacchio,111241
+5620,IAD2019-0352,Citizen complaint,08/05/2019,08/04/2019,Police Officer,Hien T,Truong,Respectful Treatment,Unfounded,,0.0,,Hien,T,2019,Hien T Truong,11365
+5621,IAD2019-0352,Citizen complaint,08/05/2019,08/04/2019,Police Officer,Matthew N,Muckerheide,Respectful Treatment,Unfounded,,0.0,,Matthew,N,2019,Matthew N Muckerheide,140326
+5637,IAD2019-0367,Internal investigation,12/04/2018,12/04/2018,Lieutenant,Thomas J,Hill,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Thomas,J,2018,Thomas J Hill,10411
+5642,IAD2019-0383,Citizen complaint,08/19/2019,08/17/2019,Police Officer,Kamisha L,Green,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Kamisha,L,2019,Kamisha L Green,135897
+5648,IAD2019-0383,Citizen complaint,08/19/2019,08/17/2019,Sergeant Detective,Mark W,Vickers,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Mark,W,2019,Mark W Vickers,8740
+5673,IAD2019-0410,Citizen complaint,09/09/2019,09/08/2019,Police Officer,Sean C,Burke,Respectful Treatment,Not Sustained,,0.0,,Sean,C,2019,Sean C Burke,129442
+5681,IAD2019-0416,Citizen complaint,09/11/2019,09/09/2019,Lieutenant,Jacqueline D,Creaven,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Jacqueline,D,2019,Jacqueline D Creaven,10708
+5689,IAD2019-0417,Citizen complaint,09/13/2019,09/13/2019,Police Officer,Gustavo Gil,Medina,Use of Force,Exonerated,,0.0,,Gustavo,Gil,2019,Gustavo Gil Medina,153096
+5691,IAD2019-0419,Citizen complaint,09/16/2019,09/10/2019,Police Officer,Peter W,Lekaditis,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Peter,W,2019,Peter W Lekaditis,144452
+5702,IAD2019-0439,Citizen complaint,09/30/2019,09/20/2019,Police Officer,John W,Green,Respectful Treatment,Not Sustained,,0.0,,John,W,2019,John W Green,10271
+5719,IAD2019-0465,Citizen complaint,10/04/2019,08/31/2019,Police Officer,India D,Lynch,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,India,D,2019,India D Lynch,11251
+5721,IAD2019-0470,Citizen complaint,10/08/2019,10/07/2019,Police Officer,Daniel S,Simons,Respectful Treatment,Not Sustained,,,,Daniel,S,2019,Daniel S Simons,9793
+5747,IAD2019-0506,Internal investigation,11/04/2019,,Police Officer,Debra M,Fisher,Alcohol In Police Facility,Not Sustained,Suspension,3.0,12/15/2023,Debra,M,2019,Debra M Fisher,10758
+5763,IAD2019-0506,Internal investigation,11/04/2019,,Police Officer,Michael J,Spence,Alcohol in Police Facility,Sustained,Suspension,3.0,07/27/2020,Michael,J,2019,Michael J Spence,11542
+5822,IAD2019-0534,Citizen complaint,11/18/2019,11/11/2019,Police Officer,Kyle J,Gomes,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Kyle,J,2019,Kyle J Gomes,140302
+5823,IAD2019-0534,Citizen complaint,11/18/2019,11/11/2019,Police Officer,Jacques Junior,Noel,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Jacques,Junior,2019,Jacques Junior Noel,153098
+5824,IAD2019-0535,Citizen complaint,11/22/2019,11/22/2019,Detective,Kevin J,Yalmokas,Respectful Treatment,Not Sustained,,,,Kevin,J,2019,Kevin J Yalmokas,11475
+5847,IAD2019-0560,Citizen complaint,12/11/2019,12/10/2019,Police Officer,Brendan Patrick,Murphy,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Brendan,Patrick,2019,Brendan Patrick Murphy,153161
+5888,IAD2020-0004,Citizen complaint,01/10/2020,01/10/2020,Police Officer,Martin D,Harrison,Respectful Treatment,Not Sustained,,0.0,,Martin,D,2020,Martin D Harrison,11695
+5890,IAD2020-0005,Citizen complaint,01/22/2020,01/22/2020,Police Officer,Ryan James,Fullam,Respectful Treatment,Not Sustained,,,,Ryan,James,2020,Ryan James Fullam,144336
+5910,IAD2020-0019,Internal investigation,01/27/2020,01/27/2020,Police Officer,Michael J,Matthews,Prisoner - Sickness or Injury,Not Sustained,Retired with Charges Pending,0.0,03/18/2021,Michael,J,2020,Michael J Matthews,10725
+5920,IAD2020-0035,Citizen complaint,02/03/2020,11/21/2019,Police Officer,Seamus P,Walsh,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Seamus,P,2020,Seamus P Walsh,126523
+5921,IAD2020-0035,Citizen complaint,02/03/2020,11/21/2019,Police Officer,Ryan J,Black,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Ryan,J,2020,Ryan J Black,153094
+5927,IAD2020-0039,Internal investigation,02/05/2020,01/10/2019,Police Officer,Terrence C,Joyce,Paid Detail Assignment (83 counts),Sustained,Retired,0.0,05/10/2022,Terrence,C,2020,Terrence C Joyce,11112
+5929,IAD2020-0041,Citizen complaint,02/06/2020,04/27/2019,Detective,Tahisha L,Skeen,Neg.Duty/Unreasonable Judge,Exonerated,,,,Tahisha,L,2020,Tahisha L Skeen,11183
+5933,IAD2020-0052,Internal investigation,02/11/2020,08/09/2019,Sergeant,William G,Knecht,Reporting for Duty,Sustained,Oral Reprimand,,02/03/2020,William,G,2020,William G Knecht,10719
+5935,IAD2020-0054,Internal investigation,02/11/2020,01/20/2020,Sergeant,Joseph G,Monahan,Conduct Unbecoming (2 counts),Not Sustained,,,,Joseph,G,2020,Joseph G Monahan,11258
+5948,IAD2020-0067,Internal investigation,02/26/2020,01/25/2019,Police Officer,Robert J,MacLean,Paid Detail Assignment (20 counts),Filed,Deceased,,04/06/2022,Robert,J,2020,Robert J MacLean,102401
+5973,IAD2020-0102,Citizen complaint,03/16/2020,03/14/2020,Police Officer,Brian M,Hurld,Self Identification,Not Sustained,,0.0,,Brian,M,2020,Brian M Hurld,131269
+5979,IAD2020-0109,Internal investigation,03/30/2020,03/16/2020,Police Officer,Morris Viet,Luu,Paid Detail Assignment,Sustained,Oral Reprimand,,04/23/2024,Morris,Viet,2020,Morris Viet Luu,153080
+5994,IAD2020-0148,Citizen complaint,04/28/2020,03/07/2020,Detective,Mark Joseph,McKeown,Use of Force,Not Sustained,,0.0,,Mark,Joseph,2020,Mark Joseph McKeown,50678
+6004,IAD2020-0159,Citizen complaint,05/07/2020,05/07/2020,Lieutenant,David E,Flaherty,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,David,E,2020,David E Flaherty,10533
+6005,IAD2020-0161,Citizen complaint,05/11/2020,05/10/2020,Police Officer,Kevin Stephen,O'Leary,Use of Force,Exonerated,,0.0,,Kevin,Stephen,2020,Kevin Stephen O'Leary,153120
+6015,IAD2020-0167,Citizen complaint,05/20/2020,05/15/2020,Police Officer,James C,Hosea,Respectful Treatment,Unfounded,,0.0,,James,C,2020,James C Hosea,128227
+6029,IAD2020-0179,Citizen complaint,06/02/2020,05/31/2020,Police Officer,Connor T,Murphy,BIAS-Free Policing Policy,Not Sustained,,,,Connor,T,2020,Connor T Murphy,144473
+6076,IAD2020-0198,Citizen complaint,06/08/2020,06/06/2020,Police Officer,Joseph Albert,Caggiano,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Joseph,Albert,2020,Joseph Albert Caggiano,148247
+6080,IAD2020-0202,Citizen complaint,06/10/2020,06/08/2020,Police Officer,Jeffrey R,McGahan,Self Identification,Unfounded,,0.0,,Jeffrey,R,2020,Jeffrey R McGahan,140313
+6101,IAD2020-0211,Internal investigation,06/16/2020,05/22/2020,Police Officer,John Edward,O'Toole,Conduct Unbecoming,Unfounded,Oral Reprimand,0.0,02/08/2023,John,Edward,2020,John Edward O'Toole,50308
+6119,IAD2020-0214,Citizen complaint,06/18/2020,06/17/2020,Police Officer,Matthew James,Beggan,Situations Involving Family & Frien,Sustained,,0.0,,Matthew,James,2020,Matthew James Beggan,112120
+6126,IAD2020-0241,Citizen complaint,06/22/2020,06/21/2020,Police Officer,Edward S,Patterson,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,0.0,05/24/2022,Edward,S,2020,Edward S Patterson,157646
+6128,IAD2020-0246,Citizen complaint,06/23/2020,06/20/2020,Police Officer,Daniel James,Bamford,Use of Force,Unfounded,,0.0,,Daniel,James,2020,Daniel James Bamford,153144
+6137,IAD2020-0261,Citizen complaint,06/26/2020,06/26/2020,Sergeant,James Peter,Nolan,Respectful Treatment,Unfounded,,0.0,,James,Peter,2020,James Peter Nolan,10435
+6145,IAD2020-0265,Citizen complaint,06/30/2020,06/24/2020,Police Officer,Joseph R,Greco,Body Worn Policy - Activation & Incidents of Use,Sustained,Suspension/Settlement Agreement,3.0,07/10/2024,Joseph,R,2020,Joseph R Greco,10148
+6152,IAD2020-0269,Internal investigation,07/02/2020,06/24/2020,Police Officer,Kylie Ann,Langton,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Kylie,Ann,2020,Kylie Ann Langton,153140
+6169,IAD2020-0283,Citizen complaint,07/08/2020,07/06/2020,Police Officer,James Gerard,O'Brien,Use of Force,Exonerated,,0.0,,James,Gerard,2020,James Gerard O'Brien,126186
+6172,IAD2020-0283,Citizen complaint,07/08/2020,07/06/2020,Police Officer,Sean M,Murphy,Use of Force,Exonerated,,0.0,,Sean,M,2020,Sean M Murphy,144472
+6183,IAD2020-0300,Citizen complaint,07/22/2020,07/22/2020,Police Officer,Amanda C,Kennedy,Respectful Treatment,Sustained,Oral Reprimand,0.0,03/07/2024,Amanda,C,2020,Amanda C Kennedy,141219
+6187,IAD2020-0302,Citizen complaint,07/27/2020,07/24/2020,Police Officer,Joseph David,Campot,Body Worn Camera Policy - Activation & Incidents of use,Sustained,Oral Reprimand,0.0,07/28/2025,Joseph,David,2020,Joseph David Campot,153131
+6189,IAD2020-0302,Citizen complaint,07/27/2020,07/24/2020,Police Officer,Jordan Dean,Aragones,Body Worn Camera Policy - Activation & Incidents of use,Sustained,Oral Reprimand,0.0,08/13/2025,Jordan,Dean,2020,Jordan Dean Aragones,153073
+6195,IAD2020-0315,Citizen complaint,08/10/2020,06/12/2020,Police Officer,Dale Deaven,Kennedy,Collection & Identification,Sustained,Oral Reprimand,0.0,08/15/2025,Dale,Deaven,2020,Dale Deaven Kennedy,144325
+6205,IAD2020-0353,Citizen complaint,08/24/2020,08/16/2020,Police Officer,Thelma S,Gomes,Conduct Unbecoming,Not Sustained,,,,Thelma,S,2020,Thelma S Gomes,113365
+6219,IAD2020-0380,Citizen complaint,09/14/2020,,Police Officer,Marc D,Coleman,Neg.Duty/Unreasonable Judge,Unfounded,,,,Marc,D,2020,Marc D Coleman,11060
+6220,IAD2020-0382,Citizen complaint,09/14/2020,02/18/2020,Police Officer,Jeffrey M,Gelinas,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Jeffrey,M,2020,Jeffrey M Gelinas,153328
+6227,IAD2020-0388,Citizen complaint,09/24/2020,09/22/2020,Police Officer,Corey P,Dizoglio,Respectful Treatment,Not Sustained,,0.0,,Corey,P,2020,Corey P Dizoglio,157662
+6236,IAD2020-0396,Citizen complaint,09/25/2020,09/12/2020,Police Officer,Ashley L,Sena,Personal Business,Sustained,Oral Reprimand,,04/13/2023,Ashley,L,2020,Ashley L Sena,140333
+6237,IAD2020-0397,Citizen complaint,09/28/2020,09/27/2020,Police Officer,William P,Henry,Respectful Treatment,Not Sustained,,,,William,P,2020,William P Henry,11696
+6241,IAD2020-0402,Citizen complaint,10/05/2020,07/03/2020,Police Officer,Saviel G,Colon,Respectful Treatment,Not Sustained,Resigned,0.0,05/27/2023,Saviel,G,2020,Saviel G Colon,140312
+6243,IAD2020-0402,Citizen complaint,10/05/2020,07/03/2020,Police Officer,Michael W,Flaven,Respectful Treatment,Not Sustained,,0.0,,Michael,W,2020,Michael W Flaven,90495
+6247,IAD2020-0405,Internal investigation,10/02/2020,02/28/2020,Police Officer,Claude N,Defay,Reporting for Duty,Sustained,Oral Reprimand,,02/21/2021,Claude,N,2020,Claude N Defay,116134
+6249,IAD2020-0413,Citizen complaint,10/09/2020,10/08/2020,Police Officer,Valerie A,Johnson,Self Identification,Not Sustained,,0.0,,Valerie,A,2020,Valerie A Johnson,9365
+6276,IAD2020-0454,Internal investigation,11/19/2020,11/18/2020,Police Officer,Ryan H,Frederick,Drug Test,Sustained,Suspension,45.0,12/02/2020,Ryan,H,2020,Ryan H Frederick,135950
+6277,IAD2020-0455,Citizen complaint,11/19/2020,06/25/2020,Sergeant Detective,Phillip A,Owens,Information Dept. Members May Not Release,Sustained,Oral Reprimand,,12/29/2022,Phillip,A,2020,Phillip A Owens,10965
+6292,IAD2020-0462,Citizen complaint,11/27/2020,10/27/2020,Police Officer,Tyler Shaun,Mathewson,Respectful Treatment,Unfounded,,0.0,,Tyler,Shaun,2020,Tyler Shaun Mathewson,148283
+6293,IAD2020-0462,Citizen complaint,11/27/2020,10/27/2020,Police Officer,Brendan M,Linnane,Respectful Treatment,Unfounded,,0.0,,Brendan,M,2020,Brendan M Linnane,144459
+6303,IAD2020-0470,Citizen complaint,12/08/2020,12/04/2020,Detective,Stephen T,Duran,Respectful Treatment,Not Sustained,,,,Stephen,T,2020,Stephen T Duran,8950
+6306,IAD2020-0483,Citizen complaint,12/18/2020,05/31/2020,Police Officer,Christopher Alan,Bird,Neg.Duty/Unreasonable Judge,Exonerated,,,,Christopher,Alan,2020,Christopher Alan Bird,153090
+6309,IAD2020-0487,Citizen complaint,12/21/2020,11/18/2020,Police Officer,Jose J,Yurrita,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Jose,J,2020,Jose J Yurrita,96998
+6310,IAD2020-0487,Citizen complaint,12/21/2020,11/18/2020,Police Officer,Richard W,Trull,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Richard,W,2020,Richard W Trull,126552
+6316,IAD2020-0491,Citizen complaint,12/31/2020,03/01/2020,Sergeant,John M,Shaughnessy,Strip Search and or Visual Body Cavity Search,Unfounded,,0.0,,John,M,2020,John M Shaughnessy,99878
+6335,IAD2021-0020,Citizen complaint,01/12/2021,01/12/2021,Police Officer,Thomas J,Nee,Neg.Duty/Unreasonable Judge,Not Sustained,,,,Thomas,J,2021,Thomas J Nee,9775
+6348,IAD2021-0032,Citizen complaint,01/26/2021,12/16/2020,Police Officer,Kevin M,Butcher,BIAS-Free Policing Policy,Not Sustained,,0.0,,Kevin,M,2021,Kevin M Butcher,108261
+6349,IAD2021-0033,Citizen complaint,01/27/2021,12/28/2020,Police Officer,Adilson G,Rosa,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Adilson,G,2021,Adilson G Rosa,144304
+6353,IAD2021-0039,Internal investigation,02/01/2021,06/30/2020,Police Officer,Philip Joseph,Kearney,Prisoners/Booking Procedures,Exonerated,,,,Philip,Joseph,2021,Philip Joseph Kearney,148319
+6386,IAD2021-0085,Citizen complaint,03/17/2021,03/13/2021,Sergeant,Joseph M,Maguire,Manner of Recording Complaints,Sustained,,0.0,,Joseph,M,2021,Joseph M Maguire,10282
+6390,IAD2021-0111,Citizen complaint,04/08/2021,03/06/2021,Police Officer,Terrence vincent,O'Toole,BIAS-Free Policing Policy,Exonerated,,,,Terrence,vincent,2021,Terrence vincent O'Toole,153076
+6417,IAD2021-0134,Internal investigation,04/26/2021,,Police Officer,Domenic A,Columbo,Courts - Extra Compensation (2 counts),Unfounded,,0.0,,Domenic,A,2021,Domenic A Columbo,120929
+6464,IAD2021-0134,Internal investigation,04/26/2021,,Detective,Michael J,Miller,Courts - Extra Compensation,Unfounded,,0.0,,Michael,J,2021,Michael J Miller,131204
+6520,IAD2021-0144,Citizen complaint,04/26/2021,04/24/2021,Police Officer,Sean Christopher,Monahan,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Sean,Christopher,2021,Sean Christopher Monahan,148287
+6521,IAD2021-0144,Citizen complaint,04/26/2021,04/24/2021,Police Officer,Brian Coughlin,Mulvey,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Brian,Coughlin,2021,Brian Coughlin Mulvey,153077
+6555,IAD2021-0232,Citizen complaint,07/02/2021,07/02/2021,Police Officer,Ralph Hantz,Blain,Respectful Treatment,Not Sustained,Oral Reprimand,0.0,03/11/2022,Ralph,Hantz,2021,Ralph Hantz Blain,153156
+6557,IAD2021-0245,Citizen complaint,07/08/2021,07/08/2021,Police Officer,Steven P,Kovaleski,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,0.0,05/17/2023,Steven,P,2021,Steven P Kovaleski,153329
+6563,IAD2021-0248,Citizen complaint,07/13/2021,07/11/2021,Detective,David W,Singletary,Self Identification,Not Sustained,,,,David,W,2021,David W Singletary,11065
+6572,IAD2021-0275,Citizen complaint,08/04/2021,08/03/2021,Police Officer,Melvin A,Ruiz,Pointing Firearms,Exonerated,,,,Melvin,A,2021,Melvin A Ruiz,157617
+6580,IAD2021-0302,Internal investigation,08/23/2021,,Police Officer,Daniel Lajuan,Rose,Residency,Sustained,Termination,0.0,06/03/2022,Daniel,Lajuan,2021,Daniel Lajuan Rose,109141
+6621,IAD2021-0349,Citizen complaint,09/27/2021,09/23/2021,Police Officer,James Peter,Bratsis,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,James,Peter,2021,James Peter Bratsis,162305
+6622,IAD2021-0349,Citizen complaint,09/27/2021,09/23/2021,Police Officer,Anne Elizabeth,Maher,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Anne,Elizabeth,2021,Anne Elizabeth Maher,157688
+6626,IAD2021-0357,Citizen complaint,10/04/2021,10/04/2021,Police Officer,Jasmany E,Beato,Respectful Treatment,Not Sustained,,0.0,,Jasmany,E,2021,Jasmany E Beato,148244
+6630,IAD2021-0374,Internal investigation,10/13/2021,10/19/2019,Police Officer,Christian A,Cuascut Hernandez,Neg.Duty/Unreasonable Judge,Sustained,Oral Reprimand,,10/03/2024,Christian,A,2021,Christian A Cuascut Hernandez,157630
+6654,IAD2021-0422,Internal investigation,11/18/2021,11/18/2021,Police Officer,Saequan Terrell,Sparks-Clancy,Neglect of Duty/Unreasonable Judgment (2 counts),Sustained,Suspension,1.0,11/06/2025,Saequan,Terrell,2021,Saequan Terrell Sparks-Clancy,153074
+6666,IAD2021-0457,Citizen complaint,12/20/2021,11/21/2021,Police Officer,Ibrahim D,Kamara,Conduct Unbecoming,Unfounded,,,,Ibrahim,D,2021,Ibrahim D Kamara,162980
+6669,IAD2021-0462,Citizen complaint,12/27/2021,12/24/2021,Police Officer,Tyler J,Ostholthoff,Respectful Treatment,Not Sustained,,,,Tyler,J,2021,Tyler J Ostholthoff,162964
+6678,IAD2022-0012,Citizen complaint,01/15/2022,01/15/2022,Police Officer,Shai M,Myers,Manner of Recording Complaints,Unfounded,,0.0,,Shai,M,2022,Shai M Myers,162944
+6703,IAD2022-0056,Citizen complaint,02/17/2022,02/16/2022,Police Officer,Gerard Jermaine,Wynn,Respectful Treatment,Unfounded,,0.0,,Gerard,Jermaine,2022,Gerard Jermaine Wynn,157699
+6705,IAD2022-0056,Citizen complaint,02/17/2022,02/16/2022,Police Officer,Derek M,Scott,Respectful Treatment,Unfounded,,0.0,,Derek,M,2022,Derek M Scott,157618
+6709,IAD2022-0056,Citizen complaint,02/17/2022,02/16/2022,Police Officer,Jerry T,Tu,Respectful Treatment,Unfounded,,0.0,,Jerry,T,2022,Jerry T Tu,164115
+6711,IAD2022-0056,Citizen complaint,02/17/2022,02/16/2022,Captain,James M,Gaughan,Respectful Treatment,Unfounded,,0.0,,James,M,2022,James M Gaughan,8695
+6736,IAD2022-0102,Citizen complaint,03/15/2022,03/11/2022,Police Officer,Zachary James,Keenan,Booking Procedures,Not Sustained,,0.0,,Zachary,James,2022,Zachary James Keenan,157655
+6737,IAD2022-0102,Citizen complaint,03/15/2022,03/11/2022,Police Officer,Emily M,LaRosa,Booking Procedures,Not Sustained,,0.0,,Emily,M,2022,Emily M LaRosa,157622
+6746,IAD2022-0118,Citizen complaint,03/22/2022,03/21/2022,Police Officer,Samora F,Lopes,Neg.Duty/Unreasonable Judge,Sustained,Suspension,1.0,11/10/2024,Samora,F,2022,Samora F Lopes,105619
+6749,IAD2022-0123,Citizen complaint,03/24/2022,03/19/2022,Police Officer,Jonathan Fernandes,Santos,Respectful Treatment,Sustained,Oral Reprimand,0.0,03/11/2025,Jonathan,Fernandes,2022,Jonathan Fernandes Santos,144310
+6750,IAD2022-0123,Citizen complaint,03/24/2022,03/19/2022,Police Officer,Jaunasse Elysee,Jean,Body Worn Policy - Activation & Incidents of Use,Sustained,Suspension,1.0,01/11/2025,Jaunasse,Elysee,2022,Jaunasse Elysee Jean,153150
+6762,IAD2022-0137,Citizen complaint,04/03/2022,03/31/2022,Police Officer,Jonathan Michael,Marcel,Conformance to Laws,Unfounded,,,,Jonathan,Michael,2022,Jonathan Michael Marcel,162971
+6763,IAD2022-0138,Internal investigation,04/03/2022,,Police Officer,Carmen Sarai,Padron,Conduct Unbecoming,Not Sustained,,,,Carmen,Sarai,2022,Carmen Sarai Padron,144311
+6767,IAD2022-0161,Internal investigation,04/20/2022,07/21/2020,Police Officer,Salvarys R,Reynoso-Santos,Training and Qualifications,Sustained,Oral Reprimand,0.0,07/07/2023,Salvarys,R,2022,Salvarys R Reynoso-Santos,153116
+6772,IAD2022-0171,Citizen complaint,04/28/2022,04/13/2022,Police Officer,Alexandra C,May,BIAS-Free Policing Policy,Unfounded,,0.0,,Alexandra,C,2022,Alexandra C May,149202
+6792,IAD2022-0239,Citizen complaint,06/08/2022,06/07/2022,Police Officer,Kevin Gerard,Shelley,Neg.Duty/Unreasonable Judge,Not Sustained,,0.0,,Kevin,Gerard,2022,Kevin Gerard Shelley,148302
+6822,IAD2022-0302,Citizen complaint,07/25/2022,,Police Officer,Kevin K,Herbert,Neg.Duty/Unreasonable Judge,Sustained,Suspension,3.0,09/15/2025,Kevin,K,2022,Kevin K Herbert,148269
+6843,IAD2022-0339,Citizen complaint,08/29/2022,,Police Officer,Tamara M,Espinola,Neg.Duty/Unreasonable Judge,Unfounded,,0.0,,Tamara,M,2022,Tamara M Espinola,10414
+6861,IAD2022-0378,Internal investigation,09/27/2022,08/17/2022,Police Officer,Hena V,Lopes,Neg.Duty/Unreasonable Judge,Exonerated,Administrative Hearing,0.0,01/17/2024,Hena,V,2022,Hena V Lopes,148288
+6869,IAD2022-0388,Internal investigation,10/12/2022,09/30/2022,Police Officer,Sean M,McCarthy,Neg.Duty/Unreasonable Judge,Sustained,Suspension,1.0,10/11/2022,Sean,M,2022,Sean M McCarthy,144500
+6870,IAD2022-0395,Citizen complaint,10/16/2022,10/16/2022,Police Officer,Gerard Majella,Giblin,Conduct Unbecoming,Sustained,Suspension held in abeyance,2.0,10/01/2024,Gerard,Majella,2022,Gerard Majella Giblin,153084
+6879,IAD2022-0402,Citizen complaint,10/07/2022,10/06/2022,Police Officer,Brian K,Griffiths,Neg.Duty/Unreasonable Judge,Exonerated,,0.0,,Brian,K,2022,Brian K Griffiths,145428
+6901,IAD2022-0433,Internal investigation,11/09/2022,09/03/2022,Police Officer,Fabian Martin,Bustillo,Harassment Policy,Not Sustained,,0.0,,Fabian,Martin,2022,Fabian Martin Bustillo,162317
+6908,IAD2022-0436,Citizen complaint,11/09/2022,10/26/2022,Police Officer,Tony Alexander,Romero,BIAS-Free Policing Policy,Unfounded,,0.0,,Tony,Alexander,2022,Tony Alexander Romero,153363
+6927,IAD2022-0444,Citizen complaint,11/22/2022,,Police Officer,James B,Kenneally,Attendance/Reporting for Duty,Unfounded,,0.0,,James,B,2022,James B Kenneally,11175
+6934,IAD2022-0451,Internal investigation,11/22/2022,,Police Officer,Kirk Orlando,Maxwell,Harassment Policy - Sexual Harassment/Hostile Work Environment,Not Sustained,,0.0,,Kirk,Orlando,2022,Kirk Orlando Maxwell,157645
+6936,IAD2022-0461,Citizen complaint,12/08/2022,12/08/2022,Police Officer,Brian Ford,Harrington,Respectful Treatment,Not Sustained,,,,Brian,Ford,2022,Brian Ford Harrington,153083
+7057,IAD2023-0163,Internal investigation,03/23/2022,02/02/2022,Police Officer,Michael R,Nee,Detail Cards,Sustained,Retired with Charges Pending,,01/05/2024,Michael,R,2022,Michael R Nee,10732
+7087,IAD2023-0227,Internal investigation,04/27/2022,,Police Officer,Daniel G,H mariam,Detail Cards,Unfounded,,,,Daniel,G,2022,Daniel G H mariam,157665
