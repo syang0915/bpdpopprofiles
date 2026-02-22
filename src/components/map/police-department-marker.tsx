@@ -76,7 +76,7 @@ export function PoliceDepartmentMarker({ department }: PoliceDepartmentMarkerPro
     closeTimerRef.current = window.setTimeout(() => {
       setIsMarkerHovered(false);
       setIsPanelHovered(false);
-    }, 700);
+    }, 900);
   };
 
   useEffect(() => {
@@ -121,7 +121,7 @@ export function PoliceDepartmentMarker({ department }: PoliceDepartmentMarkerPro
       {isHovered && (
         <Tooltip
           direction="right"
-          offset={[4, 0]}
+          offset={[8, 0]}
           opacity={1}
           className="department-tooltip"
           permanent

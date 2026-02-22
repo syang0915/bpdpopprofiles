@@ -12,6 +12,7 @@ const bostonBounds: LatLngBoundsExpression = [
   [42.2279, -71.1912],
   [42.3969, -70.986],
 ];
+const bostonCenter: [number, number] = [42.395, -71.0589];
 
 const policeDepartments: PoliceDepartment[] = [
   {
@@ -106,6 +107,7 @@ function LockInitialBostonView() {
   const map = useMap();
 
   useEffect(() => {
+    map.setView(bostonCenter, 11);
     const initialZoom = map.getZoom();
     map.setMinZoom(initialZoom);
     map.setMaxBounds(bostonBounds);
@@ -124,8 +126,8 @@ export default function App() {
   }, []);
 
   return (
-    <div className="flex h-screen flex-col bg-background text-foreground">
-      <header className="border-b border-cyan-400/30 bg-[#070b1f]/95 backdrop-blur">
+    <div className="relative h-[100dvh] w-screen overflow-hidden bg-background text-foreground">
+      <header className="absolute inset-x-0 top-0 z-[1000] border-b border-blue-400/25 bg-[#0f2f80]/20 backdrop-blur-[2px]">
         <nav className="flex h-16 items-center justify-between px-4 md:px-6">
           <div
             className={`bpd-brand ${brandLight.active ? "is-active" : ""}`}
@@ -156,19 +158,20 @@ export default function App() {
             <span className="bpd-brand-text">BPD Profiles</span>
           </div>
           <div className="flex items-center gap-2">
-            <Button className="border border-cyan-300/45 bg-[#0b1d4a] text-[#b7c9ff] shadow-[0_0_16px_rgba(34,211,238,0.25)] hover:bg-[#13307a] hover:text-[#d8e4ff] hover:shadow-[0_0_22px_rgba(56,189,248,0.45)]">
+            <Button className="border border-blue-300/45 bg-[#0f2f80]/70 text-[#c7d8ff] shadow-[0_0_14px_rgba(47,125,255,0.28)] hover:bg-[#1d56d8]/80 hover:text-[#e2ecff] hover:shadow-[0_0_20px_rgba(59,130,246,0.45)]">
               Map
             </Button>
-            <Button className="border border-fuchsia-300/45 bg-[#2a0f52] text-[#c2b7ff] shadow-[0_0_16px_rgba(217,70,239,0.25)] hover:bg-[#3a1673] hover:text-[#e0d8ff] hover:shadow-[0_0_22px_rgba(192,132,252,0.45)]">
+            <Button className="border border-blue-300/45 bg-[#1a3f9b]/65 text-[#c9dcff] shadow-[0_0_14px_rgba(37,99,235,0.26)] hover:bg-[#2f7dff]/75 hover:text-[#edf3ff] hover:shadow-[0_0_20px_rgba(96,165,250,0.42)]">
               Officers
             </Button>
           </div>
         </nav>
       </header>
 
-      <main className="flex-1">
+      <main className="absolute inset-0">
         <MapContainer
-          bounds={bostonBounds}
+          center={bostonCenter}
+          zoom={11}
           maxZoom={18}
           maxBounds={bostonBounds}
           maxBoundsViscosity={1.0}
