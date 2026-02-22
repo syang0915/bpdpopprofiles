@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type CSSProperties } from "react";
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
 import { OfficerProfileCard } from "@/components/officer/officer-profile-card";
 import { Button } from "@/components/ui/button";
@@ -112,6 +112,13 @@ export default function OfficerDashboardPage() {
   const [liveOvertimePayTotal, setLiveOvertimePayTotal] = useState<number | null>(null);
   const [liveComplaintsPercentile, setLiveComplaintsPercentile] = useState<number | null>(null);
   const [liveOvertimePercentile, setLiveOvertimePercentile] = useState<number | null>(null);
+  const [chatDraft, setChatDraft] = useState("");
+  const chatInputRef = useRef<HTMLInputElement | null>(null);
+  const examplePrompts = [
+    "Show me a visualization of this officer's overtime logging data over time compared to Officer B.",
+    "Summarize complaint trends for this officer over the past five years.",
+    "How does this officer's use-of-force history compare to their district average?",
+  ];
   const district = liveDistrict ?? searchParams.get("district") ?? "Unknown District";
   const routeOfficerName = searchParams.get("name");
   const profile = buildOfficerProfile(officerId);
@@ -325,6 +332,7 @@ export default function OfficerDashboardPage() {
             <section className="grid gap-4 md:grid-cols-3">
               <OfficerProfileCard
                 officerId={officerId ?? "officer"}
+                officerName={liveOfficerName ?? routeOfficerName ?? profile.name}
                 district={district}
                 showOpenProfileLink={false}
                 className="transition-transform duration-300 ease-out hover:scale-[1.02]"
@@ -504,11 +512,21 @@ export default function OfficerDashboardPage() {
                 <p className="text-[#d6e4ff]">Ask any questions about this officer.</p>
                 <div className="mt-3 text-xs text-[#a7c0ef]">
                   <p className="uppercase tracking-[0.08em] text-cyan-200/80">Example prompts</p>
-                  <ul className="mt-2 space-y-1 list-disc pl-5">
-                    <li>Show me a visualization of this officer&apos;s overtime logging data over time compared to Officer B.</li>
-                    <li>Summarize complaint trends for this officer over the past five years.</li>
-                    <li>How does this officer&apos;s use-of-force history compare to their district average?</li>
-                  </ul>
+                  <div className="mt-2 space-y-2">
+                    {examplePrompts.map((prompt) => (
+                      <button
+                        key={prompt}
+                        type="button"
+                        onClick={() => {
+                          setChatDraft(prompt);
+                          chatInputRef.current?.focus();
+                        }}
+                        className="block w-full rounded-md border border-cyan-300/20 bg-[#08122e] px-2.5 py-2 text-left text-[#c4d9ff] transition-colors hover:bg-[#10224f]"
+                      >
+                        {prompt}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>
               <button
@@ -531,6 +549,9 @@ export default function OfficerDashboardPage() {
               </button>
               <div className="flex items-end gap-2">
                 <input
+                  ref={chatInputRef}
+                  value={chatDraft}
+                  onChange={(event) => setChatDraft(event.target.value)}
                   className="h-11 flex-1 rounded-md border border-cyan-300/30 bg-[#020718] px-3 text-sm text-[#eaf2ff] placeholder:text-[#7f99cc] focus:outline-none"
                   placeholder="Type your question about this officer..."
                 />

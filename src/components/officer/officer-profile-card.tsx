@@ -20,17 +20,12 @@ export function OfficerProfileCard({
   officerId,
   officerName,
   officerRank,
-  complaintsPercentile: complaintsPercentileProp,
-  overtimePercentile: overtimePercentileProp,
   district,
   showOpenProfileLink = true,
   className = "",
 }: OfficerProfileCardProps) {
   const profile = buildOfficerProfile(officerId);
   const [liveOfficerName, setLiveOfficerName] = useState<string | null>(null);
-  const [liveOfficerRank, setLiveOfficerRank] = useState<string | null>(null);
-  const [liveComplaintsPercentile, setLiveComplaintsPercentile] = useState<number | null>(null);
-  const [liveOvertimePercentile, setLiveOvertimePercentile] = useState<number | null>(null);
   const employeeId = parseEmployeeId(officerId);
 
   useEffect(() => {
@@ -47,15 +42,6 @@ export function OfficerProfileCard({
         if (fullName) {
           setLiveOfficerName(fullName);
         }
-        if (data.officer.rank) {
-          setLiveOfficerRank(data.officer.rank);
-        }
-        if (data.metrics?.complaints_percentile != null) {
-          setLiveComplaintsPercentile(data.metrics.complaints_percentile);
-        }
-        if (data.metrics?.overtime_ratio_percentile != null) {
-          setLiveOvertimePercentile(data.metrics.overtime_ratio_percentile);
-        }
       } catch {
         // Keep mock profile visuals if live API is unavailable.
       }
@@ -66,11 +52,9 @@ export function OfficerProfileCard({
     };
   }, [officerId]);
 
-  const displayName = liveOfficerName ?? officerName ?? profile.name;
-  const displayRank = liveOfficerRank ?? officerRank ?? profile.rank;
+  const displayName = liveOfficerName ?? officerName ?? "Officer";
   const displayBadgeId = employeeId ? `EMP-${employeeId}` : profile.badgeId;
-  const complaintsPercentile = liveComplaintsPercentile ?? complaintsPercentileProp ?? profile.complaintsPercentile;
-  const overtimePercentile = liveOvertimePercentile ?? overtimePercentileProp ?? profile.overtimePercentile;
+  const displayRank = officerRank ?? profile.rank;
 
   return (
     <article
@@ -81,17 +65,6 @@ export function OfficerProfileCard({
         <div className="min-w-0 flex-1">
           <p className="truncate text-base font-semibold text-[#e0ecff]">{displayName}</p>
           <p className="text-xs text-[#b8c9eb]">Badge ID: {displayBadgeId}</p>
-          <p className="text-xs text-[#b8c9eb]">{`${displayRank} • ${profile.sex}, ${profile.race}`}</p>
-          {district ? <p className="mt-1 text-xs text-[#9fb6e8]">{district}</p> : null}
-        </div>
-      </div>
-
-      <div className="mt-3 grid grid-cols-2 gap-2 text-[11px]">
-        <div className="rounded border border-cyan-300/20 bg-[#0a1433]/80 px-2 py-1 text-[#b9cff7]">
-          Complaints: <span className="text-[#e3f2ff]">{complaintsPercentile.toFixed(1)}</span>
-        </div>
-        <div className="rounded border border-fuchsia-300/20 bg-[#0a1433]/80 px-2 py-1 text-[#cbc2f2]">
-          Overtime: <span className="text-[#f0e8ff]">{overtimePercentile.toFixed(1)}</span>
         </div>
       </div>
 
