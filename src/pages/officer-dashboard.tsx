@@ -1,65 +1,8 @@
 import { useEffect, useState, type CSSProperties } from "react";
 import { Link, useParams, useSearchParams } from "react-router-dom";
+import { OfficerProfileCard } from "@/components/officer/officer-profile-card";
 import { Button } from "@/components/ui/button";
-
-type OfficerProfile = {
-  name: string;
-  badgeId: string;
-  sex: string;
-  race: string;
-  rank: string;
-  complaintsPercentile: number;
-  overtimePercentile: number;
-};
-
-const SEXES = ["Male", "Female"] as const;
-const RACES = ["Black", "White", "Hispanic", "Asian", "Multiracial"] as const;
-const RANKS = [
-  "Police Officer",
-  "Sergeant",
-  "Lieutenant",
-  "Detective",
-  "Captain",
-] as const;
-
-function hashString(value: string) {
-  let hash = 0;
-  for (let index = 0; index < value.length; index += 1) {
-    hash = (hash * 31 + value.charCodeAt(index)) >>> 0;
-  }
-  return hash;
-}
-
-function formatOfficerName(officerId: string | undefined) {
-  if (!officerId) {
-    return "Officer";
-  }
-  return officerId
-    .split("-")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-}
-
-function buildOfficerProfile(officerId: string | undefined): OfficerProfile {
-  const name = formatOfficerName(officerId);
-  const officerHash = hashString(officerId ?? "officer");
-  const badgeId = `BPD-${1000 + (officerHash % 9000)}`;
-  const sex = SEXES[officerHash % SEXES.length];
-  const race = RACES[(officerHash >>> 4) % RACES.length];
-  const rank = RANKS[(officerHash >>> 8) % RANKS.length];
-  const complaintsPercentile = Number((((officerHash >>> 12) % 1000) / 10).toFixed(1));
-  const overtimePercentile = Number((((officerHash >>> 17) % 1000) / 10).toFixed(1));
-
-  return {
-    name,
-    badgeId,
-    sex,
-    race,
-    rank,
-    complaintsPercentile,
-    overtimePercentile,
-  };
-}
+import { buildOfficerProfile } from "@/lib/officer-profile";
 
 export default function OfficerDashboardPage() {
   const { officerId } = useParams();
@@ -68,12 +11,6 @@ export default function OfficerDashboardPage() {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const district = searchParams.get("district") ?? "Unknown District";
   const profile = buildOfficerProfile(officerId);
-  const initials = profile.name
-    .split(" ")
-    .map((part) => part[0])
-    .join("")
-    .slice(0, 2)
-    .toUpperCase();
 
   useEffect(() => {
     document.documentElement.classList.add("dark");
@@ -176,27 +113,12 @@ export default function OfficerDashboardPage() {
             </div>
 
             <section className="grid gap-4 md:grid-cols-3">
-              <div className="rounded-lg border border-blue-300/30 bg-[#101b45]/86 p-4 shadow-[0_0_9px_rgba(59,130,246,0.28)] transition-transform duration-300 ease-out hover:scale-[1.02]">
-                <p className="mb-3 text-xs uppercase tracking-[0.14em] text-[#9cb6ea]">Officer Details</p>
-                <div className="flex items-start gap-4">
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border border-cyan-300/45 bg-[#0f2f80]/70 text-lg font-semibold text-[#d9ebff] shadow-[0_0_8px_rgba(56,189,248,0.38)]">
-                    {initials}
-                  </div>
-                  <div className="flex flex-col gap-1 text-sm">
-                    <p className="text-base font-semibold text-[#e0ecff]">{profile.name}</p>
-                    <p className="text-[#b8c9eb]">
-                      Badge ID: <span className="text-[#d6e5ff]">{profile.badgeId}</span>
-                    </p>
-                    <p className="text-[#b8c9eb]">
-                      Sex / Race:{" "}
-                      <span className="text-[#d6e5ff]">{`${profile.sex}, ${profile.race}`}</span>
-                    </p>
-                    <p className="text-[#b8c9eb]">
-                      Rank: <span className="text-[#d6e5ff]">{profile.rank}</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <OfficerProfileCard
+                officerId={officerId ?? "officer"}
+                district={district}
+                showOpenProfileLink={false}
+                className="transition-transform duration-300 ease-out hover:scale-[1.02]"
+              />
 
               <div className="rounded-lg border border-cyan-300/28 bg-[#101b45]/86 p-4 shadow-[0_0_9px_rgba(56,189,248,0.3)] transition-transform duration-300 ease-out hover:scale-[1.02]">
                 <p className="text-xs uppercase tracking-[0.14em] text-[#9cb6ea]">
