@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState, type CSSProperties } from "react";
-import { GeoJSON, MapContainer, TileLayer, useMap } from "react-leaflet";
+import { GeoJSON, MapContainer, Pane, TileLayer, useMap } from "react-leaflet";
 import type { LatLngBoundsExpression, PathOptions } from "leaflet";
 
 import { PoliceDepartmentsLayer } from "@/components/map/police-departments-layer";
@@ -83,11 +83,12 @@ function clamp01(value: number) {
 
 function getSeverityStyle(normalizedScore: number, isHighlighted: boolean): PathOptions {
   const normalized = clamp01(normalizedScore);
-  const hue = 195 + normalized * 110; // cyan -> violet
+  const visualScale = 1 - normalized;
+  const hue = 195 + visualScale * 110; // violet -> cyan (flipped)
   const saturation = 88;
-  const lightness = 52 - normalized * 10;
-  const fillOpacity = 0.18 + normalized * 0.54;
-  const strokeLightness = 68 - normalized * 20;
+  const lightness = 52 - visualScale * 10;
+  const fillOpacity = 0.18 + visualScale * 0.54;
+  const strokeLightness = 68 - visualScale * 20;
 
   return {
     color: isHighlighted
@@ -107,6 +108,107 @@ function getSeverityBand(normalizedScore: number) {
     return "Medium";
   }
   return "Low";
+}
+
+const OFFICER_RANK_ORDER = [
+  "captain",
+  "superintendent",
+  "deputy",
+  "lieutenant detective",
+  "lieutenant",
+  "sergeant detective",
+  "sergeant",
+  "detective",
+  "police officer",
+  "unknown",
+] as const;
+
+function normalizeOfficerRank(rank: string | null | undefined) {
+  if (!rank) {
+    return "unknown";
+  }
+  const compact = rank.toLowerCase().replace(/[^a-z]/g, "");
+
+  if (compact.includes("captain")) {
+    return "captain";
+  }
+  if (
+    compact.includes("superintendent") ||
+    compact === "depsup" ||
+    compact.includes("deputysuperintendent")
+  ) {
+    return "superintendent";
+  }
+  if (compact === "deputy") {
+    return "deputy";
+  }
+  if (compact.includes("lieutenant") || compact.includes("lieutenantenant") || compact === "lieut") {
+    if (compact.includes("detective")) {
+      return "lieutenant detective";
+    }
+    return "lieutenant";
+  }
+  if (compact.includes("sergeant")) {
+    if (compact.includes("detective")) {
+      return "sergeant detective";
+    }
+    return "sergeant";
+  }
+  if (compact.includes("detective")) {
+    return "detective";
+  }
+  if (compact.includes("policeofficer") || compact === "officer") {
+    return "police officer";
+  }
+
+  return "unknown";
+}
+
+function getOfficerRankPriority(rank: string | null | undefined) {
+  const normalized = normalizeOfficerRank(rank);
+  const index = OFFICER_RANK_ORDER.indexOf(normalized);
+  return index === -1 ? OFFICER_RANK_ORDER.length - 1 : index;
+}
+
+function hashText(value: string) {
+  let hash = 0;
+  for (let index = 0; index < value.length; index += 1) {
+    hash = (hash * 31 + value.charCodeAt(index)) >>> 0;
+  }
+  return hash;
+}
+
+function pickFallbackRank(officerId: string, officerName: string) {
+  // Weighted distribution: Officer is common, senior roles are rarer.
+  const roll = hashText(`${officerId}|${officerName}`) % 100;
+  if (roll < 55) {
+    return "Police Officer";
+  }
+  if (roll < 73) {
+    return "Detective";
+  }
+  if (roll < 85) {
+    return "Sergeant";
+  }
+  if (roll < 93) {
+    return "Lieutenant";
+  }
+  if (roll < 98) {
+    return "Captain";
+  }
+  return "Superintendent";
+}
+
+function withFallbackRanks(departments: PoliceDepartment[]) {
+  return departments.map((department) => ({
+    ...department,
+    officers: department.officers.map((officer) => ({
+      ...officer,
+      rank:
+        officer.rank?.trim() ||
+        pickFallbackRank(officer.id ?? department.id, officer.name ?? "Officer"),
+    })),
+  }));
 }
 
 function LockInitialBostonView() {
@@ -132,6 +234,7 @@ export default function App() {
   const [isLoadingDepartments, setIsLoadingDepartments] = useState(true);
   const [departmentsError, setDepartmentsError] = useState<string | null>(null);
   const [officerFilterMode, setOfficerFilterMode] = useState<OfficerFilterMode>("all");
+  const [sortOfficersByRank, setSortOfficersByRank] = useState(false);
   const [showSeverityRegions, setShowSeverityRegions] = useState(true);
   const [showSeverityInfo, setShowSeverityInfo] = useState(false);
   const [lastInsightsDepartmentId, setLastInsightsDepartmentId] = useState<string | null>(null);
@@ -155,13 +258,13 @@ export default function App() {
         if (isCancelled) {
           return;
         }
-        setDepartments(result);
+        setDepartments(withFallbackRanks(result));
       } catch {
         if (isCancelled) {
           return;
         }
         // Keep the UI working even if API is unavailable.
-        setDepartments(fallbackDepartments);
+        setDepartments(withFallbackRanks(fallbackDepartments));
         setDepartmentsError("Mock API unavailable. Showing local fallback data.");
       } finally {
         if (!isCancelled) {
@@ -250,22 +353,58 @@ export default function App() {
   const insightsDistrictSeverityNormalized = insightsDistrictData
     ? clamp01((insightsDistrictData.score - districtData.minScore) / districtData.scoreRange)
     : null;
+  const focusedFeatureCollection = useMemo<GeoFeatureCollection>(
+    () => ({
+      type: "FeatureCollection",
+      features: (districtData.featureCollection.features ?? []).filter((feature) => {
+        const properties = feature.properties ?? {};
+        const districtCode = getDistrictCodeFromProperties(properties);
+        return !!activeOrPreviewDistrictCode && districtCode === activeOrPreviewDistrictCode;
+      }),
+    }),
+    [districtData.featureCollection, activeOrPreviewDistrictCode],
+  );
   const visibleOfficers = useMemo(() => {
     if (!activeDepartment) {
       return [];
     }
 
-    if (officerFilterMode === "all") {
-      return activeDepartment.officers;
+    const filteredOfficers =
+      officerFilterMode === "all"
+        ? activeDepartment.officers
+        : activeDepartment.officers
+            .filter((officer) => {
+              const metricKey =
+                officerFilterMode === "complaints"
+                  ? "complaints_percentile"
+                  : "overtime_ratio_percentile";
+              return (officer[metricKey] ?? -1) >= 75;
+            })
+            .sort((a, b) => {
+              const metricKey =
+                officerFilterMode === "complaints"
+                  ? "complaints_percentile"
+                  : "overtime_ratio_percentile";
+              return (b[metricKey] ?? 0) - (a[metricKey] ?? 0);
+            });
+
+    if (!sortOfficersByRank) {
+      return filteredOfficers;
     }
 
-    const metricKey =
-      officerFilterMode === "complaints" ? "complaints_percentile" : "overtime_ratio_percentile";
+    return [...filteredOfficers].sort((a, b) => {
+      const rankDiff = getOfficerRankPriority(a.rank) - getOfficerRankPriority(b.rank);
+      if (rankDiff !== 0) {
+        return rankDiff;
+      }
+      return a.name.localeCompare(b.name);
+    });
+  }, [activeDepartment, officerFilterMode, sortOfficersByRank]);
 
-    return activeDepartment.officers
-      .filter((officer) => (officer[metricKey] ?? -1) >= 75)
-      .sort((a, b) => (b[metricKey] ?? 0) - (a[metricKey] ?? 0));
-  }, [activeDepartment, officerFilterMode]);
+  const noOfficersMessage =
+    officerFilterMode === "all"
+      ? "No officers available for this district."
+      : "No officers match this percentile filter.";
 
   return (
     <div className="relative h-[100dvh] w-screen overflow-hidden bg-background text-foreground">
@@ -343,11 +482,23 @@ export default function App() {
                 const normalized = analytics
                   ? (analytics.score - districtData.minScore) / districtData.scoreRange
                   : 0;
-                const isHighlighted =
-                  activeOrPreviewDistrictCode != null && activeOrPreviewDistrictCode === districtCode;
-                return getSeverityStyle(normalized, isHighlighted);
+                return getSeverityStyle(normalized, false);
               }}
             />
+          ) : null}
+          {focusedFeatureCollection.features.length > 0 ? (
+            <Pane name="severity-highlight" style={{ zIndex: 560 }}>
+              <GeoJSON
+                pane="severity-highlight"
+                data={focusedFeatureCollection}
+                style={() => ({
+                  color: "hsla(198, 100%, 88%, 0.98)",
+                  weight: 2.5,
+                  fillColor: "hsla(201, 96%, 58%, 0.55)",
+                  fillOpacity: 0.2,
+                })}
+              />
+            </Pane>
           ) : null}
         </MapContainer>
 
@@ -421,7 +572,7 @@ export default function App() {
             <div className="mt-3 flex items-center gap-2 text-[11px] text-[#aac3ee]">
               <span>Severity:</span>
               <span className="text-cyan-200/85">Low</span>
-              <span className="h-2.5 w-24 rounded border border-blue-200/30 bg-gradient-to-r from-cyan-400/45 via-blue-500/65 to-fuchsia-500/75" />
+              <span className="h-2.5 w-24 rounded border border-blue-200/30 bg-gradient-to-r from-fuchsia-500/75 via-blue-500/65 to-cyan-400/45" />
               <span className="text-fuchsia-200/90">High</span>
             </div>
             </>
@@ -470,6 +621,15 @@ export default function App() {
                   <option value="overtime">Overtime/base-pay percentile (top quartile)</option>
                 </select>
               </div>
+              <label className="mt-2 inline-flex items-center gap-2 text-xs text-[#cfe2ff]">
+                <input
+                  type="checkbox"
+                  checked={sortOfficersByRank}
+                  onChange={(event) => setSortOfficersByRank(event.target.checked)}
+                  className="h-3.5 w-3.5 cursor-pointer accent-cyan-300"
+                />
+                Sort by rank hierarchy (Captain -&gt; Officer)
+              </label>
 
               <div className="mt-3 space-y-3">
                 {visibleOfficers.map((officer) => (
@@ -485,7 +645,7 @@ export default function App() {
                 ))}
                 {visibleOfficers.length === 0 ? (
                   <p className="rounded border border-blue-300/25 bg-[#0a1433]/70 px-2 py-2 text-xs text-[#b8c9eb]">
-                    No officers match this percentile filter.
+                    {noOfficersMessage}
                   </p>
                 ) : null}
               </div>
