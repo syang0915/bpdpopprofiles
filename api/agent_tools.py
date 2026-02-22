@@ -50,6 +50,20 @@ def _rows_to_dataclasses(model: Type[T], rows: Iterable[Dict[str, Any]]) -> List
     return [result for row in rows if (result := _row_to_dataclass(model, row))]
 
 
+def _dataclass_to_dict(obj: Any) -> Any:
+    """Convert a dataclass instance or list of dataclass instances to dict(s)."""
+    if obj is None:
+        return None
+    if isinstance(obj, dict):
+        return {k: _dataclass_to_dict(v) for k, v in obj.items()}
+    if isinstance(obj, (list, tuple)):
+        return [_dataclass_to_dict(item) for item in obj]
+    if hasattr(obj, "__dataclass_fields__"):
+        from dataclasses import asdict
+        return asdict(obj)
+    return obj
+
+
 def _execute_with_column_fallback(
     query_factory: Callable[[], Any],
     columns: Sequence[str],
@@ -57,11 +71,15 @@ def _execute_with_column_fallback(
 ):
     last_error = None
     for column in columns:
-        response = query_factory().eq(column, value).execute()
-        if response.error:
-            last_error = response.error
+        try:
+            response = query_factory().eq(column, value).execute()
+            # Check if response has data (successful query)
+            if response.data is not None:
+                return response
+            last_error = "No data returned"
+        except Exception as e:
+            last_error = str(e)
             continue
-        return response
     if last_error:
         raise RuntimeError(str(last_error))
     raise RuntimeError("No valid column found for query")
@@ -75,7 +93,8 @@ def get_officer_by_employee_id(employee_id: int) -> Optional[OfficerReal]:
         _DEFAULT_EMPLOYEE_ID_COLUMNS["officers"],
         employee_id,
     )
-    return _row_to_dataclass(OfficerReal, response.data)
+    data = response.data[0] if isinstance(response.data, list) and response.data else response.data
+    return _dataclass_to_dict(_row_to_dataclass(OfficerReal, data))
 
 
 def list_officers(limit: int = 50, offset: int = 0) -> List[OfficerReal]:
@@ -89,7 +108,7 @@ def list_officers(limit: int = 50, offset: int = 0) -> List[OfficerReal]:
         .range(offset, max(offset, offset + limit - 1))
         .execute()
     )
-    return _rows_to_dataclasses(OfficerReal, response.data or [])
+    return _dataclass_to_dict(_rows_to_dataclasses(OfficerReal, response.data or []))
 
 
 def find_officers_by_name(
@@ -99,13 +118,13 @@ def find_officers_by_name(
 ) -> List[OfficerReal]:
     print('find_officers_by_name called with first_name:', first_name, 'last_name:', last_name, 'limit:', limit)
     supabase = _get_supabase()
-    query = supabase.table("officers").select("*")
+    query = supabase.table("officers_real").select("*")
     if first_name:
         query = query.ilike("first_name", f"%{first_name}%")
     if last_name:
         query = query.ilike("last_name", f"%{last_name}%")
     response = query.limit(limit).execute()
-    return _rows_to_dataclasses(OfficerReal, response.data or [])
+    return _dataclass_to_dict(_rows_to_dataclasses(OfficerReal, response.data or []))
 
 
 def get_compensation_for_employee(
@@ -122,7 +141,7 @@ def get_compensation_for_employee(
     data = response.data or []
     if year is not None:
         data = [row for row in data if row.get("year") == year]
-    return _rows_to_dataclasses(Compensation, data)
+    return _dataclass_to_dict(_rows_to_dataclasses(Compensation, data))
 
 
 def get_compensation_by_year(year: int, limit: int = 200) -> List[Compensation]:
@@ -136,7 +155,7 @@ def get_compensation_by_year(year: int, limit: int = 200) -> List[Compensation]:
         .limit(limit)
         .execute()
     )
-    return _rows_to_dataclasses(Compensation, response.data or [])
+    return _dataclass_to_dict(_rows_to_dataclasses(Compensation, response.data or []))
 
 
 def get_incidents_for_employee(
@@ -151,7 +170,7 @@ def get_incidents_for_employee(
         employee_id,
     )
     data = response.data or []
-    return _rows_to_dataclasses(Incident, data[:limit])
+    return _dataclass_to_dict(_rows_to_dataclasses(Incident, data[:limit]))
 
 
 def get_incidents_by_year(year: int, limit: int = 100) -> List[Incident]:
@@ -165,7 +184,7 @@ def get_incidents_by_year(year: int, limit: int = 100) -> List[Incident]:
         .limit(limit)
         .execute()
     )
-    return _rows_to_dataclasses(Incident, response.data or [])
+    return _dataclass_to_dict(_rows_to_dataclasses(Incident, response.data or []))
 
 
 def list_departments(limit: int = 100) -> List[Department]:
@@ -178,7 +197,7 @@ def list_departments(limit: int = 100) -> List[Department]:
         .limit(limit)
         .execute()
     )
-    return _rows_to_dataclasses(Department, response.data or [])
+    return _dataclass_to_dict(_rows_to_dataclasses(Department, response.data or []))
 
 
 def get_department_by_employee_id(employee_id: int) -> Optional[Department]:
@@ -189,15 +208,17 @@ def get_department_by_employee_id(employee_id: int) -> Optional[Department]:
         _DEFAULT_EMPLOYEE_ID_COLUMNS["department"],
         employee_id,
     )
-    return _row_to_dataclass(Department, response.data)
+    data = response.data[0] if isinstance(response.data, list) and response.data else response.data
+    return _dataclass_to_dict(_row_to_dataclass(Department, data))
 
 
 def get_officer_profile(employee_id: int) -> Dict[str, Any]:
     print('get_officer_profile called with employee_id:', employee_id)
     officer = get_officer_by_employee_id(employee_id)
-    return {
+    result = {
         "officer": officer,
         "compensation": get_compensation_for_employee(employee_id),
         "incidents": get_incidents_for_employee(employee_id),
         "department": get_department_by_employee_id(employee_id),
     }
+    return _dataclass_to_dict(result)
