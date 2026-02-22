@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import type { LatLngBoundsExpression } from "leaflet";
 
@@ -116,6 +116,8 @@ function LockInitialBostonView() {
 }
 
 export default function App() {
+  const [brandLight, setBrandLight] = useState({ x: 0, y: 0, active: false });
+
   useEffect(() => {
     document.documentElement.classList.add("dark");
     return () => document.documentElement.classList.remove("dark");
@@ -125,7 +127,32 @@ export default function App() {
     <div className="flex h-screen flex-col bg-background text-foreground">
       <header className="border-b border-cyan-400/30 bg-[#070b1f]/95 backdrop-blur">
         <nav className="flex h-16 items-center justify-between px-4 md:px-6">
-          <div className="bpd-brand" aria-label="BPD Profiles">
+          <div
+            className={`bpd-brand ${brandLight.active ? "is-active" : ""}`}
+            aria-label="BPD Profiles"
+            style={
+              {
+                "--brand-halo-x": `${brandLight.x}px`,
+                "--brand-halo-y": `${brandLight.y}px`,
+              } as CSSProperties
+            }
+            onMouseEnter={() => setBrandLight((prev) => ({ ...prev, active: true }))}
+            onMouseLeave={() => setBrandLight({ x: 0, y: 0, active: false })}
+            onMouseMove={(event) => {
+              const rect = event.currentTarget.getBoundingClientRect();
+              const centerX = rect.left + rect.width / 2;
+              const centerY = rect.top + rect.height / 2;
+              const normalizedX = (event.clientX - centerX) / (rect.width / 2);
+              const normalizedY = (event.clientY - centerY) / (rect.height / 2);
+
+              // Move halo opposite cursor direction for a reflected-light look.
+              setBrandLight({
+                x: -normalizedX * 14,
+                y: -normalizedY * 10,
+                active: true,
+              });
+            }}
+          >
             <span className="bpd-brand-text">BPD Profiles</span>
           </div>
           <div className="flex items-center gap-2">
