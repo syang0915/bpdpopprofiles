@@ -153,6 +153,36 @@
   height: 16px;
   background: transparent;
   border: 0;
+  cursor: pointer;
+}
+
+.department-marker-label {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 51%;
+  pointer-events: none;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-family:
+    "Share Tech Mono",
+    "Consolas",
+    "Lucida Console",
+    "Courier New",
+    monospace;
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(179, 209, 255, 0.95);
+  text-shadow:
+    0 0 6px rgba(56, 130, 246, 0.66),
+    0 0 12px rgba(37, 99, 235, 0.56),
+    0 1px 0 rgba(8, 18, 45, 0.95);
+  opacity: 0.82;
+  transition:
+    color 320ms ease,
+    text-shadow 320ms ease,
+    opacity 260ms ease;
 }
 
 .department-marker-core {
@@ -181,13 +211,19 @@
   border-radius: 9999px;
   width: 22px;
   height: 22px;
-  border: 1.5px solid rgba(59, 130, 246, 0.62);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
   transform: translate(-50%, -50%);
   pointer-events: none;
-  opacity: 0.85;
+  opacity: 0.4;
   animation: markerPulse 1.6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+  transition:
+    border-color 280ms ease,
+    opacity 320ms ease,
+    box-shadow 320ms ease,
+    transform 320ms ease;
 }
 
+.department-marker-container:hover .department-marker-core,
 .department-marker-container.is-hovered .department-marker-core {
   background: radial-gradient(circle, #d9ecff 0%, #8ec2ff 58%, #2b68d0 100%);
   outline: 1.5px solid rgba(255, 255, 255, 0.92);
@@ -195,12 +231,27 @@
   box-shadow:
     0 0 12px rgba(191, 219, 254, 0.95),
     0 0 24px rgba(96, 165, 250, 0.78);
-  transform: translate(-50%, -50%) scale(1.08);
+  transform: translate(-50%, -50%) scale(1.24);
 }
 
+.department-marker-container:hover .department-marker-ring,
 .department-marker-container.is-hovered .department-marker-ring {
-  border-color: rgba(186, 230, 253, 0.75);
+  border-color: rgba(255, 255, 255, 0.95);
   opacity: 1;
+  box-shadow:
+    0 0 14px rgba(255, 255, 255, 0.7),
+    0 0 22px rgba(191, 219, 254, 0.45);
+}
+
+.department-marker-container:hover .department-marker-label,
+.department-marker-container.is-hovered .department-marker-label {
+  color: rgba(227, 237, 255, 0.98);
+  opacity: 1;
+  text-shadow:
+    0 0 8px rgba(191, 219, 254, 0.84),
+    0 0 16px rgba(96, 165, 250, 0.72),
+    0 0 24px rgba(37, 99, 235, 0.34),
+    0 1px 0 rgba(7, 16, 40, 0.98);
 }
 
 @keyframes markerPulse {
