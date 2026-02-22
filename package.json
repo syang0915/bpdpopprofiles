@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "api": "cd api && venv\\Scripts\\flask.exe run --no-debugger"
+    "preview": "vite preview", 
+    "api": "cd api && venv\\Scripts\\flask.exe run"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
