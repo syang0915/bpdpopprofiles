@@ -36,6 +36,17 @@ def get_officer_data():
     SELECT * from officers where first_name='John' and last_name='Smith'
     """
     employee_id = request.args.get('employee_id')
+     
+
     response = db.table("officers").select("*").eq("Employee ID", employee_id).execute()
+    
     return {"message": response.data}
 
+
+@app.route("/departments/incidents/<department_id>")
+def get_incidents_by_department(department_id):
+    """
+    SELECT * FROM incidents WHERE department_id = <department_id>
+    """
+    response = db.table("incidents").select("*").eq("department_id", department_id).execute()
+    return {"message": response.data}
