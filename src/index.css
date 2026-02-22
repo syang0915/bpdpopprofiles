@@ -109,14 +109,42 @@
 }
 
 .cyberpunk-map .leaflet-control-attribution {
-  background: rgba(5, 10, 28, 0.72);
-  color: rgba(165, 243, 252, 0.95);
-  border-top: 1px solid rgba(56, 189, 248, 0.45);
-  border-left: 1px solid rgba(56, 189, 248, 0.45);
+  background: rgba(2, 6, 23, 0.35);
+  color: rgba(148, 163, 184, 0.22);
+  border-top: 1px solid rgba(30, 41, 59, 0.55);
+  border-left: 1px solid rgba(30, 41, 59, 0.55);
+  backdrop-filter: blur(2px);
 }
 
 .cyberpunk-map .leaflet-control-attribution a {
-  color: rgba(196, 181, 253, 0.95);
+  color: rgba(125, 211, 252, 0.22);
+  transition: color 180ms ease;
+}
+
+.cyberpunk-map .leaflet-control-attribution a:hover {
+  color: rgba(165, 243, 252, 0.4);
+}
+
+.bpd-brand {
+  display: inline-flex;
+  align-items: center;
+}
+
+.bpd-brand-text {
+  font-family: "Segoe UI", "Roboto", "Calibri", sans-serif;
+  font-size: 1.45rem;
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #e6f1ff;
+  transform: perspective(260px) rotateX(8deg);
+  text-shadow:
+    0 1px 0 rgba(12, 27, 64, 0.95),
+    0 2px 0 rgba(12, 27, 64, 0.9),
+    0 3px 0 rgba(12, 27, 64, 0.85),
+    0 10px 16px rgba(34, 211, 238, 0.26),
+    0 14px 26px rgba(37, 99, 235, 0.22);
 }
 
 .department-marker-container {
@@ -156,9 +184,8 @@
   border: 1.5px solid rgba(59, 130, 246, 0.62);
   transform: translate(-50%, -50%);
   pointer-events: none;
-  opacity: 0;
+  opacity: 0.85;
   animation: markerPulse 1.6s cubic-bezier(0.22, 1, 0.36, 1) infinite;
-  animation-play-state: paused;
 }
 
 .department-marker-container.is-hovered .department-marker-core {
@@ -173,8 +200,7 @@
 
 .department-marker-container.is-hovered .department-marker-ring {
   border-color: rgba(186, 230, 253, 0.75);
-  opacity: 0.95;
-  animation-play-state: running;
+  opacity: 1;
 }
 
 @keyframes markerPulse {

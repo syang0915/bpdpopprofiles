@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Marker, Tooltip } from "react-leaflet";
 import { DomEvent, divIcon, type LatLngExpression } from "leaflet";
 import { Link } from "react-router-dom";
@@ -20,11 +20,16 @@ type PoliceDepartmentMarkerProps = {
   department: PoliceDepartment;
 };
 
+const PULSE_DURATION_SECONDS = 1.6;
+const GLOBAL_PULSE_PHASE_SECONDS = (Date.now() / 1000) % PULSE_DURATION_SECONDS;
+
 export function PoliceDepartmentMarker({ department }: PoliceDepartmentMarkerProps) {
   const [isMarkerHovered, setIsMarkerHovered] = useState(false);
   const [isPanelHovered, setIsPanelHovered] = useState(false);
+  const [fadeStrength, setFadeStrength] = useState(0);
   const closeTimerRef = useRef<number | null>(null);
   const panelRef = useRef<HTMLDivElement | null>(null);
+  const listRef = useRef<HTMLUListElement | null>(null);
 
   const isHovered = isMarkerHovered || isPanelHovered;
 
@@ -35,6 +40,24 @@ export function PoliceDepartmentMarker({ department }: PoliceDepartmentMarkerPro
     }
     DomEvent.disableScrollPropagation(node);
     DomEvent.disableClickPropagation(node);
+  };
+
+  const updateListFade = () => {
+    const list = listRef.current;
+    if (!list) {
+      setFadeStrength(0);
+      return;
+    }
+
+    const maxScroll = list.scrollHeight - list.clientHeight;
+    if (maxScroll <= 2) {
+      setFadeStrength(0);
+      return;
+    }
+
+    const remainingScroll = Math.max(0, maxScroll - list.scrollTop);
+    const normalizedStrength = Math.min(1, remainingScroll / maxScroll);
+    setFadeStrength(normalizedStrength);
   };
 
   const clearCloseTimer = () => {
@@ -54,20 +77,31 @@ export function PoliceDepartmentMarker({ department }: PoliceDepartmentMarkerPro
     closeTimerRef.current = window.setTimeout(() => {
       setIsMarkerHovered(false);
       setIsPanelHovered(false);
-    }, 260);
+    }, 700);
   };
 
+  useEffect(() => {
+    if (!isHovered) {
+      setFadeStrength(0);
+      return;
+    }
+
+    const frameId = window.requestAnimationFrame(updateListFade);
+    return () => window.cancelAnimationFrame(frameId);
+  }, [isHovered, department.officers.length]);
+
   const icon = useMemo(
-    () =>
-      divIcon({
+    () => {
+      return divIcon({
         className: `department-marker-container ${isHovered ? "is-hovered" : ""}`,
         html: `
           <span class="department-marker-core"></span>
-          <span class="department-marker-ring"></span>
+          <span class="department-marker-ring" style="animation-delay:-${GLOBAL_PULSE_PHASE_SECONDS.toFixed(3)}s;"></span>
         `,
         iconSize: [16, 16],
         iconAnchor: [8, 8],
-      }),
+      });
+    },
     [isHovered],
   );
 
@@ -85,8 +119,8 @@ export function PoliceDepartmentMarker({ department }: PoliceDepartmentMarkerPro
     >
       {isHovered && (
         <Tooltip
-          direction="auto"
-          offset={[0, -12]}
+          direction="right"
+          offset={[4, 0]}
           opacity={1}
           className="department-tooltip"
           permanent
@@ -107,18 +141,27 @@ export function PoliceDepartmentMarker({ department }: PoliceDepartmentMarkerPro
             <div className="department-tooltip-title">{department.district}</div>
             <div className="department-tooltip-address">{department.address}</div>
             <div className="department-tooltip-label">Officers</div>
-            <ul className="department-tooltip-list">
-              {department.officers.map((officer) => (
-                <li key={officer.id}>
-                  <Link
-                    to={`/officer/${officer.id}?district=${encodeURIComponent(department.district)}`}
-                    className="department-tooltip-link"
-                  >
-                    {officer.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div
+              className="department-tooltip-list-wrap"
+              style={{ ["--fade-strength" as string]: fadeStrength }}
+            >
+              <ul
+                ref={listRef}
+                className="department-tooltip-list"
+                onScroll={updateListFade}
+              >
+                {department.officers.map((officer) => (
+                  <li key={officer.id}>
+                    <Link
+                      to={`/officer/${officer.id}?district=${encodeURIComponent(department.district)}`}
+                      className="department-tooltip-link"
+                    >
+                      {officer.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </Tooltip>
       )}
