@@ -33,6 +33,14 @@ export type OfficerProfileResponse = {
     officer: OfficerRecord;
     district: OfficerDistrictRecord | null;
     latest_compensation: OfficerCompensationRecord | null;
+    metrics: {
+      overtime_hours_logged: number | null;
+      overtime_pay_total: number | null;
+      overtime_to_base_pct: number | null;
+      complaints_total: number | null;
+      overtime_ratio_percentile: number | null;
+      complaints_percentile: number | null;
+    } | null;
   };
 };
 

@@ -108,6 +108,11 @@ export default function OfficerDashboardPage() {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [liveOfficerName, setLiveOfficerName] = useState<string | null>(null);
   const [liveDistrict, setLiveDistrict] = useState<string | null>(null);
+  const [liveComplaintsTotal, setLiveComplaintsTotal] = useState<number | null>(null);
+  const [liveOvertimePayTotal, setLiveOvertimePayTotal] = useState<number | null>(null);
+  const [liveComplaintsPercentile, setLiveComplaintsPercentile] = useState<number | null>(null);
+  const [liveOvertimePercentile, setLiveOvertimePercentile] = useState<number | null>(null);
+  const [liveOvertimeToBasePct, setLiveOvertimeToBasePct] = useState<number | null>(null);
   const district = liveDistrict ?? searchParams.get("district") ?? "Unknown District";
   const profile = buildOfficerProfile(officerId);
   const analytics = useMemo(() => buildOfficerAnalytics(officerId), [officerId]);
@@ -160,6 +165,15 @@ export default function OfficerDashboardPage() {
   const complaintsTotal = analytics.outcomes.consequence + analytics.outcomes.dismissed;
   const consequencePct = (analytics.outcomes.consequence / complaintsTotal) * 100;
   const dismissedPct = (analytics.outcomes.dismissed / complaintsTotal) * 100;
+  const fallbackOvertimePay = analytics.payroll.reduce(
+    (sum, point) => sum + (point.totalSalary - point.baseSalary),
+    0,
+  );
+  const displayComplaintsTotal = liveComplaintsTotal ?? complaintsTotal;
+  const displayOvertimePay = liveOvertimePayTotal ?? fallbackOvertimePay;
+  const displayComplaintsPercentile = liveComplaintsPercentile ?? profile.complaintsPercentile;
+  const displayOvertimePercentile = liveOvertimePercentile ?? profile.overtimePercentile;
+  const displayOvertimeToBasePct = liveOvertimeToBasePct;
 
   useEffect(() => {
     document.documentElement.classList.add("dark");
@@ -185,6 +199,21 @@ export default function OfficerDashboardPage() {
         }
         if (data.district?.patrol_district) {
           setLiveDistrict(data.district.patrol_district);
+        }
+        if (data.metrics?.complaints_total != null) {
+          setLiveComplaintsTotal(data.metrics.complaints_total);
+        }
+        if (data.metrics?.overtime_pay_total != null) {
+          setLiveOvertimePayTotal(data.metrics.overtime_pay_total);
+        }
+        if (data.metrics?.complaints_percentile != null) {
+          setLiveComplaintsPercentile(data.metrics.complaints_percentile);
+        }
+        if (data.metrics?.overtime_ratio_percentile != null) {
+          setLiveOvertimePercentile(data.metrics.overtime_ratio_percentile);
+        }
+        if (data.metrics?.overtime_to_base_pct != null) {
+          setLiveOvertimeToBasePct(data.metrics.overtime_to_base_pct);
         }
       } catch {
         // Keep mock dashboard data as placeholder visuals.
@@ -304,29 +333,35 @@ export default function OfficerDashboardPage() {
                   Civilian Complaints Percentile
                 </p>
                 <p className="mt-2 text-3xl font-semibold text-[#dff3ff]">
-                  {profile.complaintsPercentile.toFixed(1)}
+                  {displayComplaintsPercentile.toFixed(1)}
                 </p>
-                <p className="mt-1 text-sm text-[#b8caec]">Compared with other BPD officers</p>
+                <p className="mt-1 text-sm text-[#b8caec]">
+                  {displayComplaintsTotal} total complaints
+                </p>
                 <div className="mt-3 h-2 w-full rounded-full bg-[#0a1433]/90">
                   <div
                     className="h-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 shadow-[0_0_10px_rgba(56,189,248,0.6)]"
-                    style={{ width: `${profile.complaintsPercentile}%` }}
+                    style={{ width: `${displayComplaintsPercentile}%` }}
                   />
                 </div>
               </div>
 
               <div className="rounded-lg border border-purple-300/28 bg-[#101b45]/86 p-4 shadow-[0_0_9px_rgba(147,51,234,0.3)] transition-transform duration-300 ease-out hover:scale-[1.02]">
                 <p className="text-xs uppercase tracking-[0.14em] text-[#b4acef]">
-                  Overtime Logged Percentile
+                  Overtime/Base Pay Percentile
                 </p>
                 <p className="mt-2 text-3xl font-semibold text-[#f0e8ff]">
-                  {profile.overtimePercentile.toFixed(1)}
+                  {displayOvertimePercentile.toFixed(1)}
                 </p>
-                <p className="mt-1 text-sm text-[#cbc2f2]">Compared with other BPD officers</p>
+                <p className="mt-1 text-sm text-[#cbc2f2]">
+                  {displayOvertimeToBasePct != null ? `${displayOvertimeToBasePct.toFixed(2)}%` : "N/A"} of base pay
+                  {" • "}
+                  {toCurrency(displayOvertimePay)} OT pay
+                </p>
                 <div className="mt-3 h-2 w-full rounded-full bg-[#0a1433]/90">
                   <div
                     className="h-2 rounded-full bg-gradient-to-r from-fuchsia-400 to-indigo-400 shadow-[0_0_10px_rgba(168,85,247,0.6)]"
-                    style={{ width: `${profile.overtimePercentile}%` }}
+                    style={{ width: `${displayOvertimePercentile}%` }}
                   />
                 </div>
               </div>

@@ -5,6 +5,9 @@ import { divIcon, type LatLngExpression } from "leaflet";
 type Officer = {
   id: string;
   name: string;
+  rank?: string | null;
+  complaints_percentile?: number | null;
+  overtime_ratio_percentile?: number | null;
 };
 
 export type PoliceDepartment = {

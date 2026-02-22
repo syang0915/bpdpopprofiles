@@ -1,4 +1,4 @@
-import { useEffect, useState, type CSSProperties } from "react";
+import { useEffect, useMemo, useState, type CSSProperties } from "react";
 import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import type { LatLngBoundsExpression } from "leaflet";
 
@@ -30,11 +30,13 @@ function LockInitialBostonView() {
 }
 
 export default function App() {
+  type OfficerFilterMode = "all" | "complaints" | "overtime";
   const [brandLight, setBrandLight] = useState({ x: 0, y: 0, active: false });
   const [activeDepartmentId, setActiveDepartmentId] = useState<string | null>(null);
   const [departments, setDepartments] = useState<PoliceDepartment[]>([]);
   const [isLoadingDepartments, setIsLoadingDepartments] = useState(true);
   const [departmentsError, setDepartmentsError] = useState<string | null>(null);
+  const [officerFilterMode, setOfficerFilterMode] = useState<OfficerFilterMode>("all");
 
   useEffect(() => {
     document.documentElement.classList.add("dark");
@@ -79,6 +81,22 @@ export default function App() {
   };
 
   const activeDepartment = departments.find((department) => department.id === activeDepartmentId);
+  const visibleOfficers = useMemo(() => {
+    if (!activeDepartment) {
+      return [];
+    }
+
+    if (officerFilterMode === "all") {
+      return activeDepartment.officers;
+    }
+
+    const metricKey =
+      officerFilterMode === "complaints" ? "complaints_percentile" : "overtime_ratio_percentile";
+
+    return activeDepartment.officers
+      .filter((officer) => (officer[metricKey] ?? -1) >= 75)
+      .sort((a, b) => (b[metricKey] ?? 0) - (a[metricKey] ?? 0));
+  }, [activeDepartment, officerFilterMode]);
 
   return (
     <div className="relative h-[100dvh] w-screen overflow-hidden bg-background text-foreground">
@@ -170,15 +188,35 @@ export default function App() {
               <p className="mt-4 text-xs uppercase tracking-[0.14em] text-cyan-200/75">
                 Officer Profiles
               </p>
+              <div className="mt-2">
+                <select
+                  value={officerFilterMode}
+                  onChange={(event) => setOfficerFilterMode(event.target.value as OfficerFilterMode)}
+                  className="w-full rounded border border-blue-300/35 bg-[#101f4f]/80 px-2 py-1 text-xs text-[#d7e7ff] focus:outline-none"
+                >
+                  <option value="all">All officers</option>
+                  <option value="complaints">Complaints percentile (top quartile)</option>
+                  <option value="overtime">Overtime/base-pay percentile (top quartile)</option>
+                </select>
+              </div>
 
               <div className="mt-3 space-y-3">
-                {activeDepartment.officers.map((officer) => (
+                {visibleOfficers.map((officer) => (
                   <OfficerProfileCard
                     key={officer.id}
                     officerId={officer.id}
+                    officerName={officer.name}
+                    officerRank={officer.rank}
+                    complaintsPercentile={officer.complaints_percentile}
+                    overtimePercentile={officer.overtime_ratio_percentile}
                     district={activeDepartment.district}
                   />
                 ))}
+                {visibleOfficers.length === 0 ? (
+                  <p className="rounded border border-blue-300/25 bg-[#0a1433]/70 px-2 py-2 text-xs text-[#b8c9eb]">
+                    No officers match this percentile filter.
+                  </p>
+                ) : null}
               </div>
             </div>
           ) : null}
