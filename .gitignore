@@ -31,3 +31,4 @@ __pycache__/
 package.json
 
 api/.env
+*/.env
