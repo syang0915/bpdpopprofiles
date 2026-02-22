@@ -21,7 +21,6 @@ type PoliceDepartmentMarkerProps = {
 };
 
 const PULSE_DURATION_SECONDS = 1.6;
-const GLOBAL_PULSE_PHASE_SECONDS = (Date.now() / 1000) % PULSE_DURATION_SECONDS;
 
 export function PoliceDepartmentMarker({ department }: PoliceDepartmentMarkerProps) {
   const [isMarkerHovered, setIsMarkerHovered] = useState(false);
@@ -92,11 +91,13 @@ export function PoliceDepartmentMarker({ department }: PoliceDepartmentMarkerPro
 
   const icon = useMemo(
     () => {
+      // Use current wall-clock phase so markers re-sync even after hover re-renders.
+      const pulsePhaseSeconds = (Date.now() / 1000) % PULSE_DURATION_SECONDS;
       return divIcon({
         className: `department-marker-container ${isHovered ? "is-hovered" : ""}`,
         html: `
           <span class="department-marker-core"></span>
-          <span class="department-marker-ring" style="animation-delay:-${GLOBAL_PULSE_PHASE_SECONDS.toFixed(3)}s;"></span>
+          <span class="department-marker-ring" style="animation-delay:-${pulsePhaseSeconds.toFixed(3)}s;"></span>
         `,
         iconSize: [16, 16],
         iconAnchor: [8, 8],
