@@ -65,6 +65,34 @@ function makeLinePoints(
     .join(" ");
 }
 
+function makeLinePointsWithBounds(
+  values: number[],
+  width: number,
+  height: number,
+  leftPadding: number,
+  topPadding: number,
+  rightPadding: number,
+  bottomPadding: number,
+  minValue: number,
+  maxValue: number,
+) {
+  if (!values.length) {
+    return "";
+  }
+  const plotWidth = width - leftPadding - rightPadding;
+  const plotHeight = height - topPadding - bottomPadding;
+  const range = Math.max(1, maxValue - minValue);
+
+  return values
+    .map((value, index) => {
+      const x = leftPadding + (index / Math.max(1, values.length - 1)) * plotWidth;
+      const normalizedY = (value - minValue) / range;
+      const y = topPadding + (1 - normalizedY) * plotHeight;
+      return `${x.toFixed(2)},${y.toFixed(2)}`;
+    })
+    .join(" ");
+}
+
 function buildOfficerAnalytics(officerId: string | undefined): OfficerAnalytics {
   const seed = hashString(officerId ?? "officer");
   const years = [2019, 2020, 2021, 2022, 2023, 2024, 2025];
@@ -113,7 +141,11 @@ export default function OfficerDashboardPage() {
   const [liveComplaintsPercentile, setLiveComplaintsPercentile] = useState<number | null>(null);
   const [liveOvertimePercentile, setLiveOvertimePercentile] = useState<number | null>(null);
   const [chatDraft, setChatDraft] = useState("");
+  const [mockChartPrompt, setMockChartPrompt] = useState<string | null>(null);
+  const [mockChartType, setMockChartType] = useState<"overtime" | "complaints">("overtime");
+  const [isChartLoading, setIsChartLoading] = useState(false);
   const chatInputRef = useRef<HTMLInputElement | null>(null);
+  const chatResponseTimeoutRef = useRef<number | null>(null);
   const examplePrompts = [
     "Show me a visualization of this officer's overtime logging data over time compared to Officer B.",
     "Summarize complaint trends for this officer over the past five years.",
@@ -169,6 +201,38 @@ export default function OfficerDashboardPage() {
     16,
     24,
   );
+  const chatChartWidth = 300;
+  const chatChartHeight = 140;
+  const chatPrimarySeries = mockChartType === "overtime" ? overtimeSeries : complaintsSeries;
+  const chatComparisonSeries = chatPrimarySeries.map((value, index) => {
+    const trendLift = mockChartType === "overtime" ? (index - 2) * 900 : (index > 3 ? 1 : 0);
+    const offsetFactor = 0.9 + ((index + 1) % 3) * 0.05;
+    return Math.max(0, Math.round(value * offsetFactor + trendLift));
+  });
+  const chatSeriesMin = Math.min(...chatPrimarySeries, ...chatComparisonSeries);
+  const chatSeriesMax = Math.max(...chatPrimarySeries, ...chatComparisonSeries);
+  const chatChartPrimaryPoints = makeLinePointsWithBounds(
+    chatPrimarySeries,
+    chatChartWidth,
+    chatChartHeight,
+    24,
+    10,
+    14,
+    20,
+    chatSeriesMin,
+    chatSeriesMax,
+  );
+  const chatChartComparisonPoints = makeLinePointsWithBounds(
+    chatComparisonSeries,
+    chatChartWidth,
+    chatChartHeight,
+    24,
+    10,
+    14,
+    20,
+    chatSeriesMin,
+    chatSeriesMax,
+  );
   const mockComplaintsTotal = analytics.outcomes.consequence + analytics.outcomes.dismissed;
   const consequenceRatio = mockComplaintsTotal > 0 ? analytics.outcomes.consequence / mockComplaintsTotal : 0.35;
   const dismissedRatio = Math.max(0, 1 - consequenceRatio);
@@ -185,9 +249,35 @@ export default function OfficerDashboardPage() {
   const consequencePct = displayComplaintsTotal > 0 ? (displayOutcomeConsequence / displayComplaintsTotal) * 100 : 0;
   const dismissedPct = displayComplaintsTotal > 0 ? (displayOutcomeDismissed / displayComplaintsTotal) * 100 : 0;
 
+  const triggerChartPreview = () => {
+    const prompt = chatDraft.trim();
+    if (!prompt) {
+      return;
+    }
+    if (chatResponseTimeoutRef.current != null) {
+      window.clearTimeout(chatResponseTimeoutRef.current);
+    }
+    setIsChartLoading(true);
+    setMockChartPrompt(null);
+    chatResponseTimeoutRef.current = window.setTimeout(() => {
+      setMockChartType(/complaint/i.test(prompt) ? "complaints" : "overtime");
+      setMockChartPrompt(prompt);
+      setIsChartLoading(false);
+      chatResponseTimeoutRef.current = null;
+    }, 700);
+  };
+
   useEffect(() => {
     document.documentElement.classList.add("dark");
     return () => document.documentElement.classList.remove("dark");
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (chatResponseTimeoutRef.current != null) {
+        window.clearTimeout(chatResponseTimeoutRef.current);
+      }
+    };
   }, []);
 
   useEffect(() => {
@@ -494,21 +584,21 @@ export default function OfficerDashboardPage() {
           <aside
             className={`${
               isChatOpen
-                ? "w-[360px] min-w-[320px] translate-x-0 opacity-100"
+                ? "w-[420px] min-w-[360px] translate-x-0 opacity-100"
                 : "w-0 min-w-0 translate-x-8 opacity-0"
-            } max-w-[45vw] self-stretch overflow-hidden rounded-lg border bg-[#101b45]/86 shadow-[0_0_10px_rgba(56,189,248,0.3)] transition-all duration-300 ease-out ${
+            } h-[86vh] max-h-[calc(100vh-5.5rem)] max-w-[52vw] self-start overflow-hidden rounded-lg border bg-[#101b45]/86 shadow-[0_0_10px_rgba(56,189,248,0.3)] transition-all duration-300 ease-out ${
               isChatOpen
                 ? "pointer-events-auto border-cyan-300/35 p-4"
                 : "pointer-events-none border-transparent p-0"
             }`}
           >
-            <div className="relative flex h-full flex-col">
+            <div className="relative flex h-full min-h-0 flex-col">
               <div className="mb-3">
                 <p className="text-sm font-semibold uppercase tracking-[0.14em] text-cyan-200/85">
                   Ask Gemini
                 </p>
               </div>
-              <div className="min-h-[220px] flex-1 rounded-md border border-blue-300/25 bg-[#040a1f]/95 p-3 text-sm text-[#b9cff7]">
+              <div className="min-h-[220px] flex-1 overflow-y-auto rounded-md border border-blue-300/25 bg-[#040a1f]/95 p-3 text-sm text-[#b9cff7]">
                 <p className="text-[#d6e4ff]">Ask any questions about this officer.</p>
                 <div className="mt-3 text-xs text-[#a7c0ef]">
                   <p className="uppercase tracking-[0.08em] text-cyan-200/80">Example prompts</p>
@@ -527,6 +617,53 @@ export default function OfficerDashboardPage() {
                       </button>
                     ))}
                   </div>
+                </div>
+                <div
+                  className={`mt-3 overflow-hidden rounded-md border border-cyan-300/25 bg-[#081433]/90 transition-all duration-350 ease-out ${
+                    isChartLoading || mockChartPrompt ? "max-h-[320px] opacity-100" : "max-h-0 border-transparent opacity-0"
+                  }`}
+                >
+                  {isChartLoading ? (
+                    <div className="p-3 text-[11px] text-cyan-100/85">
+                      <p className="animate-pulse">Generating preview...</p>
+                    </div>
+                  ) : null}
+                  {mockChartPrompt ? (
+                    <div className="p-2">
+                      <p className="text-[11px] text-[#c4d9ff]">{mockChartPrompt}</p>
+                      <div className="mt-1 flex items-center gap-3 text-[10px] text-[#b8c9eb]">
+                        <span className="inline-flex items-center gap-1">
+                          <span className="h-2 w-4 rounded bg-cyan-400" />
+                          Officer A
+                        </span>
+                        <span className="inline-flex items-center gap-1">
+                          <span className="h-2 w-4 rounded bg-fuchsia-400" />
+                          Officer B
+                        </span>
+                      </div>
+                      <div className="mt-2 rounded border border-blue-300/20 bg-[#050d24] p-1.5">
+                        <svg viewBox={`0 0 ${chatChartWidth} ${chatChartHeight}`} className="h-[130px] w-full">
+                          <polyline
+                            fill="none"
+                            stroke="#38bdf8"
+                            strokeWidth="2.6"
+                            strokeLinejoin="round"
+                            strokeLinecap="round"
+                            points={chatChartPrimaryPoints}
+                          />
+                          <polyline
+                            fill="none"
+                            stroke="#d946ef"
+                            strokeWidth="2.4"
+                            strokeDasharray="6 4"
+                            strokeLinejoin="round"
+                            strokeLinecap="round"
+                            points={chatChartComparisonPoints}
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  ) : null}
                 </div>
               </div>
               <button
@@ -552,11 +689,18 @@ export default function OfficerDashboardPage() {
                   ref={chatInputRef}
                   value={chatDraft}
                   onChange={(event) => setChatDraft(event.target.value)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter") {
+                      event.preventDefault();
+                      triggerChartPreview();
+                    }
+                  }}
                   className="h-11 flex-1 rounded-md border border-cyan-300/30 bg-[#020718] px-3 text-sm text-[#eaf2ff] placeholder:text-[#7f99cc] focus:outline-none"
                   placeholder="Type your question about this officer..."
                 />
                 <button
                   type="button"
+                  onClick={triggerChartPreview}
                   aria-label="Send message"
                   className="flex h-11 w-11 items-center justify-center rounded-full border border-cyan-300/45 bg-[#15347e] text-[#e5f0ff] shadow-[0_0_8px_rgba(56,189,248,0.35)] transition-all duration-300 ease-out hover:scale-115 hover:bg-[#20479f]"
                 >
